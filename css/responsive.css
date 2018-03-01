@@ -319,6 +319,11 @@ and (orientation : landscape){
         height:100%;
         width: 100%;
     }
+    
+    .below-icon a img {
+        height:100%;
+        width: 100%;
+    }
     .c-wid,.bdtemplate {
         margin-top: -200px !important;
         /*margin-top: 5px !important;*/
@@ -419,7 +424,7 @@ and (orientation : portrait){
         margin-top: -90px;
     }
     #demo2{
-        margin-top: -100px;border:2px solid red;
+        margin-top: -100px;
     }
     .img-squareiconsz{
         width: 32%;
