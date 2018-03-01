@@ -322,7 +322,7 @@ and (orientation : landscape){
     
     .below-icon a img {
         height:100%;
-        width: 100%;
+        width: 100%;border:2px solid black;
     }
     .c-wid,.bdtemplate {
         margin-top: -200px !important;
