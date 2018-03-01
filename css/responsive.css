@@ -405,8 +405,8 @@ and (orientation : portrait){
         /*margin-top: 5px !important;*/
     }
   .below-icon-inq a img {
-        height:20%;
-        width: 20%;
+        height:100%;
+        width: 100%;
     }
     #portfolio{
         padding-left: 40px;
