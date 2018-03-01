@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+     <title>Medical Concierge Application</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css_v3/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+    <!-- Datables-->
+    <link href="DataTables-1.10.16/css/dataTables.bootstrap.css" rel="stylesheet">  
+    <link href="css/stacktable.css" rel="stylesheet">
+
+        <!-- Material Design Bootstrap -->
+    <link href="css_v3/mdb.min.css" rel="stylesheet">
+            <!-- Jasmin CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+            <!-- Jesh CSS -->
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+  </head>
+
+  <body id="page-top">
+
+
+  <!-- Navigation -->
+    <nav  class="navbar navbar-expand-md navbar-light fixed-top" id="mainNav">
+      <div class="container-fluid"  >
+        <div class="custom-navtemp"   >
+          <a class="navbar-brand js-scroll-trigger" href="#page-top" >
+            <img class="img-fluid imagelogo img-lg" src="img/Medicon.png" alt="Medicon Logo" style="height: 100px;z-index: 1000;"></a>
+              
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav ml-auto pull-right">
+                <li class="nav-item">
+
+                  <!-- jas 11-29-17 --><li class="top-nav">
+                    <p>Hi Maricar! |</p>
+                    <a href="index.html" class="btn btn-secondary btn-lg btn-icon1" role="button" aria-pressed="true"><img src="img/circle-icons/icon2.png"></a>
+                    <a href="http://192.168.137.238:3031" class="btn btn-secondary btn-lg btn-icon1" role="button" aria-pressed="true"><img src="img/circle-icons/icon1.png"></a>
+                   </li>
+                  </li> <!--end jas 11-29-17 -->
+
+                  <!--profile pic dropdown -->
+                  <li class="nav-item dropdown img-index">
+                    <a class="nav-link dropdown-toggle img-hov" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img class="img-circle pull-right" src="img/circle-icons/profile-icon.png" alt="" height="100" width="100">
+                    </a>
+
+                    <div class="dropdown-menu img-dropindex img-dropindextwo" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="editprofile.html?tab=1">Edit Profile</a>
+                      <a class="dropdown-item" href="editprofile.html?tab=2">Settings</a>
+                    </div>
+                  </li>
+
+                </li><!-- end nav-item -->
+              </ul><!-- end navbar-nav -->
+            </div><!-- end navbar-collapse -->
+
+        </div><!-- custom-navtemp -->
+      </div><!-- container -->
+    </nav><!-- end nav -->
+
+    <!-- jas 11-29-17 --><!--BACKGROUND-->
+    <div class="backport backport-img" id="backport">
+      <ul class="stluke img-reponsive img-r img-rtwo cb-slideshow cb-template">
+        <li><span>Image 01</span></li>
+        <li><span>Image 02</span></li>
+        <li><span>Image 03</span></li>
+        <li><span>Image 04</span></li>
+        <li><span>Image 05</span></li>
+        <li><span>Image 06</span></li>
+      </ul>
+    </div>
+    <!--END BACKGROUND--> <!-- end jas 11-29-17 -->
+
+    <section id="template">
+      <div class="container c-wid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="bdtemplate" style="">
+              <div class="row mx-auto">
+              
+                 <!--tabs-->
+                    <div class="tab">
+                        <button class="tablinks  active" id="defaultOpen" onclick="openTab(event, 'Create')"><b>Create New</b></button>
+<!--02-21-2018 jesh--><button class="tablinks" onclick="openTab(event, 'Inbox')"><span class="inbox-notif pull-right">1</span><b>Inbox</b></button><!--end-->
+                        <button class="tablinks" onclick="openTab(event, 'Sent')"><b>Sent Items</b></button>
+<!--02-21-2018 jesh--><button class="tablinks" onclick="openTab(event, 'Drafts')"><b>Drafts</b></button><!--end-->
+                    </div>
+                 
+                     <!--Start Tab 1-->
+                    <div class="tabcontent" id="Create" style="display: block;">
+                        <form enctype="multipart/form-data" id="sendReqEmail" method="POST" action="">
+                            <input id="time" name="time" type="hidden">
+                            <div class="row">
+                                <div class="row col-sm-12">
+                                    <div class="col-sm-6">
+                                        <label>Patient's Name</label>
+                                        <div class="input-group">
+                                            <input class="form-control" name="pin" value="" type="hidden">
+                                            <input class="form-control" name="ehPin" value="" type="hidden">
+                                            <input class="form-control" id="inputPatientName" placeholder="Name" readonly="readonly" value="" type="text">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-primary" type="button">SEARCH</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label>Account Class</label>
+                                    <select class="form-control" id="inputAccountClass" name="accountClass">
+                                        <option value=""></option>
+                                        <option value="HMO2">HMO</option>
+                                        <option value="COM2">COMPANY</option></select>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label id="companyLabel"></label>
+                                    <select class="form-control selectized" id="inputCompany" name="guarantorCode" tabindex="-1" >
+                                        <option value="" selected="selected"></option>
+                                    </select>
+                                   <!-- <div class="selectize-control form-control single">
+                                        <div class="selectize-input items not-full">
+                                            <input autocomplete="off" tabindex="" id="inputCompany-selectized" style="width: 4px;" type="hidden">
+                                        </div>
+                                    </div>-->
+                                </div>
+                                <div class="col-sm-3">
+                                    <label>Member's ID</label>
+                                    <input class="form-control" maxlength="50" placeholder="Member's Id" id="inputMembersId" name="membersId" value="" type="text">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label>Subject</label>
+                                    <input class="form-control" maxlength="50" onfocus="$('#inputSubject').removeClass('error');" placeholder="Subject" id="inputSubject" name="subject" value="" type="text">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label>Email</label>
+                                    <div class="input-group">
+                                        <input class="form-control" maxlength="50" onblur="$('#inputTo').attr('readonly', true);" onfocus="$('#inputTo').removeClass('error');" placeholder="Email" readonly="readonly" id="inputTo" name="recipient" value="" type="text">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-primary" onclick="$('#inputTo').attr('readonly', false);" type="button">UPDATE</button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label>Cc</label>
+                                    <select class="form-control selectized"  >
+                                        <option></option>
+                                    </select>
+                                    <!--<div class="selectize-control form-control multi plugin-remove_button">
+                                        <div class="selectize-input items not-full">
+                                            <input autocomplete="off" tabindex="" id="inputCc-selectized" placeholder="Cc" style="width: 20px;" type="text">
+                                        </div>
+                                        <div class="selectize-dropdown multi form-control plugin-remove_button" style="display: none;">
+                                            <div class="selectize-dropdown-content"></div>
+                                        </div>
+                                    </div>-->
+                                </div>
+
+               <!--START JESH 02-21-2018 DOCTOR SEARCH AND DIAGNOSIS-->
+                                <div class="col-sm-6">
+                                    <label></label>
+                                    <div class="input-group">
+                                       <span class="input-group-btn ">
+                                            <button style="width: 140px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">Doctor Search</button>
+                                        </span>    
+                                            <input class="form-control col-sm-1" maxlength="50"  placeholder="" readonly="readonly" id="inputTo" name="recipient" value="" type="text">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                     <label></label>
+                                    <div class="input-group">
+                                       <span class="input-group-btn">
+                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">Diagnosis</button>
+                                        </span>
+                                        <input class="form-control" maxlength="50"  placeholder="" readonly="readonly" id="inputTo" name="recipient" value="" type="text">
+                                    </div>
+                                </div>
+                 <!--END jesh-->
+                            </div>
+
+
+                            <div style="border:1px solid black;margin-top: 20px;"></div>
+                            <h6>REQUEST DETAILS</h6>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label>Letter Type</label>
+                                    <select class="form-control" onfocus="$('#inputLetterType').removeClass('error');" id="inputLetterType" name="letterType">
+                                        <option value=""></option>
+                                        <option value="LT001">REQUEST</option>
+                                        <option value="LT002">FOLLOW-UP</option></select>
+                                </div>
+                            </div>
+                            <div class="col-md-3 pull-right zindex-md-3">
+                                <button class="btn btn-primary btn-fright" onclick="openReqTempModal()" type="button">Template</button>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label>Message</label>
+                                   <textarea class="form-control" cols="50" rows="3" id="message" name="message" aria-hidden="true"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                
+                                <div class="row col-md-6">
+                                    <div class="input-group">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-primary button-buffer" style="width: 130px;" onclick="javascript:document.getElementById('hiddenInputFile').click();" type="button">ATTACH FILE</button>
+                                        </span>
+                                        <input class="form-control required" id="addFile" name="filePath" onclick="javascript:document.getElementById('hiddenInputFile').click();" title="File" type="text">
+                                        
+                                    </div>
+                                    <input accept="application/pdf, .doc, .docx, image/*" id="hiddenInputFile" name="referenceFile" onchange="changeText(this, 'addFile')" style="visibility: hidden;" type="file">
+                                </div>
+                                <div class="col-md-6">
+                                    <button class="btn btn-primary" value="SEND" type="button">Send</button>
+                                    <button class="btn btn-primary" value="CANCEL" type="button">Cancel</button>
+                                </div>
+
+                            </div>
+
+                            </div>
+                        </form>
+                    </div>
+                    <!--End Tab 1-->
+
+                    <!--Start Tab 2-->
+                    <div class="tabcontent" id="Inbox" style="display: none;">
+                        <div class="row mx-auto">
+                             <div class="col-md-5">
+                             <!-- Tab panes -->
+                                <div class="tab-content  fixed-height">
+                                    <div class="tab-pane fade in active" id="home">
+                                        <div class="list-group">
+                                        </br>
+                                        <table id="inbox-gl" class="table table-condensed responsive-example-table" cellspacing="0">    
+                                            <thead  style="display: none;"  id="headtb">
+                                                <th></th>
+                                            </thead>
+                                              <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#" id="inbox-message-link">
+                                                                <span class="name" style="min-width: 190px; display: inline-block;">Calvos-helplin.com</span> 
+                                                                <span class="inbox-time">12:10 PM</span></br>
+                                                                <span class="">GUARANTEE LETTER FOR PATIENT ROQUE</span>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                           <a href="#" id="inbox-message-link">
+                                                                <span class="name" style="min-width: 190px; display: inline-block;">Buspa-International.Com</span> 
+                                                                <span class="inbox-time">12:10 AM</span></br>
+                                                                <span class="">GUARANTEE LETTER</span>
+                                                            </a> 
+                                                        </td>
+                                                    </tr>
+                                                    <!--SELECTED MESSAGE TO BE BOLD-->
+                                                    <tr>
+                                                        <td>
+                                                           <a href="#" id="inbox-message-link"  class="selected">
+                                                                <span class="name" style="min-width: 190px; display: inline-block;">Buspa-International.Com</span> 
+                                                                <span class="inbox-time">12:10 AM</span></br>
+                                                                <span class="">GUARANTEE LETTER</span>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <!--END-->
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#" id="inbox-message-link">
+                                                                <span class="name" style="min-width: 190px; display: inline-block;">Calvos-helplin.com</span> 
+                                                                <span class="inbox-time">12:10 PM</span></br>
+                                                                <span class="">GUARANTEE LETTER FOR PATIENT ROQUE</span>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                           <a href="#" id="inbox-message-link">
+                                                                <span class="name" style="min-width: 190px; display: inline-block;">Buspa-International.Com</span> 
+                                                                <span class="inbox-time">12:10 AM</span></br>
+                                                                <span class="">GUARANTEE LETTER</span>
+                                                            </a> 
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#" id="inbox-message-link">
+                                                                <span class="name" style="min-width: 190px; display: inline-block;">Calvos-helplin.com</span> 
+                                                                <span class="inbox-time">12:10 PM</span></br>
+                                                                <span class="">GUARANTEE LETTER FOR PATIENT ROQUE</span>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                           <a href="#" id="inbox-message-link">
+                                                                <span class="name" style="min-width: 190px; display: inline-block;">Buspa-International.Com</span> 
+                                                                <span class="inbox-time">12:10 AM</span></br>
+                                                                <span class="">GUARANTEE LETTER</span>
+                                                            </a> 
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#" id="inbox-message-link">
+                                                                <span class="name" style="min-width: 190px; display: inline-block;">Calvos-helplin.com</span> 
+                                                                <span class="inbox-time">12:10 PM</span></br>
+                                                                <span class="">GUARANTEE LETTER FOR PATIENT ROQUE</span>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                           <a href="#" id="inbox-message-link">
+                                                                <span class="name" style="min-width: 190px; display: inline-block;">Buspa-International.Com</span> 
+                                                                <span class="inbox-time">12:10 AM</span></br>
+                                                                <span class="">GUARANTEE LETTER</span>
+                                                            </a> 
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="col-md-7 fixed-height">
+                            <div class="row inbox-header">
+                                <span class="pull-right btn-reply">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#reply">Reply</button>
+                                </span>
+                                <h4 id="inbox-header">GUARANTEE LETTER FOR PATIENT ROQUE</h4> 
+                            </div>
+                            <hr>
+                            <div class="inbox-content">
+                                <h5>Dear St. Luke's Concierge,</h5></br>
+                                <p style="text-indent: 40px">Kindly see attached Guarantee Letter for Patient Roque. Also, may we request for scanned copy of his request of procedure for 
+                                the laboratory exam. Thank You!</p>
+                                
+                                </br>
+                                </br>
+                                <p>Regards,</br>
+                                Guarantee Officer</br>
+                                Calvos</p>
+                                <span>Attachments:</span><a href=""> GL For Roque, Milandi</a>
+                            </div>
+                            <hr>
+                            <span style="float: right;">12:10 AM</span>
+                            <p>Calvos-helpline.com</p>
+                            <h6>Good Day! Your request is now on queue and we wil email once done..</h6>
+
+                            <hr>
+                            <span style="float: right;">11:30 PM</span>
+                            <p>lerom-ipsum-helpline.com</p>
+                            <h6>Good Day! Your request is now on queue and we wil email once done..</h6>
+
+
+                            <hr>
+                            <span style="float: right;">11:10 PM</span>
+                            <p>Calvos-helpline.com</p>
+                            <h6>Good Day! Your request is now on queue and we wil email once done..</h6>
+                        </div>
+                    </div>
+                </div>
+            <!--End Tab 2-->
+
+            <!--Tab 3 Sent-->
+                    <div class="tabcontent" id="Sent" style="display: none;">
+                        <div class="row mx-auto">
+                            <b>Search Options</b>
+                            <div class="row col-sm-12" style="margin:5px; background-color: #deebf3; border:2px solid #c1c3c9;">
+                                <form action="/medicon/patient/" id="advSearchForm2" method="get" name="advSearchForm2">
+                                    <input name="fromPage" value="guaranteeSent" hidden="hidden">
+                                    <input id="time" name="time" type="hidden">
+                                </form>
+                                <form method="POST" action="/medicon/request-letter/search">
+                               <input id="time" name="time" type="hidden">
+                                <div class="row col-sm-10">
+                                    <div class="col-sm-2">
+                                        Account Class:
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <select class="form-control" id="acct_class" onfocus="$('#acct_class').removeClass('error');">
+                                            <option value=""></option>
+                                            <option value="HMO2">HMO</option>
+                                            <option value="COM2">COMPANY</option></select>
+                                    </div>
+                                    <div class="col-sm-1">
+                                        Company:
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <select class="form-control selectized" id="inputCompanySearch" name="company" tabindex="-1" style="display: none;"><option value="" selected="selected"></option></select><div class="selectize-control form-control single"><div class="selectize-input items not-full"><input autocomplete="off" tabindex="" id="inputCompanySearch-selectized" style="width: 4px;" type="text"></div></div>
+                                    </div>
+                                </div>
+                                <div class="row col-sm-10">
+                                    <div class="col-sm-2">
+                                        Patient's Name:
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <input class="form-control" name="pinSent" value="" type="hidden">
+                                        <input class="form-control" id="ehPinSent" name="ehPinSent" value="" type="hidden">
+                                        <input class="form-control" id="sentPatientName" placeholder="First Name" readonly="readonly" value="" type="text">
+                                    </div>
+                                    <button class="btn btn-primary" onclick="$('#advSearchForm2').submit();$('#sentPatientName').removeClass('error');" type="button">Search Patient</button>
+                                </div>
+                                <div class="row col-sm-10">
+                                    <div class="col-sm-2">
+                                        Document Date:
+                                    </div>
+                                    <!--<div class="col-sm-3">-->
+                                        <!--<input type="date" name="fromDate" class="form-control" id="fromDate" placeholder="from" onfocus="$('#fromDate').removeClass('error');"/>-->
+                                    <!--</div>-->
+                                    <div class="input-group date col-md-3" id="fromDateDiv1" style="float: left; padding: 0 15px;">
+                                        <input class="form-control" id="fromDate" name="fromDate" onfocus="$('#fromDate').removeClass('error');" placeholder="Start Date" type="text"> <span class="input-group-addon"> <span class="glyphicon glyphicon-calendar"></span>
+                              </span>
+                                    </div>
+                                    <label class="col-md-1 col-form-label to-form-label" for="colFormLabel">
+                                        To
+                                    </label>
+                                    <div class="input-group date col-md-3" id="toDateDiv1" style="float: left; padding: 0 15px;">
+                                        <input class="form-control" id="toDate" name="toDate" onfocus="$('#toDate').removeClass('error');" placeholder="End Date" type="text">
+                                        <span class="input-group-addon"> <span class="glyphicon glyphicon-calendar"></span>
+                              </span>
+                                    </div>
+                                    <!--<div class="col-sm-3">-->
+                                        <!--<input type="date" name="toDate" class="form-control" id="toDate" placeholder="to" onfocus="$('#toDate').removeClass('error');"/>-->
+                                    <!--</div>-->
+                                    <div class="col-sm-3">
+                                        <input class="btn btn-primary" onclick="searchLetter()" value="Search" type="button">
+                                        <input class="btn btn-primary" onclick="clearSentFields()" value="Clear" type="button">
+                                    </div>
+                                </div>
+                                </form>
+                            </div>
+
+                            <!--TABLE-->
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <div id="resultsBlock">
+                                        <div id="example_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="example_length"><label>Show <select name="example_length" aria-controls="example" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div>
+                                        <table class="table table-bordered large-only responsive-example-table dataTable no-footer stacktable small-only">
+                                            <tbody>
+                                                <tr class="  ">
+                                                    <th class="st-head-row st-head-row-main" colspan="2">DATE</th>
+                                                </tr>
+                                                <tr class="odd">
+                                                    <th class="st-head-row" colspan="2">No data available in table</th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table class="table table-bordered large-only responsive-example-table dataTable no-footer stacktable" id="example" role="grid" aria-describedby="example_info" cellspacing="0">
+                                            <thead id="headtb">
+                                                <tr role="row">
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 0px;" aria-label="DATE: activate to sort column ascending">DATE</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 0px;" aria-label="MEMBER'S ID: activate to sort column ascending">MEMBER'S ID</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 0px;" aria-label="COMPANY: activate to sort column ascending">COMPANY</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 0px;" aria-label="ACTION: activate to sort column ascending">ACTION</th></tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="odd">
+                                                        <td colspan="4" class="dataTables_empty" valign="top">No data available in table</td>
+                                                    </tr>
+                                                </tbody>
+                                        </table>
+                                        <div class="dataTables_info" id="example_info" role="status" aria-live="polite">Showing 0 to 0 of 0 entries</div>
+                                        <div class="dataTables_paginate paging_simple_numbers" id="example_paginate"><a class="paginate_button previous disabled" aria-controls="example" data-dt-idx="0" tabindex="0" id="example_previous">Previous</a><span></span><a class="paginate_button next disabled" aria-controls="example" data-dt-idx="1" tabindex="0" id="example_next">Next</a></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end tab 3-->
+
+                    <!--Start Tab 4-->
+                     <div class="tabcontent" id="Drafts" style="display: none;">
+                        <div class="row mx-auto">
+                             <div class="col-md-5">
+                             <!-- Tab panes -->
+                                <div class="tab-content  fixed-height">
+                                    <div class="tab-pane fade in active" id="home">
+                                        <div class="list-group">
+                                        </br>
+                                        <table id="drafts-gl" class="table table-condensed responsive-example-table" cellspacing="0">    
+                                            <thead  style="display: none;"  id="headtb">
+                                                <th></th>
+                                            </thead>
+                                              <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#" id="inbox-message-link">
+                                                                <span class="name" style="min-width: 190px; display: inline-block;">Calvos-helplin.com</span> 
+                                                                <span class="inbox-time">12:10 PM</span></br>
+                                                                <span class="">GUARANTEE LETTER FOR PATIENT ROQUE</span>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                    <!--SELECTED MESSAGE TO BE BOLD-->
+                                                    <tr>
+                                                        <td>
+                                                           <a href="#" id="inbox-message-link"  class="selected">
+                                                                <span class="name" style="min-width: 190px; display: inline-block;">Buspa-International.Com</span> 
+                                                                <span class="inbox-time">12:10 AM</span></br>
+                                                                <span class="">GUARANTEE LETTER</span>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <!--END-->
+                                              </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7 fixed-height">
+                                <div class="row inbox-header">
+                                    <span class="pull-right btn-edit">
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit">Edit</button>
+                                    </span>
+                                    <h4 id="inbox-header">GUARANTEE LETTER FOR PATIENT ROQUE</h4> 
+                                </div>
+                                <hr>
+                                <div class="inbox-content">
+                                    <h5>Dear St. Luke's Concierge,</h5></br>
+                                    <p> Good Day!</p>
+                                    </br>
+                                    </br>
+                            </div>
+                        </div>
+                    </div>
+                <!--End Tab 4-->
+
+                                </div><!-- end panel body -->
+                            </div><!-- end panel -->
+                        </div><!-- row -->
+                    </div><!-- body -->
+                </div><!-- row -->
+            </div><!-- container -->               
+        </div>
+    </div>
+</div>
+        <!-- jas 11-29-17 --><!--start of icons-->
+        <div class="row  iconbelowpatient iconbelowpatient-ref">
+            <div class="col-md-3 below-icon">
+              <a href="">
+                <img  class="img-fluid img-iconsz img-reficons" src="img/circle-icons/Search_2-Circle-icons.png" alt="" height="180" width="180">
+              </a>
+            </div>
+            <div class="col-md-3 below-icon">
+              <a href="">
+                <img class="img-fluid img-iconsz img-reficons" src="img/circle-icons/calendar-Circle-icons.png" alt="" height="180" width="180">
+              </a>
+            </div>
+            <div class="col-md-3 below-icon">
+              <a href="">
+                <img class="img-fluid img-iconsz img-reficons" src="img/circle-icons/Message_3-Circle-icons.png" alt="" height="180" width="180">
+              </a>
+            </div>
+            <div class="col-md-3 below-icon">
+              <a href="">
+                <img class="img-fluid img-iconsz img-reficons" src="img/circle-icons/Reference-Circle-icons.png" alt="" height="180" width="180">
+              </a>
+            </div>
+        </div><!--end jas 11-29-17 -->
+          
+        </div>
+    </div>
+  </div>
+</section>
+<!--end-->
+
+       <!-- Footer -->
+<footer class="footer text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+          </div>
+          <div class="col-md-4"><p class="footer-sz">Medicon Version 1.1 rev 389</p></div>
+          <div class="col-md-4">
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+<!--Jesh New Modal View for Doctor Search-->
+<div class="modal fade modal-inq" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content modal-bg">
+          <div class="modal-header"></div>
+
+              <div class="modal-body m-bd">
+                <div class="modal-border m-br">
+                    <table id="example3" class="table table-striped responsive-example-table" cellspacing="0">              
+                      <thead id="headtb">
+                        <th class="let-s">NAME</th>
+                        <th class="let-s">SPECIALIZATION</th>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="p-text">ABAD, RAINERIO S</td>
+                          <td>OBSTETRICS GYNECOLOGY</td>
+                        </tr>
+                        <tr>
+                          <td class="p-text">ABAD, LORNA RAMOS</td>
+                          <td>PEDIATRICS</td>
+                        </tr>
+                        <tr>
+                          <td class="p-text">ABASCO, DELFIN LIM</td>
+                          <td>DENTISTRY AND ORAL SURGERY</td>
+                        </tr>
+                        <tr>
+                          <td class="p-text">ABAYA, CAMILLE ANN CASTANEDA</td>
+                          <td>OBSTETRIC GYNECOLOGY</td>
+                        </tr>
+
+                        <tr>
+                          <td class="p-text">ABANO, JESSICA MAE REYES</td>
+                          <td>OPTHALMOLOGY</td>
+                        </tr>
+                           <tr>
+                          <td class="p-text">ABANO, JOEL ANTHONY GALAN</td>
+                          <td>OTORHINOLARYNGOLOGY AND HEAD AND NECK SURGERY</td>
+                        </tr>
+                        <tr>
+                          <td class="p-text">ABAR, MARC EVANS MALONZO</td>
+                          <td>GERITRIC MEDICINE</td>
+                        </tr>
+                        <tr>
+                          <td class="p-text">ABAD, MARCO JOSE FULVIO CICOLI</td>
+                          <td>SURGERY</td>
+                        </tr>
+                        <tr>
+                          <td class="p-text">ABAD SANTOS, SALVADOR MICLAT</td>
+                          <td>INTERNAL MEDICINE</td>
+                        </tr>
+                        <tr>
+                          <td class="p-text">ABAD SANTOS, SALVADOR MICLAT</td>
+                          <td>INTERNAL MEDICINE</td>
+                        </tr>
+                        <tr>
+                          <td class="p-text">ABAD SANTOS, SALVADOR MICLAT</td>
+                          <td>INTERNAL MEDICINE</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+              </div>
+            <div class="modal-footer">
+              <center>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+              </center>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end-->
+
+<!--Jesh New Modal View for Diagnosis-->
+<div class="modal fade modal-inq" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content modal-bg">
+          <div class="modal-header"></div>
+
+              <div class="modal-body m-bd">
+                <div class="modal-border m-br">
+                    <table id="example4" class="table table-striped responsive-example-table" cellspacing="0">              
+                      <thead id="headtb">
+                        <th style="text-align:left;">DESCRIPTION</th>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="p-text">BONE AND ARTICULAR CARTILAGE, UNSPECIFIED CHONDROSARCOMA NOS</td>
+                        </tr>
+                        <tr>
+                          <td class="p-text">CERVIX UTERI, MYOMA</td>
+                        </tr>
+                        <tr>
+                          <td class="p-text">CLOSED FACTURE OF LEFT CLAVICLE</td>
+                        </tr>
+                        <tr>
+                          <td class="p-text">LEFT TEMPORAL LOBE, ASTROCYTOMA NOS</td>
+                        </tr>
+                        <tr>
+                          <td class="p-text">BONE AND ARTICULAR CARTILAGE, UNSPECIFIED CHONDROSARCOMA NOS</td>
+                        </tr>
+                        <tr>
+                          <td class="p-text">CERVIX UTERI, MYOMA</td>
+                        </tr>
+                        <tr>
+                          <td class="p-text">CLOSED FACTURE OF LEFT CLAVICLE</td>
+                        </tr>
+                        <tr>
+                          <td class="p-text">BONE AND ARTICULAR CARTILAGE, UNSPECIFIED CHONDROSARCOMA NOS</td>
+                        </tr>
+                        <tr>
+                          <td class="p-text">CERVIX UTERI, MYOMA</td>
+                        </tr>
+                        <tr>
+                          <td class="p-text">CLOSED FACTURE OF LEFT CLAVICLE</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+              </div>
+            <div class="modal-footer">
+              <center>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+              </center>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end-->
+
+<!--Jesh New Modal View for Repply-->
+<div class="modal fade modal-inq" id="reply" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content modal-bg">
+          <div class="modal-header">
+              
+          </div>
+
+              <div class="modal-body m-bd">
+                <div class="modal-border m-br">
+                    <h5>RE: GUARANTEE LETTER FOR PATIENT ROQUE</h5>
+                    <p>To: Calvos-helpline.com</p>
+                    <label>Cc:</label><input  autocomplete="off" tabindex="" id="inputCc-selectized" placeholder="Cc"  type="text">
+                    <textarea class="form-control" cols="50" rows="3" id="reply" name="reply" aria-hidden="true"></textarea>           
+                </div>
+                  </div>
+            <div class="modal-footer">
+              <center>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">SEND</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">CANCEL</button>
+              </center>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end-->
+
+
+<div class="scroll-top d-lg-none">
+    <a class="btn btn-primary js-scroll-trigger" href="#page-top"> <i class="fa fa-chevron-up"></i>
+    </a>
+</div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/popper/popper.min.js"></script>
+    <script src="js_v3/jquery-3.2.1.min.js"></script>
+    <script src="js_v3/bootstrap.min.js"></script>
+    <script src="js_v3/custom.js"></script>
+        <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js_v3/popper.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js_v3/mdb.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.min.js"></script>
+
+    <!--Data Tables-->
+    <script src="DataTables-1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="DataTables-1.10.16/js/dataTables.bootstrap.js"></script>
+    <script src="js/stacktable.js"></script>
+    <script src="/js/ors/jquery.js"></script>
+    <script src="/js/ors/jquery-ui.js"></script>
+    <script src="/js/ors/moment.js"></script>
+    <script src="/newdaw/js/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="/js/application.js"></script>
+    <!--<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>-->
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/selectize.js"></script>
+    <script type="text/javascript" src="/js/popper/popper.min.js"></script>
+    <script type="text/javascript" src="/js/dataTables.bootstrap.js"></script>
+    <script type="text/javascript" src="/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="/js/stacktable.js"></script>
+
+    <script type="text/javascript">
+        var app = angular.module('myapp', ['ui.bootstrap'])
+            .controller('TabsDemoCtrl', function ($scope, $window) {
+                // Demo Logic to Manipulate No of Objects on left
+                $scope.number = 16;
+                $scope.getNumber = function (num) {
+                    return new Array(num);
+                }
+            });
+    </script>
+    <!--jesh insert of tinymce.min.js-->
+    <script type="text/javascript" src="js_tinymce/tinymce.min.js"></script><!--end-->
+
+    <!--Datepicker--> 
+    <script type="text/javascript">
+      var datefield=document.createElement("input")
+      datefield.setAttribute("type", "date")
+      if (datefield.type!="date"){ //if browser doesn't support input type="date", load files for jQuery UI Date Picker
+        document.write('<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />\n')
+        document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"><\/script>\n')
+        document.write('<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"><\/script>\n') 
+      }
+    </script>
+
+    <script type="text/javascript" charset="utf-8">
+
+/*jesh 02-22-2018 Doctor Table*/
+    $('#example3').dataTable( {
+          "bFilter": true,
+          "order": [],
+          "columnDefs": [ {
+            "targets"  : 'no-sort',
+            "orderable": false,
+          }],
+          "language": {
+            "search": "Seach:"
+            },
+            "input":false
+      });
+      $('.responsive-example-table').stacktable({myClass:'stacktable large-only'});
+    /*Diagnosis*/  
+      $('#example4').dataTable( {
+          "bFilter": true,
+          "order": [],
+          "columnDefs": [ {
+            "targets"  : 'no-sort',
+            "orderable": false,
+          }]
+      });
+/*END*/
+
+/*jesh 02-22-2018*/
+    $('#inbox-gl').dataTable( {
+        "bFilter": true,
+        "language": {
+            "search": "Search:"
+        },
+        "paging":   false,
+        "info":     false,
+        "dom":' <"search"f><"sc"l>',
+        "order": [],
+        "columnDefs": [ {
+            "targets"  : 'no-sort',
+            "orderable": false,
+          }]
+      });
+
+    $('#drafts-gl').dataTable( {
+        "bFilter": true,
+        "language": {
+            "search": "Search:"
+        },
+        "paging":   false,
+        "info":     false,
+        "dom":' <"search"f><"sc"l>',
+        "order": [],
+        "columnDefs": [ {
+            "targets"  : 'no-sort',
+            "orderable": false,
+          }]
+      });
+/*end jesh 02-22-2018*/  
+
+        $('#example').dataTable( {
+        "bFilter": true,
+        "order": [],
+        "columnDefs": [ {
+            "targets"  : 'no-sort',
+            "orderable": false,
+        }]
+    });
+
+
+$(document).ready(function () {             
+  $('.dataTables_filterinput[type="search"]').css(
+     {'width':'90px','display':'inline-block'}
+  );
+});
+  </script>
+    <!-- Tab -->
+
+<!--jesh for the create inquiry show and hie div-->
+<script type="text/javascript">
+function change(obj) {
+    var selectBox = obj;
+    var selected = selectBox.options[selectBox.selectedIndex].value;
+    var div = document.getElementById("showdiv");
+
+    if(selected === '1'){
+        div.style.display = "block";
+    }
+    else{
+        div.style.display = "none";
+    }
+}
+</script>
+  <script>
+    /*<![CDATA[*/
+
+    $(document).ready(function() {
+      var searchedWord = null
+      var category = null;
+      if(category != ""){
+      if (category == "MODULE") {
+        $("#moduleCategory").css({
+          'display' : 'block'
+        });
+        $("#moduleDropdown").val(searchedWord);
+        $("option[value='10']").attr('selected','selected');
+        $("#otherCategory").css({
+          'display' : 'none'
+        });
+      } else if(category == "USERNAME" || category == "ACTION"){
+        $("#otherCategory").css({
+          'display' : 'block'
+        });
+        $("#searchWord").val(searchedWord);
+        $("#moduleCategory").css({
+          'display' : 'none'
+        });
+      }
+      }
+      var today = moment().format('MM/DD/YYYY');
+      $('#fromDateDiv').datetimepicker({
+        //              minDate: today,
+        //                      defaultDate: '',
+        maxDate: today,
+        format : "MMMM DD, YYYY"
+
+      });
+
+      $('#toDateDiv').datetimepicker({
+        //              minDate: today,
+        //                      defaultDate: '',
+        maxDate: today,
+        format : "MMMM DD, YYYY",
+        useCurrent : false
+      });
+      $("#fromDateDiv").on("dp.change", function(e) {
+        $('#toDateDiv').data("DateTimePicker").minDate(e.date);
+      });
+      $("#toDateDiv").on("dp.change", function(e) {
+        $('#fromDateDiv').data("DateTimePicker").maxDate(e.date);
+      });
+    });
+
+    /*]]>*/
+  </script>
+  <script>
+    /*<![CDATA[*/
+
+        $(document).ready(function() {
+            var today = moment().format('MM/DD/YYYY');
+            $('#fromDateDiv1').datetimepicker({
+                //              minDate: today,
+                //                      defaultDate: '',
+                maxDate: today,
+                format : "MMMM DD, YYYY"
+
+            });
+
+            $('#toDateDiv1').datetimepicker({
+                //              minDate: today,
+                //                      defaultDate: '',
+                maxDate: today,
+                format : "MMMM DD, YYYY",
+                useCurrent : false
+            });
+            $("#fromDateDiv1").on("dp.change", function(e) {
+                $('#toDateDiv1').data("DateTimePicker").minDate(e.date);
+            });
+            $("#toDateDiv1").on("dp.change", function(e) {
+                $('#fromDateDiv1').data("DateTimePicker").maxDate(e.date);
+            });
+        });
+
+    /*]]>*/
+  </script>
+<script type="text/javascript">
+    tinymce.init({
+        selector: '#message',
+        force_br_newlines : true,
+        force_p_newlines : false,
+        forced_root_block : ''
+    });
+/*jesh 02-22--2018 insert new tinymce to reply in inbox. not working
+    tinymce.init({
+        selector: '#reply',
+        force_br_newlines : true,
+        force_p_newlines : false,
+        dialog_type : "modal",
+        forced_root_block : ''
+    });
+end*/
+    $('#inputCc').selectize({
+        persist: false,
+        maxItems: null,
+        valueField: 'email',
+        plugins: ['remove_button'],
+        render: {
+            item: function(item, escape) {
+                return '<div>' + (item.email ? '<span class="email">' + escape(item.email) + '</span>' : '') + '</div>';
+            },
+            option: function(item, escape) {
+                var name = formatName(item);
+                var label = name || item.email;
+                var caption = name ? item.email : null;
+                return '<div>' +
+                        '<span class="label">' + escape(label) + '</span>' +
+                        (caption ? '<span class="caption">' + escape(caption) + '</span>' : '') +
+                        '</div>';
+            }
+        },
+        createFilter: function(input) {
+            /*<![CDATA[*/
+            var regexpA = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return regexpA.test(input);
+            /*]]>*/
+        },
+        create: function(input) {
+            /*<![CDATA[*/
+            var regexpA = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            if (regexpA.test(input)) {
+                return {email: input};
+            }
+            return false;
+            /*]]>*/
+        }
+    });
+
+    $('#inputCompany').selectize({
+        create: false,
+        sortField: {
+            field: 'text',
+            direction: 'asc'
+        },
+        dropdownParent: 'body'
+    });
+
+    $('#inputCompanySearch').selectize({
+        create: false,
+        sortField: {
+            field: 'text',
+            direction: 'asc'
+        },
+        dropdownParent: 'body'
+    });
+
+    /*<![CDATA[*/
+    function openTab(evt, Name) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(Name).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+    document.getElementById("defaultOpen").click();
+    /*]]>*/
+</script>
+</body>
+</html>

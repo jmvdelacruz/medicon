@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Medical Concierge Application</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css_v3/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+    <!-- Datables-->
+    <link href="DataTables-1.10.16/css/dataTables.bootstrap.css" rel="stylesheet">  
+    <link href="css/stacktable.css" rel="stylesheet">
+
+        <!-- Material Design Bootstrap -->
+    <link href="css_v3/mdb.min.css" rel="stylesheet">
+            <!-- Jasmin CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+            <!-- Jesh CSS -->
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+  </head>
+
+  <body id="page-top">
+
+
+  <!-- Navigation -->
+    <nav  class="navbar navbar-expand-md navbar-light fixed-top" id="mainNav">
+      <div class="container-fluid"  >
+        <div class="custom-navtemp"   >
+          <a class="navbar-brand js-scroll-trigger" href="#page-top" >
+            <img class="img-fluid imagelogo img-lg" src="img/Medicon.png" alt="Medicon Logo" style="height: 100px;z-index: 1000;"></a>
+              
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav ml-auto pull-right">
+                <li class="nav-item">
+
+                  <!-- jas 11-29-17 --><li class="top-nav">
+                    <p>Hi Maricar! |</p>
+                    <a href="index.html" class="btn btn-secondary btn-lg btn-icon1" role="button" aria-pressed="true"><img src="img/circle-icons/icon2.png"></a>
+                    <a href="http://192.168.137.238:3031" class="btn btn-secondary btn-lg btn-icon1" role="button" aria-pressed="true"><img src="img/circle-icons/icon1.png"></a>
+                   </li>
+                  </li> <!--end jas 11-29-17 -->
+
+                  <!--profile pic dropdown -->
+                  <li class="nav-item dropdown img-index">
+                    <a class="nav-link dropdown-toggle img-hov" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img class="img-circle pull-right" src="img/circle-icons/profile-icon.png" alt="" height="100" width="100">
+                    </a>
+
+                    <div class="dropdown-menu img-dropindex img-dropindextwo" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="editprofile.html?tab=1">Edit Profile</a>
+                      <a class="dropdown-item" href="editprofile.html?tab=2">Settings</a>
+                    </div>
+                  </li>
+
+                </li><!-- end nav-item -->
+              </ul><!-- end navbar-nav -->
+            </div><!-- end navbar-collapse -->
+
+        </div><!-- custom-navtemp -->
+      </div><!-- container -->
+    </nav><!-- end nav -->
+
+    <!-- jas 11-29-17 --><!--BACKGROUND-->
+    <div class="backport backport-img" id="backport">
+      <ul class="stluke img-reponsive img-r img-rtwo cb-slideshow cb-template">
+        <li><span>Image 01</span></li>
+        <li><span>Image 02</span></li>
+        <li><span>Image 03</span></li>
+        <li><span>Image 04</span></li>
+        <li><span>Image 05</span></li>
+        <li><span>Image 06</span></li>
+      </ul>
+    </div>
+    <!--END BACKGROUND--> <!-- end jas 11-29-17 -->
+
+    <section id="template">
+      <div class="container c-wid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="bdtemplate">
+              <div class="row mx-auto">
+                <!--Change new button tabs jesh-->
+                  <!--tabs-->
+                 <div class="tab">
+                        <button class="tablinks" id="defaultOpen"  onclick="openCity(event, 'Create')"><b>Create New Inquiries</b></button>
+                        <button class="tablinks"  onclick="openCity(event, 'View')"><b>View Inquiries</b></button>
+                      </div>
+
+                  <!--Start Create Tab 1-->
+                      <div id="Create" class="tabcontent">
+                        <div class="row">
+                          <div class="row col-sm-12">
+                            <div class="col-sm-3"><br/>
+                              <label>Type of Inquiries</label>
+                            </div>
+                            <div class="col-sm-4"></br>
+                               <select id="show" class="form-control" name="show_text_area" onchange="change(this)">
+                                <option value="0" selected>-Select Inquiries-</option>
+                                <option value="1">Doctor's Inquiry</option>
+                                <option value="1">Inquiry 2</option>
+                                <option value="1">Inquiry 3</option>
+                              </select></br>
+                            </div>
+                            <div class="col-sm-12"  id="showdiv" style="display: none">
+                               <div class="row col-sm-12">
+                                <div class="col-sm-3">
+                                  <button type="button" class="btn btn-primary">Search Patient</button><!--data-target="#exampleModal1"--> 
+                                </div>
+                                <div class="col-sm-4">
+                                  <input type="text" name="search" class="form-control">
+                                </div>
+                                <div class="col-sm-1"><button class="form-control btn-danger glyphicon glyphicon-trash"></button></div>
+                              </div>
+
+                              <div class="row col-sm-12">
+                                <div class="col-sm-3">
+                                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">Doctor Search</button>
+                                </div>
+                                <div class="col-sm-4">
+                                  <input type="text" name="search" class="form-control">
+                                </div>
+                                <div class="col-sm-2">
+                                  <label>Doctor's PF</label>
+                                </div>
+                                <div class="col-sm-2">
+                                  <input type="text" name="search" class="form-control">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      <div style="border:1px solid black;margin-top: 10px;"></div>
+                      <h5>Inquiry Details:</h5>
+                      <div class="col-sm-12">
+                        <textarea class="form-control"  rows="9" cols="50"></textarea>
+                      </div>
+                        <center>
+                          <button class="btn btn-primary">Create</button>
+                          <button class="btn btn-primary">Cancel</button>
+                        </center>
+                    </div>
+                  <!--End Tab 1 create-->
+
+                  <!--Tab 2 view-->
+                    <div id="View" class="tabcontent">
+                      <div class="container c-SPcalendar">
+                        <div class="modal-body mx-auto">
+                          <p>Search Option</p>
+                          <div class="row mx-auto">
+                            <form enctype="multipart/form-data" id="searchPatientForm" method="post" action="/medicon/reports.html">
+                              <div class="col-md-12 SP-col-sm-12 SI-col-sm-12">
+                                <div class="row" style="margin-bottom: 5px;">
+                                  <label class="col-md-3 smsall-form-label" for="colFormLabel">
+                                    Type of Inquiries:
+                                  </label>
+                                  <div class="col-md-3">
+                                    <div id="selectize1">
+                                      <select class="form-control" id="searchParam" name="searchParam" onchange="searchParamChange()" required="">
+                                       <option value="0">-Select Inquiries-</option>
+                                        <option selected value="1">Doctor's Inquiry</option>
+                                        <option value="1">Inquiry 2</option>
+                                        <option value="1">Inquiry 3</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-1"></div>
+                                </div> <!-- end SI-col-sm-12 -->
+                                <div class="row" style="margin-bottom: 5px;">
+                                  <label class="col-md-3 smsall-form-label" for="colFormLabel">
+                                    Inquiry Date:
+                                  </label>
+                                  <div class="input-group date col-md-3" id="fromDateDiv1" style="float: left; padding: 0 15px;">
+                                    <input class="form-control" id="fromDate1" name="fromDate1" placeholder="Start Date" required="required" type="text"> <span class="input-group-addon"> <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                  </div>
+                                  <label class="col-md-1 to-form-label" for="colFormLabel">
+                                    To
+                                  </label>
+                                  <div class="input-group date col-md-3" id="toDateDiv1" style="float: left; padding: 0 15px;">
+                                    <input class="form-control" id="toDate1" name="toDate1" placeholder="End Date" required="required" type="text">
+                                    <span class="input-group-addon"> <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                  </div>
+                                  <div class="col-md-2"></div>
+                                  <div class="col-md-1 pad-md-2"></div>
+                                </div><!-- end row -->
+
+                                <div class="row row-botUti">
+                                  <label class="col-md-3 smsall-form-label" for="colFormLabel">
+                                    Location:
+                                  </label>
+                                  <div class="col-md-3">
+                                    <input class="form-control" disabled="" id="location" name="location" onchange="checkIfEmpty()" value="GC" type="text">
+                                    <input class="form-control" id="loc" name="loc" onchange="checkIfEmpty()" value="GC" type="hidden">
+                                    <!--<input type="text" name="firstname" class="form-control" placeholder="Quezon City">-->
+                                  </div>
+
+                                  <div class="col-md-2"></div>
+
+                                  <div class="col-md-2 r-wsms5">
+                                  <button class="btn btn-primary btn-SC wpad-md-1 wpad-ut waves-effect waves-light" id="search" onclick="validateAllInputs();" type="button">
+                                    Search
+                                  </button>
+                                </div>
+
+                                <div class="col-md-2 pull-right r-wsms4">
+                                  <button class="btn btn-primary btn-SC wpad-md-2 wpad-ut waves-effect waves-light" onclick="clearInput()" type="button">
+                                    Clear
+                                  </button>
+                                </div>
+                            </div><!-- end row -->
+                        </div><!-- col-sm-12 -->
+                      </form>
+
+                      <div class="panel panel-info panel-calendar">
+                        <div class="panel-body">
+                          <div>
+                              <div id="example3_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                                <div class="row">
+                                  <div class="col-sm-6">
+                                  </div>
+                                  <div class="col-sm-6">
+                                  </div>
+                                </div>
+                                   <div class="row">
+                                    <div class="col-sm-12">
+                                      <table class="table table-bordered large-only responsive-example-table dataTable no-footer stacktable" id="example" style="margin-top: 0 !important;" table="" role="grid" cellspacing="0">
+                                        <thead id="headtb">
+                                          <tr role="row">
+                                            <th style="text-align: center; width: 142px;" class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Transaction Date: activate to sort column ascending">TYPE OF INQUIRY</th>
+                                            <th style="text-align: center; width: 142px;" class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Company: activate to sort column ascending">CREATED DATETIME</th>
+                                            <th style="text-align: center; width: 190px;" class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Patient Name: activate to sort column ascending">CREADTED BY</th><th style="text-align: center; width: 95px;" class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="ACTION: activate to sort column ascending">ACTION</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>Doctor's Inquiry</td>
+                                            <td>01/10/2018 12:01:00</td>
+                                            <td>Username1</td>
+                                            <td><center>
+                                              <button class="form-control btn-primary">View</button></center>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>Doctor's Inquiry</td>
+                                            <td>01/10/2018 12:01:00</td>
+                                            <td>Username1</td>
+                                            <td><center>
+                                              <button class="form-control btn-primary">View</button></center>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>Doctor's Inquiry</td>
+                                            <td>01/10/2018 12:01:00</td>
+                                            <td>Username1</td>
+                                            <td><center>
+                                              <button class="form-control btn-primary">View</button></center>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>Doctor's Inquiry</td>
+                                            <td>01/10/2018 12:01:00</td>
+                                            <td>Username1</td>
+                                            <td><center>
+                                              <button class="form-control btn-primary">View</button></center>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>Doctor's Inquiry</td>
+                                            <td>01/10/2018 12:01:00</td>
+                                            <td>Username1</td>
+                                            <td><center>
+                                              <button class="form-control btn-primary">View</button></center>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>Doctor's Inquiry</td>
+                                            <td>01/10/2018 12:01:00</td>
+                                            <td>Username1</td>
+                                            <td><center>
+                                              <button class="form-control btn-primary">View</button></center>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>Doctor's Inquiry</td>
+                                            <td>01/10/2018 12:01:00</td>
+                                            <td>Username1</td>
+                                            <td><center>
+                                              <button class="form-control btn-primary">View</button></center>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>Doctor's Inquiry</td>
+                                            <td>01/10/2018 12:01:00</td>
+                                            <td>Username1</td>
+                                            <td><center>
+                                              <button class="form-control btn-primary">View</button></center>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>Doctor's Inquiry</td>
+                                            <td>01/10/2018 12:01:00</td>
+                                            <td>Username1</td>
+                                            <td><center>
+                                              <button class="form-control btn-primary">View</button></center>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>Doctor's Inquiry</td>
+                                            <td>01/10/2018 12:01:00</td>
+                                            <td>Username1</td>
+                                            <td><center>
+                                              <button class="form-control btn-primary">View</button></center>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>Doctor's Inquiry</td>
+                                            <td>01/10/2018 12:01:00</td>
+                                            <td>Username1</td>
+                                            <td><center>
+                                              <button class="form-control btn-primary">View</button></center>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>Doctor's Inquiry</td>
+                                            <td>01/10/2018 12:01:00</td>
+                                            <td>Username1</td>
+                                            <td><center>
+                                              <button class="form-control btn-primary">View</button></center>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>Doctor's Inquiry</td>
+                                            <td>01/10/2018 12:01:00</td>
+                                            <td>Username1</td>
+                                            <td><center>
+                                              <button class="form-control btn-primary">View</button></center>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>Doctor's Inquiry</td>
+                                            <td>01/10/2018 12:01:00</td>
+                                            <td>Username1</td>
+                                            <td><center>
+                                              <button class="form-control btn-primary">View</button></center>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-sm-5"></div>
+                                    <div class="col-sm-7"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row"><div class="col-sm-5"></div>
+                            <div class="col-sm-7"></div>
+                          </div></div>
+                          </div>
+                        </div><!-- end panel body -->
+
+                      </div><!-- end panel -->
+
+                    </div><!-- row -->
+                  </div><!-- body -->
+                </div><!-- row -->
+              </div><!-- container -->               
+              </div>
+            </div>
+            </div>
+        <!-- jas 11-29-17 --><!--start of icons-->
+        <div class="row  iconbelowinquiry iconbelowinquiry-ref">
+            <div class="col-md-2 col-md-offset-1 below-icon-inq">
+              <a href="">
+                <img  class="img-fluid img-iconsz img-reficons" src="img/circle-icons/Search_2-Circle-icons.png" alt="" height="170" width="170">
+              </a>
+            </div>
+            <div class="col-md-2 below-icon-inq">
+              <a href="">
+                <img class="img-fluid img-iconsz img-reficons" src="img/circle-icons/calendar-Circle-icons.png" alt="" height="170" width="170">
+              </a>
+            </div>
+            <div class="col-md-2 below-icon-inq">
+              <a href="">
+                <img class="img-fluid img-iconsz img-reficons" src="img/circle-icons/Message_3-Circle-icons.png" alt="" height="170" width="170">
+              </a>
+            </div>
+            <!--jesh new icon inquiry 02-15-2018-->
+            <div class="col-md-2 below-icon-inq">
+              <a href="" style="cursor: not-allowed;">
+                <img class="img-fluid img-iconsz img-reficons" src="img/circle-icons/Inquiry-Circle-icon.png" alt="" style="filter: grayscale(100%) blur(2px);" height="170" width="170">
+              </a>
+            </div>
+            <!--end jesh-->
+            <div class="col-md-2 below-icon-inq">
+              <a href="">
+                <img class="img-fluid img-iconsz img-reficons" src="img/circle-icons/Reference-Circle-icons.png" alt="" height="170" width="170">
+              </a>
+            </div>
+        </div><!--end jas 11-29-17 -->
+          
+        </div>
+    </div>
+  </div>
+</section>
+<!--end-->
+
+       <!-- Footer -->
+    <footer class="footer text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+          </div>
+          <div class="col-md-4"><p class="footer-sz">Medicon Version 1.1 rev 389</p></div>
+          <div class="col-md-4">
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+<!--Modal View-->
+<div class="modal fade modal-inq" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content modal-bg">
+          <div class="modal-header"></div>
+
+              <div class="modal-body m-bd">
+                <div class="modal-border m-br">
+                  
+                <table id="example3" class="table table-striped responsive-example-table" cellspacing="0">              
+                          <thead id="headtb">
+                            <th class="let-s">NAME</th>
+                            <th class="let-s">SPECIALIZATION</th>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><a onclick="close_modal()">ABAD, RAINERIO S</a></td>
+                              <td>OBSTETRICS GYNECOLOGY</td>
+                            </tr>
+                            <tr>
+                              <script type="text/javascript">
+                                function close_modal(){
+                                  $('#exampleModal2').modal('hide');$('body').removeClass('modal-open'); 
+                                  $('.modal-backdrop').hide();
+                                }
+                              </script>
+                              <td class="p-text">ABAD, LORNA RAMOS</td>
+                              <td>PEDIATRICS</td>
+                            </tr>
+                            <tr>
+                              <td class="p-text">ABASCO, DELFIN LIM</td>
+                              <td>DENTISTRY AND ORAL SURGERY</td>
+                            </tr>
+                            <tr>
+                              <td class="p-text">ABAYA, CAMILLE ANN CASTANEDA</td>
+                              <td>OBSTETRIC GYNECOLOGY</td>
+                            </tr>
+
+                            <tr>
+                              <td class="p-text">ABANO, JESSICA MAE REYES</td>
+                              <td>OPTHALMOLOGY</td>
+                            </tr>
+                               <tr>
+                              <td class="p-text">ABANO, JOEL ANTHONY GALAN</td>
+                              <td>OTORHINOLARYNGOLOGY AND HEAD AND NECK SURGERY</td>
+                            </tr>
+                            <tr>
+                              <td class="p-text">ABAR, MARC EVANS MALONZO</td>
+                              <td>GERITRIC MEDICINE</td>
+                            </tr>
+                            <tr>
+                              <td class="p-text">ABAD, MARCO JOSE FULVIO CICOLI</td>
+                              <td>SURGERY</td>
+                            </tr>
+                            <tr>
+                              <td class="p-text">ABAD SANTOS, SALVADOR MICLAT</td>
+                              <td>INTERNAL MEDICINE</td>
+                            </tr>
+                            <tr>
+                              <td class="p-text">ABAD SANTOS, SALVADOR MICLAT</td>
+                              <td>INTERNAL MEDICINE</td>
+                            </tr>
+                            <tr>
+                              <td class="p-text">ABAD SANTOS, SALVADOR MICLAT</td>
+                              <td>INTERNAL MEDICINE</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+                  </div>
+            <div class="modal-footer">
+              <center>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+              </center>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end-->
+
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+    <div class="scroll-top d-lg-none">
+      <a class="btn btn-primary js-scroll-trigger" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="js/popper/popper.min.js"></script>
+        <script src="js_v3/jquery-3.2.1.min.js"></script>
+        <script src="js_v3/bootstrap.min.js"></script>
+        <script src="js_v3/custom.js"></script>
+            <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="js_v3/popper.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="js_v3/mdb.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="js/jquery-easing/jquery.easing.min.js"></script>
+        <!-- Custom scripts for this template -->
+        <script src="js/freelancer.min.js"></script>
+
+    <!--Data Tables-->
+    <script src="DataTables-1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="DataTables-1.10.16/js/dataTables.bootstrap.js"></script>
+    <script src="js/stacktable.js"></script>
+
+<!--Datepicker--> 
+<script type="text/javascript">
+  var datefield=document.createElement("input")
+  datefield.setAttribute("type", "date")
+  if (datefield.type!="date"){ //if browser doesn't support input type="date", load files for jQuery UI Date Picker
+    document.write('<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />\n')
+    document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"><\/script>\n')
+    document.write('<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"><\/script>\n') 
+  }
+</script>
+    <script type="text/javascript" charset="utf-8">
+      $('#example3').dataTable( {
+          "bFilter": true,
+          "order": [],
+          "columnDefs": [ {
+            "targets"  : 'no-sort',
+            "orderable": false,
+          }]
+      });
+      $('.responsive-example-table').stacktable({myClass:'stacktable large-only'});
+
+      $('#example4').dataTable( {
+          "bFilter": true,
+          "order": [],
+          "columnDefs": [ {
+            "targets"  : 'no-sort',
+            "orderable": false,
+          }]
+      });x
+
+        $('#example').dataTable( {
+        "bFilter": true,
+        "order": [],
+        "columnDefs": [ {
+            "targets"  : 'no-sort',
+            "orderable": false,
+        }]
+    });
+  </script>
+    <!-- Tab -->
+
+<!--jesh for the create inquiry show and hie div-->
+<script type="text/javascript">
+function change(obj) {
+    var selectBox = obj;
+    var selected = selectBox.options[selectBox.selectedIndex].value;
+    var div = document.getElementById("showdiv");
+
+    if(selected === '1'){
+        div.style.display = "block";
+    }
+    else{
+        div.style.display = "none";
+    }
+}
+</script>
+  <!-- Tab -->
+  <script>
+    /*<![CDATA[*/
+
+    $(document).ready(function() {
+      var searchedWord = null
+      var category = null;
+      if(category != ""){
+      if (category == "MODULE") {
+        $("#moduleCategory").css({
+          'display' : 'block'
+        });
+        $("#moduleDropdown").val(searchedWord);
+        $("option[value='10']").attr('selected','selected');
+        $("#otherCategory").css({
+          'display' : 'none'
+        });
+      } else if(category == "USERNAME" || category == "ACTION"){
+        $("#otherCategory").css({
+          'display' : 'block'
+        });
+        $("#searchWord").val(searchedWord);
+        $("#moduleCategory").css({
+          'display' : 'none'
+        });
+      }
+      }
+      var today = moment().format('MM/DD/YYYY');
+      $('#fromDateDiv').datetimepicker({
+        //              minDate: today,
+        //                      defaultDate: '',
+        maxDate: today,
+        format : "MMMM DD, YYYY"
+
+      });
+
+      $('#toDateDiv').datetimepicker({
+        //              minDate: today,
+        //                      defaultDate: '',
+        maxDate: today,
+        format : "MMMM DD, YYYY",
+        useCurrent : false
+      });
+      $("#fromDateDiv").on("dp.change", function(e) {
+        $('#toDateDiv').data("DateTimePicker").minDate(e.date);
+      });
+      $("#toDateDiv").on("dp.change", function(e) {
+        $('#fromDateDiv').data("DateTimePicker").maxDate(e.date);
+      });
+    });
+
+    /*]]>*/
+  </script>
+  <script>
+    /*<![CDATA[*/
+
+        $(document).ready(function() {
+            var today = moment().format('MM/DD/YYYY');
+            $('#fromDateDiv1').datetimepicker({
+                //              minDate: today,
+                //                      defaultDate: '',
+                maxDate: today,
+                format : "MMMM DD, YYYY"
+
+            });
+
+            $('#toDateDiv1').datetimepicker({
+                //              minDate: today,
+                //                      defaultDate: '',
+                maxDate: today,
+                format : "MMMM DD, YYYY",
+                useCurrent : false
+            });
+            $("#fromDateDiv1").on("dp.change", function(e) {
+                $('#toDateDiv1').data("DateTimePicker").minDate(e.date);
+            });
+            $("#toDateDiv1").on("dp.change", function(e) {
+                $('#fromDateDiv1').data("DateTimePicker").maxDate(e.date);
+            });
+        });
+
+    /*]]>*/
+  </script>
+    
+
+    <!--jesh 02-15-2018-->
+   <!-- Tab -->
+      <script>
+      function openCity(evt, Name) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(Name).style.display = "block";
+          evt.currentTarget.className += " active";
+      }
+          document.getElementById("defaultOpen").click();
+      </script>
+    <!--end jesh -->
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="js/popper/popper.min.js"></script>
+        <script src="js_v3/jquery-3.2.1.min.js"></script>
+        <script src="js_v3/bootstrap.min.js"></script>
+        <script src="js_v3/custom.js"></script>
+            <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="js_v3/popper.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="js_v3/mdb.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="js/jquery-easing/jquery.easing.min.js"></script>
+        <!-- Custom scripts for this template -->
+        <script src="js/freelancer.min.js"></script>
+
+    <!--Data Tables-->
+    <script src="DataTables-1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="DataTables-1.10.16/js/dataTables.bootstrap.js"></script>
+    <script src="js/stacktable.js"></script>
+  </body><!-- end -->
+</html><!-- end -->

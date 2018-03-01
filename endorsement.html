@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<!--jasmin--> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--end jasmin-->  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Medical Concierge Application</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css_v3/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+    <!-- Datables-->
+    <link href="DataTables-1.10.16/css/dataTables.bootstrap.css" rel="stylesheet">  
+    <link href="css/stacktable.css" rel="stylesheet">
+
+        <!-- Material Design Bootstrap -->
+    <link href="css_v3/mdb.min.css" rel="stylesheet">
+            <!-- Jasmin CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+            <!-- Jesh CSS -->
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+  </head>
+
+  <body id="page-top">
+
+
+  <!-- Navigation -->
+    <nav  class="navbar navbar-expand-md navbar-light fixed-top" id="mainNav">
+      <div class="container-fluid"  >
+        <div class="custom-navtemp"   >
+          <a class="navbar-brand js-scroll-trigger" href="#page-top" >
+            <img class="img-fluid imagelogo img-lg" src="img/Medicon.png" alt="Medicon Logo" style="height: 100px;z-index: 1000;">
+          </a>
+              
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav ml-auto pull-right">
+                <li class="nav-item">
+
+                  <!-- jas 11-29-17 -->
+                  <li class="top-nav">
+                    <p>Hi Maricar! |</p>
+                    <a href="index.html" class="btn btn-secondary btn-lg btn-icon1" role="button" aria-pressed="true"><img src="img/circle-icons/icon2.png"></a>
+                    <a href="http://192.168.137.238:3031" class="btn btn-secondary btn-lg btn-icon1" role="button" aria-pressed="true"><img src="img/circle-icons/icon1.png"></a>
+                  </li>
+                  <!--end jas 11-29-17 -->
+
+                  <!--profile pic dropdown -->
+                  <li class="nav-item dropdown img-index">
+                    <a class="nav-link dropdown-toggle img-hov" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img class="img-circle pull-right" src="img/circle-icons/profile-icon.png" alt="" height="100" width="100">
+                    </a>
+
+                    <div class="dropdown-menu img-dropindex img-dropindextwo" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="editprofile.html?tab=1">Edit Profile</a>
+                      <a class="dropdown-item" href="editprofile.html?tab=2">Settings</a>
+                    </div>
+                  </li>
+                </li><!-- end nav-item -->
+              </ul><!-- end navbar-nav -->
+            </div><!-- end navbar-collapse -->
+          </div><!-- custom-navtemp -->
+        </div><!-- container -->
+      </nav><!-- end nav -->
+
+    <!-- jas 11-29-17 --><!--BACKGROUND-->
+    <div class="backport backport-img" id="backport">
+      <ul class="stluke img-reponsive img-r img-rtwo cb-slideshow cb-template">
+        <li><span>Image 01</span></li>
+        <li><span>Image 02</span></li>
+        <li><span>Image 03</span></li>
+        <li><span>Image 04</span></li>
+        <li><span>Image 05</span></li>
+        <li><span>Image 06</span></li>
+      </ul>
+    </div>
+    <!--END BACKGROUND--> <!-- end jas 11-29-17 -->
+
+    <section id="template">
+      <div class="container c-wid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="bdtemplate">
+              <div class="row mx-auto">
+                <!--Change new button tabs jesh-->
+                  <!--tabs-->
+                 <div class="tab">
+                    <button class="tablinks" id="defaultOpen" onclick="openCity(event, 'Create')"><b>Create Endorsement</b></button>
+                    <button class="tablinks" onclick="openCity(event, 'View')"><b>View Endorsement</b><span class="inbox-notif pull-right">1</span></button>
+                  </div>
+
+                  <!--Start Create Tab 1-->
+                      <div id="Create" class="tabcontent">
+                        <div class="row">
+                          <div class="row col-sm-12" style="padding-left: 25px;">
+                            <div class="col-sm-1"><br>
+                              <label style="padding: 5px;">Subject</label>
+                            </div>
+                            <div class="col-sm-4"><br>
+                              <select id="show" class="form-control" name="show_text_area" onchange="change(this)">
+                                <option value="0" selected>-Select Subject-</option>
+                                <option value="1">SPECIAL ARRANGEMENTS</option>
+                                <option value="1">Subject 2</option>
+                                <option value="1">Subject 3</option>
+                              </select><br>
+                            </div>
+                            <div class="col-sm-9">
+                              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">Search Admitted Patient</button><br>
+                            </div>
+                            <div class="col-sm-12"  id="showdiv" style="display: none;padding-top: 10px;">
+                               <div class="row col-sm-12">
+                                <h4>Jesh Dela Cruz</h4>
+                                <p>Visit Number: 119878768</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      <div style="border:2px solid black;margin-top: 8px;"></div>
+                      <h5>Endorsement Details:</h5>
+                      <div class="col-sm-12">
+                        <textarea class="form-control"  rows="7" cols="50"></textarea>
+                      </div>
+                      <div class="row col-sm-12">
+                        <div class="row col-sm-12">
+                          <div class="col-sm-2">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3">Asignee</button><!--data-target="#exampleModal1"--> 
+                          </div>
+                          <div class="col-sm-3">
+                            <input type="text" name="search" class="form-control">
+                          </div>
+                          <div class="col-sm-1 ">
+                            <button class="form-control btn-xs btn-danger glyphicon glyphicon-trash del-btn"></button><br>
+                          </div>
+                        </div>
+                      </div>
+                        <center>
+                          <button class="btn btn-primary">Create</button>
+                          <button class="btn btn-primary">Cancel</button>
+                        </center>
+                    </div>
+                  <!--End Tab 1 create-->
+
+
+                  <!--Start View Tab 2-->
+                    <div id="View" class="tabcontent">
+                      <div class="row">
+                       <div class="col-md-12 mg-0">
+                        <div class="container" style="padding: 20px;">
+                          <!--jesh 02-28-2018-->
+                          <a id="showhidetrigger" href="#" class="hov-color" style="text-decoration:none">
+                              Search more
+                            <i class="fa fa-arrow-circle-down fa-mgarrow"></i>
+                          </a>
+                          <div id="showhidetarget" style="padding: 10px;display: none">
+                            <div class="form-group row col-md-2" >
+                              <label for="InputName" class="col-md-12">Search By:</label>
+                            </div>
+                            <div class="col-md-4">
+                              <select class="form-control">
+                                <option>sdasd</option>\
+                                <option>dasdasd</option>
+                              </select>
+                            </div>
+                            <div class="col-md-8"></div>
+                            <div class="row col-md-2"></div>
+                            <div class="input-group date col-md-3" id="fromDateDiv1" style="float: left; padding: 0 15px;">
+                              <input class="form-control" id="fromDate1" name="fromDate1" placeholder="Start Date" required="required" type="text"> <span class="input-group-addon"> <span class="glyphicon glyphicon-calendar"></span>
+                              </span>
+                            </div>
+                            <label class="col-md-1 to-form-label" for="colFormLabel">
+                              To
+                            </label>
+                            <div class="input-group date col-md-3" id="toDateDiv1" style="float: left; padding: 0 15px;">
+                              <input class="form-control" id="toDate1" name="toDate1" placeholder="End Date" required="required" type="text">
+                              <span class="input-group-addon"> <span class="glyphicon glyphicon-calendar"></span>
+                              </span>
+                            </div>
+                            <div class="col-md-3">
+                              <button class="btn btn-primary">SEARCH</button>
+                              <button class="btn btn-primary">CLEAR</button></div>
+                            <div class="col-md-1 pad-md-2"></div>
+                          </div>
+                        </div><!--end-->         
+                          <div style="border:2px solid black;"></div>
+                            <div class="row">
+                              <div class="col-sm-12"><br>
+                                <table id="example2" class="table table-striped responsive-example-table" cellspacing="0">    
+                                  <thead id="headtb">
+                                    <tr role="row">
+                                      <th class="let-s">PATIENT'S NAME</th>
+                                      <th class="let-s">DATE CREATED</th>
+                                      <th class="let-s">CREATED BY</th>
+                                      <th class="let-s">ASSIGNEE</th>
+                                      <th class="let-s">ACTION</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="c-text">JUAN DELA CRUZ</td>
+                                      <td class="c-text">01/10/2018</td>
+                                      <td class="c-text">MEDICON</td>
+                                      <td class="c-text">IN HOUSE</td>
+                                      <td class="c-text">
+                                        <button class="form-control btn-primary" class="btn btn-primary" data-toggle="modal" data-target="#view-modal">View</button>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="c-text">JESH DELA CRUZ</td>
+                                      <td class="c-text">01/10/2018</td>
+                                      <td class="c-text">ADMISSION</td>
+                                      <td class="c-text">MEDICON</td>
+                                      <td class="c-text">
+                                        <button class="form-control btn-primary" class="btn btn-primary" data-toggle="modal" data-target="#view-modal">View</button>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="c-text">LUNA DELA CRUZ</td>
+                                      <td class="c-text">01/10/2018</td>
+                                      <td class="c-text">MEDICON</td>
+                                      <td class="c-text">IN HOUSE</td>
+                                      <td class="c-text">
+                                        <button class="form-control btn-primary" class="btn btn-primary" data-toggle="modal" data-target="#view-modal">View</button>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div><!-- end row -->                    
+                          </div><!-- container -->
+                        </div><!-- col-md-12 mg-0  -->
+                      </div><!-- row -->
+                    </div><!--End Tab 1-->
+                  </div>
+                </div><!-- end panel body -->
+              </div><!-- end panel -->
+            </div><!-- row -->           
+
+         
+
+        </div>
+    </div>
+    </section>
+<!--end-->
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+          </div>
+          <div class="col-md-4"><p class="footer-sz">Medicon Version 1.1 rev 389</p></div>
+          <div class="col-md-4">
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+<!--Modal View for search tab 1-->
+<div class="modal fade modal-inq" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content modal-bg">
+      <div class="modal-header">
+        <center>
+          <h3>SEARCH FOR CURRENTLY ADMITTED PATIENT</h3>  
+        </center>        
+      </div>
+      <div class="modal-body m-bd">
+        <div class="modal-border m-br">
+          <div class="row col-sm-12" style="margin-left: .1px; background-color: #deebf3; border:2px solid #c1c3c9;padding:20px 30px 20px 80px;">
+            <div class="row col-sm-12">
+                <div class="col-sm-2">
+                   <label>Search By:</label> 
+                </div>
+
+                <div class="col-sm-4">
+                  <select class="form-control" id="acct_class" onfocus="$('#acct_class').removeClass('error');">
+                    <option value="">Name</option>
+                    <option value="">Date</option>
+                    <option value="">Visit Number</option>
+                  </select>
+                </div>
+
+                <div class="col-sm-4">
+                  <input class="form-control" value="" type="text">
+                </div>
+                <button class="btn btn-primary" type="button">Search</button>
+            </div>
+          </div>
+            <table id="example" class="table table-bordered responsive-example-table no-footer" cellspacing="0">              
+              <thead id="headtb">
+                <th class="let-s"  style="font-size: 12px;">PATIENT'S NAME</th>
+                <th class="let-s">BIRTHDATE</th>
+                <th class="let-s">ADMISSION DATE</th>
+                <th class="let-s">VISIT NUMBER</th>
+                <th class="let-s">ACTION</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="c-text">Jesh Dela Cruz</td>
+                  <td class="c-text">12/30/1996</td>
+                  <td class="c-text">01/01/3000</td>
+                  <td class="c-text">119878768</td>
+                  <td class="c-text"><button class="btn btn-primary">SELECT</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <center>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--end-->
+
+<!--MOdal View for Asignee tab 1-->
+    <div class="modal fade modal-inq" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xs" role="document">
+        <div class="modal-content modal-bg">
+          <div class="modal-header">
+            <center>
+              <h3>ASIGNEE</h3>  
+            </center>        
+          </div>
+          <div class="modal-body m-bd">
+            <div class="modal-border m-br">
+              <dl>
+                <dt>BILLING</dt>
+                <dt>IN HOUSE COLLECTION</dt>
+                <dt>ADMISSION</dt>
+                <dt>SOCIAL SERVICE</dt>
+                <dt>DIVISION OF NURSING</dt>
+              </dl> 
+            </div>
+            <div class="modal-footer">
+              <center>
+                <button type="button" class="btn btn-primary">OK</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!--end-->
+
+    <!--MOdal View for Tab 2-->
+    <div class="modal fade modal-inq" id="view-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content modal-bg">
+          <div class="modal-header">
+            <center>
+              <h3>SPECIAL ARRANGEMENTS</h3>  
+            </center>   
+          </div>
+          <label style="margin-left: 18px;">Endorsement Details</label>
+          <div class="modal-body m-bd">
+            <div class="modal-border m-br" id="unedited_text"  style="height:257px;">
+              Kindly provide the LOG for this patient
+            </div>
+            <div class="modal-footer">
+                <div class="col-md-6">
+                <input id="button_edit" type="button"  class="btn btn-primary pull-right" value="EDIT">
+              </div>
+              <div class="col-md-6">
+                <button type="button" class="btn btn-primary pull-left" data-dismiss="modal">CLOSE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!--end-->
+
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+    <div class="scroll-top d-lg-none">
+      <a class="btn btn-primary js-scroll-trigger" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+
+    <!--Datepicker--> 
+    <script type="text/javascript">
+      var datefield=document.createElement("input")
+      datefield.setAttribute("type", "date")
+      if (datefield.type!="date"){ //if browser doesn't support input type="date", load files for jQuery UI Date Picker
+        document.write('<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />\n')
+        document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"><\/script>\n')
+        document.write('<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"><\/script>\n') 
+      }
+    </script>
+
+    <script>
+    if (datefield.type!="date"){ //if browser doesn't support input type="date", initialize date picker widget:
+      jQuery(function($){ //on document.ready
+        $('#birthday').datepicker();
+      })
+    }
+    </script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/popper/popper.min.js"></script>
+    <script src="js_v3/jquery-3.2.1.min.js"></script>
+    <script src="js_v3/bootstrap.min.js"></script>
+    <script src="js_v3/custom.js"></script>
+        <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js_v3/popper.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js_v3/mdb.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.min.js"></script>
+
+    <!--Data Tables-->
+    <script src="DataTables-1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="DataTables-1.10.16/js/dataTables.bootstrap.js"></script>
+    <script src="js/stacktable.js"></script>
+    <script type="text/javascript" charset="utf-8">
+     $('#example').dataTable( {
+        "bFilter": false,
+        "paging":   false,
+        "info":     false,
+        "order": [],
+        "columnDefs": [ {
+            "targets"  : 'no-sort',
+            "orderable": false,
+          }]
+      });
+      $('.responsive-example-table').stacktable({myClass:'stacktable large-only'});
+
+      $('#example2').dataTable( {
+          "bFilter": false,
+          "order": [],
+          "columnDefs": [ {
+            "targets"  : 'no-sort',
+            "orderable": false,
+          }]
+      });
+    </script>
+      <!--jesh for the create inquiry show and hie div-->
+      <script type="text/javascript">
+      function change(obj) {
+          var selectBox = obj;
+          var selected = selectBox.options[selectBox.selectedIndex].value;
+          var div = document.getElementById("showdiv");
+
+          if(selected === '1'){
+              div.style.display = "block";
+          }
+          else{
+              div.style.display = "none";
+          }
+      }
+      </script><!--end-->
+
+      <!--jesh 02-15-2018-->
+      <script>
+      function openCity(evt, Name) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(Name).style.display = "block";
+          evt.currentTarget.className += " active";
+      }
+          document.getElementById("defaultOpen").click();
+      </script><!--end jesh -->
+
+      <!--jesh 02-27-2018 EDIT UPDATE TEXTAREA-->
+      <script type="text/javascript">
+       $('#button_edit').click(function(){
+          var name = $('#unedited_text').val();
+          $('#unedited_text').html('');
+          $('<textarea>')
+              .attr({
+                  'type': 'text',
+                  'id': 'edited_text',
+                  'rows': '10',
+                  'cols': '63',
+                  'value': name
+              })
+          .appendTo('#unedited_text');
+          $('#edited_text').focus();
+          /*to change the inout button VALUE and id*/
+          $("#button_edit").val("EDIT");
+          $("#button_edit").attr("id", "button_update");
+
+            $("#button_update").unbind("click").click(function () {
+                var name = $('#edited_text').val();
+                $('#unedited_text').text(name);
+                $("#button_update").val("UPDATE");
+                $("#button_update").attr("id", "button_edit");    
+            });
+        });
+      </script><!--end-->
+      <!--jesh 02-28-2018 show hie div-->
+      <script type="text/javascript">
+          $(document).ready(function () {
+              $('#showhidetarget').hide();
+
+              $('a#showhidetrigger').click(function () {
+                  $('#showhidetarget').toggle(400);
+              });
+          });
+      </script>
+      <!--jesh-->
+  </body><!-- end -->
+</html><!-- end -->

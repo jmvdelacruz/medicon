@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<!--jasmin--> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--end jasmin-->    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Medicon</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css_v3/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+    <!-- Datables-->
+    <link href="DataTables-1.10.16/css/dataTables.bootstrap.css" rel="stylesheet">  
+    <link href="css/stacktable.css" rel="stylesheet">
+
+        <!-- Material Design Bootstrap -->
+    <link href="css_v3/mdb.min.css" rel="stylesheet">
+            <!-- Jasmin CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+            <!-- Jesh CSS -->
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+  </head>
+
+
+  <body id="page-top">
+    
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top" id="mainNav">
+      <div class="container-fluid">
+        <div class="custom-navtemp">
+          <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <img class="img-fluid imagelogo img-lg" src="img/Medicon.png" alt="Medicon Logo" style="height: 100px"></a>
+              
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav ml-auto pull-right">
+                <li class="nav-item">
+
+                  <!-- jas 11-29-17 --><li class="top-nav">
+                    <p>Hi Maricar! |</p>
+                    <a href="index.html" class="btn btn-secondary btn-lg btn-icon1" role="button" aria-pressed="true"><img src="img/circle-icons/icon2.png"></a>
+                    <a href="http://192.168.137.238:3031" class="btn btn-secondary btn-lg btn-icon1" role="button" aria-pressed="true"><img src="img/circle-icons/icon1.png"></a>
+                   </li>
+                  </li> <!--end jas 11-29-17 -->
+
+                  <!--profile pic dropdown -->
+                  <li class="nav-item dropdown img-index">
+                    <a class="nav-link dropdown-toggle img-hov" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img class="img-circle pull-right" src="img/circle-icons/profile-icon.png" alt="" height="100" width="100">
+                    </a>
+
+                    <div class="dropdown-menu img-dropindex img-dropindextwo" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="editprofile.html?tab=1">Edit Profile</a>
+                      <a class="dropdown-item" href="editprofile.html?tab=2">Settings</a>
+                    </div>
+                  </li>
+
+                </li><!-- end nav-item -->
+              </ul><!-- end navbar-nav -->
+            </div><!-- end navbar-collapse -->
+
+        </div><!-- custom-navtemp -->
+      </div><!-- container -->
+    </nav><!-- end nav -->
+
+    <!-- jas 11-29-17 --><!--BACKGROUND-->
+    <div class="backport backport-img" id="backport">
+      <ul class="stluke img-reponsive img-r img-rtwo cb-slideshow ">
+        <li><span>Image 01</span></li>
+        <li><span>Image 02</span></li>
+        <li><span>Image 03</span></li>
+        <li><span>Image 04</span></li>
+        <li><span>Image 05</span></li>
+        <li><span>Image 06</span></li>
+      </ul>
+    </div>
+    <!--END BACKGROUND--> <!-- end jas 11-29-17 -->
+    
+    <section id="editprofile">
+      <div class="container c-wprofile">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="bdeditprofile">
+
+          <!--tabs-->
+              <div class="tab tab-radius">
+                <button class="tablinks" id="defaultOpen"  onclick="openCity(event, 'Edit')"><b>Edit Profile</b></button>
+                <button class="tablinks" id="btnAdmin" onclick="openCity(event, 'Admin')"><b>Admin Settings</b></button>
+              </div>
+
+          <!--Start Tab 1-->
+              <div id="Edit" class="tabcontent">
+
+                <div class="row">
+                 <div class="col-md-12 mg-0">
+
+                  <div class="row justify-content-md-center">
+                    <div class="col-md-12 profile-img">
+                      <div class="c-user">User Information
+                      </div> 
+
+                        <div>
+                          <div>                                
+                            <img class="img-circle" src="img/prof.jpg" alt="" height="100" width="100">
+                          </div>
+
+                      <!-- upload button --> 
+                          <div class="btn btn-default file-preview-input"> 
+                            <i class="fa fa-camera-retro" aria-hidden="true"></i> 
+                            <span class="file-preview-input-title"></span>
+                            <input type="file" accept="text/cfg" name="input-file-preview">
+                          </div>
+                        </div>      
+
+                      <div class="c-name">
+                        Maricar S. Paz
+                      </div>  
+
+                    </div><!--profile-img -->
+                  </div><!-- end row -->
+
+                    <!-- form group email.number --> 
+                    <div class="form-group row mg-formgroup">
+                      <div class="col-md-12">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Email</label>
+                        <div class="col-sm-9">
+                          <input type="email" class="form-control" id="colFormLabel" placeholder="Email">
+                        </div>
+                      </div>                  
+                    </div>           
+
+                    <div class="form-group row mg-formgroup">
+                      <div class="col-md-12">
+                        <label for="colFormLabel" class="col-sm-3 col-form-label">Contact Number</label>
+                        <div class="col-sm-9">
+                          <input type="tel" class="form-control" id="colFormLabel" placeholder="Contact Number">
+                        </div>
+                      </div>                  
+                    </div>         
+
+                    <div class="row">
+                      <div class="col-md-12">
+                        <center>
+                          <button type="button" class="btn btn-primary edit-btn">Edit</button>
+                        </center>
+                      </div>
+                    </div><!-- end row -->
+
+                 </div><!-- row col-md-12 mg-0  -->                    
+                </div><!-- row -->
+              </div><!--End Tab 1-->
+
+              <!--Tab 2-->
+                <div id="Admin" class="tabcontent">
+                  <div class="row">
+                    <div class="col-md-12 mg-0">
+
+                      <div class="row justify-content-md-center">
+                        <div class="col-md-12 admin-img ">
+
+                          <div id="front-div">
+                            <div>
+                              <button type="button" id='btncreate' onclick='showCreatediv()' class="btn btn-primary c-userbtn">
+                              <a href="#">Create User Accounts</a>
+                              </button> 
+                            </div> 
+
+                            <div>
+                              <button type="button" class="btn btn-primary c-userbtn" id='btnUpdatetable' onclick='showUpdatetablediv()' >
+                              <a href="#">Update User Accounts</a>
+                              </button> 
+                            </div> 
+                          </div><!-- end div -->
+
+
+                          <div id="create-div" style="display:none">
+                            <div class="row">
+
+                              <div class="col-md-12">
+                                <center class="c-userthree">
+                                  <a class="c-user">Create User Accounts</a> 
+                                </center>
+                              </div> <!-- end col-md-12 -->
+
+                              <div class="col-md-6"> 
+
+                                <div class="col-md-12">
+                                  <center class="c-usertwo c-user">User Profile</a>
+                                  </center>
+                                </div>
+
+                                <label for="colFormLabel" class="col-md-4 col-form-label">First name
+                                </label>
+                                  <div class="col-md-8">
+                                    <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="" required>
+                                  </div>
+
+                                <label for="colFormLabel" class="col-md-4 col-form-label">Middle name
+                                </label>
+                                  <div class="col-md-8">
+                                      <input type="text" class="form-control" id="validationCustom02" placeholder="Middle name" value="" required>
+                                  </div>
+
+                                <label for="colFormLabel" class="col-md-4 col-form-label">Last name
+                                </label>
+                                  <div class="col-md-8">
+                                    <input type="text" class="form-control" id="validationCustom03" placeholder="Last name" value="" required>
+                                  </div>
+
+                                <label for="colFormLabel" class="col-md-4 col-form-label">Suffix
+                                </label>
+                                  <div class="col-md-8">
+                                    <select class="form-control" id="validationCustom04" placeholder="Suffix" value="" required>
+                                      <option>III</option>
+                                      <option>II</option>
+                                      <option>I</option>     
+                                    </select>   
+                                  </div> 
+
+                                <label for="colFormLabel" class="col-md-4 col-form-label">Birthday
+                                </label>
+                                  <div class="col-md-8">
+                                    <input type="date" class="form-control" id="validationCustom05" placeholder="Birthday" value="" required>
+                                  </div>  
+
+                                <label for="colFormLabel" class="col-md-4 col-form-label">Gender
+                                </label>
+                                  <div class="col-md-8">
+                                    <select class="form-control" id="validationCustom06" placeholder="Gender" value="" required>
+                                      <option>Male</option>
+                                      <option>Female</option>
+                                    </select>   
+                                  </div>                                                                                         
+
+                                <label for="colFormLabel" class="col-md-4 col-form-label">Designation
+                                </label>
+                                  <div class="col-md-8">
+                                    <input type="text" class="form-control" id="validationCustom07" placeholder="Last name" value="" required>
+                                  </div>                              
+
+                                <label for="form-check-label" class="col-md-4 form-check-label">Status
+                                </label>
+                                  <div class="col-md-4" style="text-align: left;">
+                                    <input type="radio" class="form-check-input" name="optradio1" id="validationCustom08a" value="" required> Active
+                                  </div>
+                                  <div class="col-md-4" style="text-align: left;">
+                                    <input type="radio" class="form-check-input" name="optradio2" id="validationCustom08b" value="" required> Deactivate
+                                  </div>                              
+
+                              </div><!-- col-md-6 -->    
+
+
+                              <div class="col-md-6">
+
+                                <div class="col-md-12"> 
+                                  <center class="c-usertwo c-user">Contact Information</a>
+                                  </center>
+                                </div> 
+
+                                <label for="colFormLabel" class="col-md-4 col-form-label">Company name
+                                </label>
+                                  <div class="col-md-8">
+                                    <input type="text" class="form-control" id="validationCustom09" placeholder="Company name" value="" required>
+                                  </div>
+
+                                <label for="colFormLabel" class="col-md-4 col-form-label">Company Email</label>
+                                  <div class="col-md-8">
+                                    <input type="email" class="form-control" id="validationCustom10" placeholder="Company Email" value="" required>
+                                  </div>
+
+                                <label for="colFormLabel" class="col-md-4 col-form-label">User Email
+                                </label>
+                                  <div class="col-md-8">
+                                    <input type="email" class="form-control" id="validationCustom11" placeholder="User Email" value="" required>
+                                  </div>
+
+                                <label for="colFormLabel" class="col-md-4 col-form-label">Phone Number
+                                </label>
+                                  <div class="col-md-8">
+                                    <input type="tel" class="form-control" id="validationCustom12" placeholder="Phone Number" value="" required>
+                                  </div>
+
+                                <label for="colFormLabel" class="col-md-4 col-form-label">Mobile Number</label>
+                                  <div class="col-md-8">
+                                    <input type="tel" class="form-control" id="validationCustom13" placeholder="Mobile Number" value="" required>
+                                  </div>   
+
+                                <div class="col-md-12">
+                                  <center class="c-usertwo c-user">User Roles</a>    
+                                  </center> 
+                                </div>     
+
+                                <div class="col-md-12">
+                                  <center>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                        ADD ROLES
+                                    </button>
+                                  </center>
+                                </div>
+
+                              </div><!-- end col-md-6 -->     
+
+                              <div class="col-md-12">
+
+                                <center>
+                                  <button type="button" class="btn btn-primary edit-btn edit-btntwo">Create Account</button>
+                                  <button type="button" class="btn btn-primary edit-btn edit-btntwo" data-dismiss="modal" onclick="hideCreatedDiv()">Cancel</button>
+                                </center>
+
+                              </div><!-- end col-md-12 -->
+
+                            </div><!-- end row -->
+                          </div><!-- end div -->
+
+                          
+
+                          <div id="updatetable-div" style="display:none">
+                            <div class="container-fluid">
+                            <div class="row">
+
+                              <div class="col-md-12">
+                                <center class="c-user c-userfour">Update User Accounts</a> 
+                                </center>
+                              </div> <!-- end col-md-12 -->
+
+                              <div class="col-md-12 input-group">
+                                <div class="input-group-addon">Company Name/ User Email:</div>                                       
+                                  <input type="text" class="form-control formc-h" placeholder="Search for...">
+                                    <span class="input-group-btn">
+                                      <button class="btn btn-secondary btn-search" type="button">Search</button>
+                                    </span>
+                              </div><!-- end col-md-12 -->
+
+                              <div class="panel panel-default panel-pd">
+                                <div class="panel-body panel-pd">
+                                  <table id="example" class="table table-bordered large-only responsive-example-table" cellspacing="0">              
+                                    <thead id="headtb">
+                                          <th class="let-s title-tbadmin">COMPANY NAME</th>
+                                          <th class="let-s title-tbadmin">FULL NAME</th>
+                                          <th class="let-s title-tbadmin_3">USER EMAIL</th>
+                                          <th class="let-s title-tbadmin_4">STATUS</th>
+                                          <th class="let-s title-tbadmin_4">ACTION</th>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <center>
+                                          <td class="p-text">Caller ID Company</td>
+                                          <td class="p-text">Juan Dela Cruz</td>
+                                          <td class="p-text">juandelacruz@caller.com.ph</td>                      
+                                          <td style="text-align: center; font-weight: 400">ACTIVE</td>
+                                          <td style="text-align: center;">
+                                            <a class="btn btn-primary tablebtn-l" href="#" data-toggle="modal" Onclick="showUpdatediv()">SELECT</a>
+                                          </td>
+                                        </center>
+                                      </tr>
+                                    </tbody>
+                                  </table>                      
+                                </div>
+                              </div>
+
+                            </div><!-- end row -->                           
+                            </div><!-- end container -->                           
+                          </div><!-- end div -->
+
+
+                          <div id="update-div" style="display:none">
+                            <div class="row">
+
+                              <div class="col-md-12">
+                                <center class="c-userthree">
+                                  <a class="c-user">Update User Accounts</a> 
+                                </center>
+                              </div> <!-- end col-md-12 -->
+
+                              <div class="col-md-6"> 
+                                <div class="col-md-12">
+                                  <center class="c-usertwo c-user">User Profile</a>
+                                  </center>
+                                </div>
+
+                                <label for="colFormLabel" class="col-md-4 col-form-label">First name
+                                </label>
+                                  <div class="col-md-8">
+                                    <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="" required>
+                                  </div>
+
+                                <label for="colFormLabel" class="col-md-4 col-form-label">Middle name
+                                </label>
+                                  <div class="col-md-8">
+                                      <input type="text" class="form-control" id="validationCustom02" placeholder="Middle name" value="" required>
+                                  </div>
+
+                                <label for="colFormLabel" class="col-md-4 col-form-label">Last name
+                                </label>
+                                  <div class="col-md-8">
+                                    <input type="text" class="form-control" id="validationCustom03" placeholder="Last name" value="" required>
+                                  </div>
+
+                                <label for="colFormLabel" class="col-md-4 col-form-label">Suffix
+                                </label>
+                                  <div class="col-md-8">
+                                    <select class="form-control" id="validationCustom04" placeholder="Suffix" value="" required>
+                                      <option>III</option>
+                                      <option>II</option>
+                                      <option>I</option>     
+                                    </select>   
+                                  </div> 
+
+                                <label for="colFormLabel" class="col-md-4 col-form-label">Birthday
+                                </label>
+                                  <div class="col-md-8">
+                                    <input type="date" class="form-control" id="validationCustom05" placeholder="Birthday" value="" required>
+                                  </div>  
+
+                                <label for="colFormLabel" class="col-md-4 col-form-label">Gender
+                                </label>
+                                  <div class="col-md-8">
+                                    <select class="form-control" id="validationCustom06" placeholder="Gender" value="" required>
+                                      <option>Male</option>
+                                      <option>Female</option>
+                                    </select>   
+                                  </div>                                                                                         
+
+                                <label for="colFormLabel" class="col-md-4 col-form-label">Designation
+                                </label>
+                                  <div class="col-md-8">
+                                    <input type="text" class="form-control" id="validationCustom07" placeholder="Last name" value="" required>
+                                  </div>                              
+
+                                <label for="form-check-label" class="col-md-4 form-check-label">Status
+                                </label>
+                                  <div class="col-md-4" style="text-align: left;">
+                                    <input type="radio" class="form-check-input" name="optradio1" id="validationCustom08a" value="" required> Active
+                                  </div>
+                                  <div class="col-md-4" style="text-align: left;">
+                                    <input type="radio" class="form-check-input" name="optradio2" id="validationCustom08b" value="" required> Deactivate
+                                  </div>                              
+                              </div><!-- col-md-6 -->    
+
+
+                              <div class="col-md-6">
+                                <div class="col-md-12"> 
+                                  <center class="c-usertwo c-user">Contact Information</a>
+                                  </center>
+                                </div> 
+
+                                <label for="colFormLabel" class="col-md-4 col-form-label">Company name
+                                </label>
+                                  <div class="col-md-8">
+                                    <input type="text" class="form-control" id="validationCustom09" placeholder="Company name" value="" required>
+                                  </div>
+
+                                <label for="colFormLabel" class="col-md-4 col-form-label">Company Email</label>
+                                  <div class="col-md-8">
+                                    <input type="email" class="form-control" id="validationCustom10" placeholder="Company Email" value="" required>
+                                  </div>
+
+                                <label for="colFormLabel" class="col-md-4 col-form-label">User Email
+                                </label>
+                                  <div class="col-md-8">
+                                    <input type="email" class="form-control" id="validationCustom11" placeholder="User Email" value="" required>
+                                  </div>
+
+                                <label for="colFormLabel" class="col-md-4 col-form-label">Phone Number
+                                </label>
+                                  <div class="col-md-8">
+                                    <input type="tel" class="form-control" id="validationCustom12" placeholder="Phone Number" value="" required>
+                                  </div>
+
+                                <label for="colFormLabel" class="col-md-4 col-form-label">Mobile Number</label>
+                                  <div class="col-md-8">
+                                    <input type="tel" class="form-control" id="validationCustom13" placeholder="Mobile Number" value="" required>
+                                  </div>   
+
+                                <div class="col-md-12">
+                                  <center class="c-usertwo c-user">User Roles</a>    
+                                  </center> 
+                                </div>     
+
+                                <div class="col-md-12">
+                                  <center>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                        VIEW ROLES
+                                    </button>
+                                  </center>
+                                </div><!-- end col-md-12 -->
+
+                              </div><!-- end col-md-6 -->     
+
+                              <div class="col-md-12">
+                                <center>
+                                  <button type="button" class="btn btn-primary edit-btn edit-btntwo">Create Account</button>
+                                  <button type="button" class="btn btn-primary edit-btn edit-btntwo" data-dismiss="modal" Onclick="hideUpdateDiv()">Cancel</button>
+                                </center>
+                              </div><!-- end col-md-12 -->
+
+                            </div><!-- row  -->
+                          </div><!-- end div -->
+                          
+
+                        </div><!--admin-img -->
+                      </div><!--row -->
+                    </div><!-- mg-0 -->
+                  </div><!-- end row -->                  
+                </div><!--end tab2-->
+
+            </div><!--bededitprofile-->
+          </div><!--col-md-12-->
+        </div><!--row-->
+      </div><!--container-->
+    </section><!--end patient tab-->
+
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top d-lg-none">
+      <a class="btn btn-primary js-scroll-trigger" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+
+   <!-- Footer -->
+    <footer class="footer text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+          </div>
+          <div class="col-md-4"><p class="footer-sz">Medicon Version 1.1 rev 389</p></div>
+          <div class="col-md-4">
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--Modal View-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md modal-custom" role="document">
+            <div class="modal-content modal-bg">
+
+                <div class="modal-header">
+
+                  <h5 class="modal-title" id="exampleModalLabel">Choose Access Roles</h5>
+                    <div class="col-md-12">
+                      <div class="loc-access">Tick Location to Access:</div>
+                        <div class="col-md-3">
+                          <input type="radio" class="form-check-input" name="optradio" id="validationCustom14" value="" required> Global City
+                        </div>
+                        <div class="col-md-3">
+                          <input type="radio" class="form-check-input" name="optradio" id="validationCustom15" value="" required> Quezon City
+                        </div>                   
+                    </div>  
+
+                </div><!-- end modal header -->  
+
+
+                <div class="modal-body m-bd m-bdtwo">
+
+                  <div class="col-md-5 box-pdr">
+                    <center class="title-select">Selection</center>
+                      <div class="modal-border m-br m-brtwo">
+                        <a href="#" role="button" aria-pressed="true">ROLES_SEARCH_REFERENCE</a>
+                        <a href="#" role="button" aria-pressed="true">ROLES_SEARCH_PATIENT</a>
+                      </div>
+                  </div>
+
+                  <div class="col-md-2 all-midd">
+                    <center>
+                      <a href="#" role="button" aria-pressed="true">add all <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                      <a href="#" role="button" aria-pressed="true"><i class="fa fa-angle-double-left" aria-hidden="true"></i> clear all</a>
+                    </center>
+                  </div>                
+
+                  <div class="col-md-5 box-pdl">
+                    <center class="title-select">Selected Roles</center>
+                      <div class="modal-border m-br m-brtwo">
+                        <a href="#" role="button" aria-pressed="true">ROLES_WEB_USER</a>
+                        <a href="#" role="button" aria-pressed="true">ROLES_CREATE_TRANSACTION</a>
+                      </div>
+                  </div>
+
+                </div><!-- end modal body -->
+
+
+                <div class="modal-footer">
+                  <div class="col-md-12">
+                    <center>
+                      <button type="button" class="btn btn-primary">OK</button>
+                      <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                    </center>
+                  </div>
+                </div><!-- end modal footer -->
+
+
+            </div><!-- end modal-content -->
+        </div><!-- end modal-dialog -->
+    </div><!--end-->
+
+
+
+<!--Datepicker--> 
+<script type="text/javascript">
+  var datefield=document.createElement("input")
+  datefield.setAttribute("type", "date")
+  if (datefield.type!="date"){ //if browser doesn't support input type="date", load files for jQuery UI Date Picker
+    document.write('<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />\n')
+    document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"><\/script>\n')
+    document.write('<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"><\/script>\n') 
+  }
+</script>
+
+<script>
+if (datefield.type!="date"){ //if browser doesn't support input type="date", initialize date picker widget:
+  jQuery(function($){ //on document.ready
+    $('#birthday').datepicker();
+  })
+}
+</script>
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="js/popper/popper.min.js"></script>
+        <script src="js_v3/jquery-3.2.1.min.js"></script>
+        <script src="js_v3/bootstrap.min.js"></script>
+        <script src="js_v3/custom.js"></script>
+            <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="js_v3/popper.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="js_v3/mdb.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="js/jquery-easing/jquery.easing.min.js"></script>
+        <!-- Custom scripts for this template -->
+        <script src="js/freelancer.min.js"></script>
+
+    <!--Data Tables-->
+    <script src="DataTables-1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="DataTables-1.10.16/js/dataTables.bootstrap.js"></script>
+    <script src="js/stacktable.js"></script>
+
+    <script type="text/javascript" charset="utf-8">
+      $('#example').dataTable( {
+          "bFilter": false,
+          "order": [],
+          "columnDefs": [ {
+            "targets"  : 'no-sort',
+            "orderable": false,
+          }]
+      });
+      $('.responsive-example-table').stacktable({myClass:'stacktable large-only'});
+
+    </script>
+
+<!-- Tab -->
+  <script>
+  
+    
+  var initUrl = window.location;
+  var tabToOpen = getParameterByName('tab');
+
+    $("#btnAdmin").click(function(){
+          $('.c-wprofile').css('width','925px');
+      });
+    $("#defaultOpen").click(function(){
+          $('.c-wprofile').css('width','725px');
+      });   
+    $("#btnUpdatetable").click(function(){
+          $('.bdeditprofile').css('background','#fff');
+      });   
+   
+  
+    function openCity(evt, Name) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(Name).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+  
+    function getParameterByName(name, url) {
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+    
+    if(tabToOpen == 2){
+      document.getElementById("btnAdmin").click();
+    }else{
+      document.getElementById("defaultOpen").click();
+    }
+
+
+    function showCreatediv(){
+      $('#create-div').show();
+      $('#front-div').hide();
+    }
+
+    function hideCreatedDiv(){
+      $('#create-div').hide();
+      $('#front-div').show();
+    }
+
+    function showUpdatetablediv(){
+      $('#updatetable-div').show();
+      $('#front-div').hide();
+    }
+
+    function hideUpdatetableDiv(){
+      $('#updatetable-div').hide();
+      $('#front-div').show();
+    }
+
+    function showUpdatediv(){
+      $('#update-div').show();
+      $('.bdeditprofile').css('background','rgba(255, 255, 255, 0.6)');    
+      $('#updatetable-div').hide();
+    }
+
+    function hideUpdateDiv(){
+      $('#update-div').hide();
+      $('#front-div').show();
+    }
+
+  </script>
+
+</body>
+</html>

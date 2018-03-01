@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- jas 10-27-17 --><meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Medicon</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css_v3/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+    <!-- Datables-->
+    <link href="DataTables-1.10.16/css/dataTables.bootstrap.css" rel="stylesheet">  
+    <link href="css/stacktable.css" rel="stylesheet">
+
+        <!-- Material Design Bootstrap -->
+    <link href="css_v3/mdb.min.css" rel="stylesheet">
+            <!-- Jasmin CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+            <!-- Jesh CSS -->
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+  </head>
+
+  <body id="page-top">
+      
+    <!-- Navigation -->
+    <nav  class="navbar navbar-expand-md navbar-light fixed-top" id="mainNav">
+      <div class="container-fluid"  >
+        <div class="custom-navtemp"   >
+          <a class="navbar-brand js-scroll-trigger" href="#page-top" >
+            <img class="img-fluid imagelogo img-lg" src="img/Medicon.png" alt="Medicon Logo" style="height: 100px;z-index: 1000;"></a>
+              
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav ml-auto pull-right">
+                <li class="nav-item">
+
+                  <!-- jas 11-29-17 --><li class="top-nav">
+                    <p>Hi Maricar! |</p>
+                    <a href="index.html" class="btn btn-secondary btn-lg btn-icon1" role="button" aria-pressed="true"><img src="img/circle-icons/icon2.png"></a>
+                    <a href="http://192.168.137.238:3031" class="btn btn-secondary btn-lg btn-icon1" role="button" aria-pressed="true"><img src="img/circle-icons/icon1.png"></a>
+                   </li>
+                  </li> <!--end jas 11-29-17 -->
+
+                  <!--profile pic dropdown -->
+                  <li class="nav-item dropdown img-index">
+                    <a class="nav-link dropdown-toggle img-hov" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img class="img-circle pull-right" src="img/circle-icons/profile-icon.png" alt="" height="100" width="100">
+                    </a>
+
+                    <div class="dropdown-menu img-dropindex img-dropindextwo" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="editprofile.html?tab=1">Edit Profile</a>
+                      <a class="dropdown-item" href="editprofile.html?tab=2">Settings</a>
+                    </div>
+                  </li>
+
+                </li><!-- end nav-item -->
+              </ul><!-- end navbar-nav -->
+            </div><!-- end navbar-collapse -->
+
+        </div><!-- custom-navtemp -->
+      </div><!-- container -->
+    </nav><!-- end nav -->
+
+
+	<!--BACKGROUND-->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="backport img-w backport-img" id="backport">
+					<ul class="stluke img-reponsive img-r img-rtwo cb-slideshow cb-lversion pull-left-1sm">
+				     <li><span>Image 01</span></li>
+				     <li><span>Image 02</span></li>
+				     <li><span>Image 03</span></li>
+				     <li><span>Image 04</span></li>
+				     <li><span>Image 05</span></li>
+				     <li><span>Image 06</span></li>
+				   </ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--END BACKGROUND-->
+
+	<section id="utilization_reports">
+		<div class="container c-utilization">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="bdutilization">
+
+						<!--tabs-->
+						<div class="tab tab-radius tab-sms">
+							<button class="tablinks active" id="defaultOpen" onclick="openCity(event, 'utilization')" type="button">
+								<b>Utilization</b>
+							</button>
+							<button class="tablinks" id="auditTabOpen" onclick="openCity(event, 'auditTrail')" type="button">
+								<b>Audit Trail</b>
+							</button>
+						</div>
+
+						<!--Start Tab 1-->
+						<div class="tabcontent" id="utilization" style="display: block;">
+
+							<div class="container c-SPcalendar">
+								<div class="row">
+									<div class="modal-body mx-auto">
+										<p>Search Option</p>
+										<div class="row mx-auto">
+											<form enctype="multipart/form-data" id="searchPatientForm" method="post" action="/medicon/reports.html">
+												<div class="col-md-12 SP-col-sm-12 SI-col-sm-12">
+													<div class="row" style="margin-bottom: 5px;">
+														<label class="col-md-2 smsall-form-label" for="colFormLabel">
+															Search Parameter:
+														</label>
+														<div class="col-md-3">
+															<div id="selectize1">
+																<select class="form-control" id="searchParam" name="searchParam" onchange="searchParamChange()" required="">
+																	<option value="">Search Parameter</option>
+																	<option value="ACCOUNT CLASS">ACCOUNT CLASS</option>
+																	<option value="NATIONALITIES">NATIONALITIES</option>
+																</select>
+															</div>
+														</div>
+														<!--HIDE                          <div class="col-md-3">
+                                                                                            <input type="text" name="name" class="form-control" placeholder="All">
+                                                                                          </div> -->
+														<div class="col-md-3" id="accountClassDiv" style="display: none;">
+															<!--account class-->
+															<div id="selectize2">
+																<select class="no-search selectized" id="accountClass" name="accountClass" onchange="populateSelectizeValue()" tabindex="-1" style="display: none;"><option value="" selected="selected"></option></select><div class="selectize-control no-search single"><div class="selectize-input items not-full has-options"><input autocomplete="off" tabindex="" id="accountClass-selectized" style="width: 4px;" type="text"></div></div>
+															</div>
+														</div>
+														<div class="col-md-3" id="partnerDiv" style="display: none;">
+															<div id="selectize3">
+																<select id="partner" maxlength="80" name="partner" tabindex="-1" style="display: none;" class="selectized"><option value="ALL" selected="selected">ALL</option></select><div class="selectize-control single"><div class="selectize-input items full has-options has-items"><div class="item" data-value="ALL">ALL</div><input autocomplete="off" tabindex="" id="partner-selectized" style="width: 4px;" type="text"></div></div>
+															</div>
+														</div>
+														<div class="col-md-3" id="defaultDiv">
+															<div id="def">
+																<input class="form-control" id="defaultVal" name="defaultVal" value="ALL">
+															</div>
+														</div>
+														<div class="col-md-3" id="nationalityDiv" style="display: none;">
+															<div id="selectize4">
+																<select id="nationality" maxlength="50" name="nationality" tabindex="-1" style="display: none;" class="selectized"><option value="ALL" selected="selected">ALL</option></select><div class="selectize-control single"><div class="selectize-input items full has-options has-items"><div class="item" data-value="ALL">ALL</div><input autocomplete="off" tabindex="" id="nationality-selectized" style="width: 4px;" type="text"></div></div>
+															</div>
+														</div>
+
+														<div class="col-md-1"></div>
+													</div> <!-- end SI-col-sm-12 -->
+													<div class="row" style="margin-bottom: 5px;">
+														<label class="col-md-2 smsall-form-label" for="colFormLabel">
+															Document Date:
+														</label>
+														<div class="input-group date col-md-3" id="fromDateDiv1" style="float: left; padding: 0 15px;">
+															<input class="form-control" id="fromDate1" name="fromDate1" placeholder="Start Date" required="required" type="text"> <span class="input-group-addon"> <span class="glyphicon glyphicon-calendar"></span>
+															</span>
+														</div>
+														<label class="col-md-1 to-form-label" for="colFormLabel">
+															To
+														</label>
+														<div class="input-group date col-md-3" id="toDateDiv1" style="float: left; padding: 0 15px;">
+															<input class="form-control" id="toDate1" name="toDate1" placeholder="End Date" required="required" type="text">
+															<span class="input-group-addon"> <span class="glyphicon glyphicon-calendar"></span>
+															</span>
+														</div>
+
+														<div class="col-md-2"></div>
+
+														<div class="col-md-1 pad-md-2"></div>
+													</div><!-- end row -->
+
+													<div class="row row-botUti">
+														<label class="col-md-2 smsall-form-label" for="colFormLabel">
+															Location:
+														</label>
+														<div class="col-md-3">
+															<input class="form-control" disabled="" id="location" name="location" onchange="checkIfEmpty()" value="GC" type="text">
+															<input class="form-control" id="loc" name="loc" onchange="checkIfEmpty()" value="GC" type="hidden">
+															<!--<input type="text" name="firstname" class="form-control" placeholder="Quezon City">-->
+														</div>
+
+														<div class="col-md-3"></div>
+
+														<div class="col-md-2 r-wsms5">
+														<button class="btn btn-primary btn-SC wpad-md-1 wpad-ut waves-effect waves-light" id="search" onclick="validateAllInputs();" type="button">
+															Search
+														</button>
+													</div>
+
+														<div class="col-md-2 pull-right r-wsms4">
+															<button class="btn btn-primary btn-SC wpad-md-2 wpad-ut waves-effect waves-light" onclick="clearInput()" type="button">
+																Clear
+															</button>
+														</div>
+													</div><!-- end row -->
+
+												</div><!-- col-sm-12 -->
+											</form>
+											<div class="panel panel-info panel-calendar">
+												<div class="panel-body">
+													<!--FOR ACCOUNT CLASS-->
+													<!--<table table id="example3" class="table table-bordered large-only responsive-example-table" style="margin-top: 0 !important;" cellspacing="0">-->
+														<!--<thead id="headtb">-->
+														<!--<th style="text-align: center; width: 20% !important;">Transaction Date</th>-->
+														<!--</thead>-->
+														<!--<tr th:each="${soaOfficail}"-->
+													<!--</table>-->
+													<div id="AC">
+														<h5>IN-PATIENT</h5>
+															<div id="example3_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row"><div class="col-sm-6"></div><div class="col-sm-6"></div></div><div class="row"><div class="col-sm-12"><table class="table table-bordered large-only responsive-example-table dataTable no-footer stacktable small-only"><tbody><tr class="  "><th class="st-head-row st-head-row-main" colspan="2">Transaction Date</th></tr><tr class="odd"><th class="st-head-row" colspan="2"><b>PATIENT TOTAL COUNT :</b></th></tr></tbody></table><table class="table table-bordered large-only responsive-example-table dataTable no-footer stacktable" id="example3" style="margin-top: 0 !important;" table="" role="grid" cellspacing="0">
+															<thead id="headtb">
+															<tr role="row"><th style="text-align: center; width: 191px;" class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Transaction Date: activate to sort column ascending">Transaction Date</th><th style="text-align: center; width: 191px;" class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Company: activate to sort column ascending">Company</th><th style="text-align: center; width: 251px;" class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Patient Name: activate to sort column ascending">Patient Name</th><th style="text-align: center; width: 132px;" class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="ACTION: activate to sort column ascending">ACTION</th></tr></thead><tbody>
+															
+															
+															<tr role="row" class="odd">
+																<td style="text-align: center; border-right: 1px solid transparent;"><b>PATIENT TOTAL COUNT :</b></td>
+																<td style="border-right: 1px solid transparent;"></td>
+																<td style="border-right: 1px solid transparent;"></td>
+																<td style="text-align: center; border-right: 1px solid transparent;"></td>
+															</tr></tbody>
+															</table></div></div><div class="row"><div class="col-sm-5"></div><div class="col-sm-7"></div></div></div>
+
+														<h5>OUT-PATIENT</h5>
+															<div id="example4_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row"><div class="col-sm-6"></div><div class="col-sm-6"></div></div><div class="row"><div class="col-sm-12"><table class="table table-bordered large-only responsive-example-table dataTable no-footer stacktable small-only"><tbody><tr class="  "><th class="st-head-row st-head-row-main" colspan="2">Transaction Date</th></tr><tr class="odd"><th class="st-head-row" colspan="2"><b>PATIENT TOTAL COUNT :</b></th></tr></tbody></table><table class="table table-bordered large-only responsive-example-table dataTable no-footer stacktable" id="example4" style="margin-top: 0 !important;" table="" role="grid" cellspacing="0">
+																<thead id="headtb">
+																	<tr role="row"><th style="text-align: center; width: 191px;" class="sorting" tabindex="0" aria-controls="example4" rowspan="1" colspan="1" aria-label="Transaction Date: activate to sort column ascending">Transaction Date</th><th style="text-align: center; width: 191px;" class="sorting" tabindex="0" aria-controls="example4" rowspan="1" colspan="1" aria-label="Company: activate to sort column ascending">Company</th><th style="text-align: center; width: 251px;" class="sorting" tabindex="0" aria-controls="example4" rowspan="1" colspan="1" aria-label="Patient Name: activate to sort column ascending">Patient Name</th><th style="text-align: center; width: 132px;" class="sorting" tabindex="0" aria-controls="example4" rowspan="1" colspan="1" aria-label="ACTION: activate to sort column ascending">ACTION</th></tr></thead><tbody>
+																
+																
+															<tr role="row" class="odd">
+																<td style="text-align: center; border-right: 1px solid transparent;"><b>PATIENT TOTAL COUNT :</b></td>
+																<td style="border-right: 1px solid transparent;"></td>
+																<td style="border-right: 1px solid transparent;"></td>
+																<td style="text-align: center; border-right: 1px solid transparent;"></td>
+																</tr></tbody>
+														</table></div></div><div class="row"><div class="col-sm-5"></div><div class="col-sm-7"></div></div></div>
+													</div>
+													<!--FOR NATIONALITIES-->
+													
+												</div><!-- end panel body -->
+
+											</div><!-- end panel -->
+
+										</div><!-- row -->
+									</div><!-- body -->
+								</div><!-- row -->
+							</div><!-- container -->
+						</div><!--End Tab 1-->
+
+						<!--Tab 2-->
+						<div class="tabcontent tabcontent2" id="auditTrail" style="display: none;">
+							<div class="container c-SPcalendar">
+								<div class="row">
+									<div class="modal-body mx-auto">
+										<p>Search Option</p>
+										<div class="row mx-auto">
+											<form action="/medicon/searchAuditResults.html" id="auditSearch" method="post">
+												<input id="time" name="time" value="00:00:43" type="hidden">
+												<div class="col-md-12 SP-col-sm-12 SI-col-sm-12">
+													<div class="row" style="margin-bottom: 5px;">
+														<label class="col-md-2 smsall-form-label" for="colFormLabel"> Search
+															Parameter: </label>
+														<div class="col-md-3">
+															<select class="form-control" id="category" name="category" placeholder="Category" required="" type="text">
+																<option value=""></option>
+																<option value="USERNAME">USERNAME</option>
+																<option value="MODULE">MODULE</option>
+																<option value="ACTION">ACTION</option>
+															</select>
+														</div>
+
+														<!--HIDE                              <div class="col-md-3">
+                                    <input type="text" name="name" class="form-control" placeholder="All">
+                                  </div> -->
+														<input id="hiddenSearch" name="searchWord" type="hidden">
+														<div class="col-md-3" id="moduleCategory" style="display: none">
+															<select class="form-control" id="moduleDropdown">
+																<option value=""></option>
+																<option value="OTHER INQUIRIES">OTHER INQUIRIES</option>
+																<option value="PATIENT SEARCH">PATIENT SEARCH</option>
+																<option value="PROFILE">PROFILE</option>
+																<option value="REPORTS">REPORTS</option>
+																<option value="APPOINTMENT">APPOINTMENT</option>
+																<option value="GUARANTEE LETTERS">GUARANTEE LETTERS</option>
+																<option value="REFERENCE">REFERENCE</option>
+																<option value="SMS">SMS</option>
+																<option value="TEMPLATES">TEMPLATES</option>
+															</select>
+														</div>
+														<div class="col-md-3" id="otherCategory" style="display: none;">
+															<input class="form-control" id="searchWord" maxlength="50" type="text">
+														</div>
+														<div class="col-md-4"></div>
+													</div>
+													<!-- SI-col-sm-12 -->
+
+													<div class="row" style="margin-bottom: 5px;">
+														<label class="col-md-2 smsall-form-label" for="colFormLabel"> Document
+															Date: </label>
+														<div class="input-group date col-md-3" id="fromDateDiv" style="float: left; padding: 0 15px;">
+															<input class="form-control" id="fromDate" name="fromDate" placeholder="Start Date" required="required" value="" type="text"> <span class="input-group-addon"> <span class="glyphicon glyphicon-calendar"></span>
+															</span>
+														</div>
+
+														<label class="col-md-1 to-form-label" for="colFormLabel">
+															To </label>
+														<div class="input-group date col-md-3" id="toDateDiv" style="float: left; padding: 0 15px;">
+															<input class="form-control" id="toDate" name="toDate" placeholder="End Date" required="required" value="" type="text">
+															<span class="input-group-addon"> <span class="glyphicon glyphicon-calendar"></span>
+															</span>
+														</div>
+														<!-- <div class="col-md-2"></div>
+
+														<div class="col-md-1 pad-md-2"></div> -->
+													</div>
+													<!-- end row -->
+
+
+													<div class="row row-botUti">
+														<label class="col-md-2 smsall-form-label" for="colFormLabel"> Location: </label>
+														<div class="col-md-3">
+															<input class="form-control" id="location" name="locationId" placeholder="Quezon City" readonly="readonly" required="required" value="GC" type="text">
+														</div>
+
+														<div class="col-md-3"></div>
+
+														<div class="col-md-2 r-wsms5">
+															<button class="btn btn-primary btn-SC wpad-md-1 wpad-ut waves-effect waves-light" onclick="submitAuditSearch();" type="button">
+																Search
+															</button>
+														</div>
+
+														<div class="col-md-2 pull-right r-wsms4">
+															<button class="btn btn-primary btn-SC wpad-md-2 wpad-ut waves-effect waves-light" onclick="clearFields()" type="button">
+																Clear
+															</button>
+														</div>
+													</div>
+													<!-- end row -->
+
+												</div>
+											</form>
+											<!-- col-sm-12 -->
+
+											<div class="panel panel-info panel-calendar">
+												<div class="panel-body">
+													<h5>AUDIT TRAIL SEARCH RESULTS</h5>
+													<div id="example5_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="example5_length"><label>Show <select name="example5_length" aria-controls="example5" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-6"></div></div><div class="row"><div class="col-sm-12"><table class="table table-bordered large-only responsive-example-table dataTable no-footer stacktable small-only"><tbody><tr class="  "><th class="st-head-row st-head-row-main" colspan="2">Date</th></tr><tr class="odd"><th class="st-head-row" colspan="2">No data available in table</th></tr></tbody></table><table class="table table-bordered large-only responsive-example-table dataTable no-footer stacktable" id="example5" style="margin-top: 0 !important;" table="" role="grid" aria-describedby="example5_info" cellspacing="0">
+														<thead id="headtb">
+															<tr role="row"><th style="text-align: center; width: 20px;" class="sorting" tabindex="0" aria-controls="example5" rowspan="1" colspan="1" aria-label="Date: activate to sort column ascending">Date</th><th style="text-align: center; width: 25px;" class="sorting" tabindex="0" aria-controls="example5" rowspan="1" colspan="1" aria-label="Username: activate to sort column ascending">Username</th><th style="text-align: center; width: 25px;" class="sorting" tabindex="0" aria-controls="example5" rowspan="1" colspan="1" aria-label="Module: activate to sort column ascending">Module</th><th style="text-align: center; width: 30px;" class="sorting" tabindex="0" aria-controls="example5" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending">Action</th></tr></thead><tbody>
+															
+														<tr class="odd"><td colspan="4" class="dataTables_empty" valign="top">No data available in table</td></tr></tbody>
+													</table></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="example5_info" role="status" aria-live="polite">Showing 0 to 0 of 0 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="example5_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="example5_previous"><a href="#" aria-controls="example5" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button next disabled" id="example5_next"><a href="#" aria-controls="example5" data-dt-idx="1" tabindex="0">Next</a></li></ul></div></div></div></div>
+												</div>
+												<!-- end panel body -->
+
+											</div>
+											<!-- end panel -->
+
+										</div>
+										<!-- row -->
+									</div>
+									<!-- body -->
+								</div>
+								<!-- row -->
+							</div>
+							<!-- container -->
+						</div>
+						<!-- End Search Patient -->
+
+					</div>
+					<!--bededitprofile-->
+					<!--start of icons-->
+					<!--<div class="row iconbelowpatient">
+            <div class="col-sm-3 below-icon">
+              <a onclick="window.location.href = '/medicon/patient/'">
+                <img  class="img-fluid"  src="/img/icons/search.png" alt="" height="180" width="180"/>
+              </a>
+            </div>
+            <div class="col-sm-3 below-icon">
+              <a>
+                <img class="img-fluid" src="/img/icons/appointment.png" alt="" height="180" width="180"/>
+              </a>
+            </div>
+            <div class="col-sm-3 below-icon">
+              <a >
+                <img class="img-fluid" src="/img/icons/message.png" alt="" height="180" width="180"/>
+              </a>
+            </div>
+            <div class="col-sm-3 below-icon">
+              <a onclick="window.location.href = '/medicon/references.html'">
+                <img class="img-fluid" src="/img/icons/reference.png" alt="" height="180" width="180"/>
+              </a>
+            </div>
+          </div> -->
+				</div>
+				<!--col-md-12-->
+			</div>
+			<!--row-->
+		</div>
+		<!--container-->
+	</section>
+	<!--end patient tab-->
+
+
+	<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+	<div class="scroll-top d-lg-none">
+		<a class="btn btn-primary js-scroll-trigger waves-effect waves-light" href="#page-top"> <i class="fa fa-chevron-up"></i>
+		</a>
+	</div>
+
+	<!-- Footer -->
+<footer class="footer text-center">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+			</div>
+			<div class="col-md-4"><p class="footer-sz">Medicon Version 1.1 rev 389</p></div>
+			<div class="col-md-4">
+			</div>
+		</div>
+	</div>
+</footer>
+
+	<!--Datepicker-->
+	<!-- <script th:src="@{/js-webshim/minified/polyfiller.js}"></script>
+	<script th:src="@{/js-webshim/modernizr-custom.js}"></script>
+	<script type="text/javascript">
+		/*<![CDATA[*/
+		webshims.setOptions('waitReady', false);
+		webshims.setOptions('forms-ext', {
+			types : 'date',
+			replaceUI : 'auto'
+		});
+		webshims.polyfill('forms forms-ext');
+
+		var datefield = document.createElement("input")
+		datefield.setAttribute("type", "date")
+		if (datefield.type != "date") { //if browser doesn't support input type="date", load files for jQuery UI Date Picker
+			document
+					.write('<link th:href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />\n')
+			document
+					.write('<script th:src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js}"><\/script>\n')
+			document
+					.write('<script th:src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js}"><\/script>\n')
+		}
+		/*]]>*/
+	</script> -->
+
+	<!-- DATETIMEPICKER -->
+	<script src="/js/ors/jquery.js"></script>
+	<script src="/js/ors/jquery-ui.js"></script>
+	<script src="/js/ors/moment.js"></script>
+	<!--SELECTIZE-->
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/selectize.js"></script>
+	<!--SELECTIZE end-->
+	<script src="/newdaw/js/bootstrap-datetimepicker.js"></script>
+	<script src="/css/bootstrap-3.3.7/js/jquery-ui.js"></script>
+	<!--DATETIMEPICKER e-->
+	<script src="/scripts/utilizationReports.js"></script><div class="selectize-dropdown single no-search" style="display: none;"><div class="selectize-dropdown-content"></div></div><div class="selectize-dropdown single" style="display: none;"><div class="selectize-dropdown-content"></div></div><div class="selectize-dropdown single" style="display: none;"><div class="selectize-dropdown-content"></div></div>
+	<!-- Bootstrap core JavaScript -->
+	<script src="/js/popper/popper.min.js"></script>
+	<!-- <script src="/js_v3/jquery-3.2.1.min.js"></script> -->
+	<script src="/js_v3/bootstrap.min.js"></script>
+	<script src="/js_v3/custom.js"></script>
+	<!-- Bootstrap tooltips -->
+	<script src="/js_v3/popper.min.js" type="text/javascript"></script>
+	<!-- MDB core JavaScript -->
+	<script src="/newdaw/js_v3/mdb.min.js" type="text/javascript"></script>
+	<!-- Plugin JavaScript -->
+	<script src="/newdaw/js/jquery-easing/jquery.easing.min.js"></script>
+	<!-- Custom scripts for this template -->
+	<script src="/js/freelancer.min.js"></script>
+
+	<!--Data Tables-->
+	<script src="/DataTables-1.10.16/js/jquery.dataTables.min.js"></script>
+	<script src="/DataTables-1.10.16/js/dataTables.bootstrap.js"></script>
+	<script src="/js/stacktable.js"></script>
+	<script src="/scripts/header.js"></script>
+	<script src="/scripts/auditSearch.js"></script>
+	<!-- LOADING -->
+	<script src="/ors-late-pages/ors/scripts/js/waitMe.js"></script>
+	<script src="/ors-late-pages/ors/scripts/js/waitMe.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/timer.jquery/0.7.0/timer.jquery.js"></script>
+
+	<script charset="utf-8" type="text/javascript">
+		$('#example3').dataTable({
+			"bFilter" : false,
+			"order" : [],
+			"columnDefs" : [ {
+				"targets" : 'no-sort',
+				"orderable" : false
+			} ],
+			"bPaginate" : false,
+			"bInfo" : false
+		});
+		// $('#example3').dataTable( {
+		//     "paging": false
+		// });
+		$('#example4').dataTable({
+			"bFilter" : false,
+			"order" : [],
+			"columnDefs" : [ {
+				"targets" : 'no-sort',
+				"orderable" : false
+			} ],
+			"bPaginate" : false,
+			"bInfo" : false
+		});
+		$('#example5').dataTable({
+			"bFilter" : false,
+			"order" : [],
+			"columnDefs" : [ {
+				"targets" : 'no-sort',
+				"orderable" : false
+			} ]
+		});
+		$('.responsive-example-table').stacktable({
+			myClass : 'stacktable large-only'
+		});
+	</script>
+
+	<!-- Tab -->
+	<script>
+		/*<![CDATA[*/
+
+		$(document).ready(function() {
+			var searchedWord = null
+			var category = null;
+			if(category != ""){
+			if (category == "MODULE") {
+				$("#moduleCategory").css({
+					'display' : 'block'
+				});
+				$("#moduleDropdown").val(searchedWord);
+				$("option[value='10']").attr('selected','selected');
+				$("#otherCategory").css({
+					'display' : 'none'
+				});
+			} else if(category == "USERNAME" || category == "ACTION"){
+				$("#otherCategory").css({
+					'display' : 'block'
+				});
+				$("#searchWord").val(searchedWord);
+				$("#moduleCategory").css({
+					'display' : 'none'
+				});
+			}
+			}
+			var today = moment().format('MM/DD/YYYY');
+			$('#fromDateDiv').datetimepicker({
+				//	            minDate: today,
+				//	                    defaultDate: '',
+				maxDate: today,
+				format : "MMMM DD, YYYY"
+
+			});
+
+			$('#toDateDiv').datetimepicker({
+				//	            minDate: today,
+				//	                    defaultDate: '',
+				maxDate: today,
+				format : "MMMM DD, YYYY",
+				useCurrent : false
+			});
+			$("#fromDateDiv").on("dp.change", function(e) {
+				$('#toDateDiv').data("DateTimePicker").minDate(e.date);
+			});
+			$("#toDateDiv").on("dp.change", function(e) {
+				$('#fromDateDiv').data("DateTimePicker").maxDate(e.date);
+			});
+		});
+
+		/*]]>*/
+	</script>
+	<script>
+		/*<![CDATA[*/
+
+        $(document).ready(function() {
+            var today = moment().format('MM/DD/YYYY');
+            $('#fromDateDiv1').datetimepicker({
+                //	            minDate: today,
+                //	                    defaultDate: '',
+                maxDate: today,
+                format : "MMMM DD, YYYY"
+
+            });
+
+            $('#toDateDiv1').datetimepicker({
+                //	            minDate: today,
+                //	                    defaultDate: '',
+                maxDate: today,
+                format : "MMMM DD, YYYY",
+                useCurrent : false
+            });
+            $("#fromDateDiv1").on("dp.change", function(e) {
+                $('#toDateDiv1').data("DateTimePicker").minDate(e.date);
+            });
+            $("#toDateDiv1").on("dp.change", function(e) {
+                $('#fromDateDiv1').data("DateTimePicker").maxDate(e.date);
+            });
+        });
+
+		/*]]>*/
+	</script>
+
+	<script>
+    /*<![CDATA[*/
+    (function($) {
+		//start a timer
+		if (localStorage.getItem("f5Time") === '' ||
+				localStorage.getItem("f5Time") === null ||
+				localStorage.getItem("f5Time") === undefined ||
+				localStorage.getItem("f5Time") === 'null') {
+
+			var start = '0'
+		} else {
+			var f5Time = localStorage.getItem("f5Time");
+			var start = convertToSeconds(f5Time);
+		}
+
+		var green = 'green'
+		var yellow = 'yellow'
+		var red = 'red'
+		// alert(start);
+		jQuery("#timer").timer({
+			seconds: start,
+			format: '%H:%M:%S',
+			duration: '1s',
+			callback: function() {
+				var timerTime = jQuery("#timer").html();
+				//console.log(convertToSeconds(timerTime));
+				if (convertToSeconds(timerTime) >= 3600) {
+					jQuery("#timer").css({'color': red});
+				} else if (convertToSeconds(timerTime) >= 60 * 15) {
+					jQuery("#timer").css({'color': yellow});
+				} else if (convertToSeconds(timerTime) > 0) {
+					jQuery("#timer").css({'color': green});
+				}
+				localStorage.setItem("f5Time", timerTime);
+			},
+			repeat: true
+		});
+        jQuery("#time").timer({
+            seconds: start,
+            format: '%H:%M:%S'
+        });
+    }());
+
+
+	function convertToSeconds(val) {
+		var x = val.split(':');
+		var hr = (3600 * x[0]);
+		var m = (60 * x[1]);
+		var s = x[2];
+		return parseInt(hr) + parseInt(m) + parseInt(s);
+	}
+    /*]]>*/
+</script>
+<!-- Tab -->
+  <script>
+    function openCity(evt, Name) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(Name).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+        document.getElementById("defaultOpen").click();
+  </script>
+
+<!-- The Modal -->
+	<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="viewORModal" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-md" role="document">
+			<div class="modal-content modal-bg">
+				<h1>Official Receipt</h1>
+				<h2>Payments</h2>
+				<h4 id="payments"></h4>
+			</div>
+		</div>
+	</div>
+	<!--INVALID DATE MODAL-->
+	<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="invalidDate" role="dialog" tabindex="2">
+		<div class="modal-dialog" style="width: -moz-max-content">
+			<div class="modal-content">
+
+				<div class="modal-body">
+					<button class="close" data-dismiss="modal" type="button">×</button>
+					<center>
+						<br>
+						<div>
+							<h4 style="width: 400px; color: red ">Invalid date!(30 days or less interval Only)</h4>
+						</div>
+						<br>
+					</center>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--NULL INPUT MODAL-->
+	<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="invalidInput" role="dialog" tabindex="2">
+		<div class="modal-dialog" style="width: -moz-max-content">
+			<div class="modal-content">
+
+				<div class="modal-body">
+					<button class="close" data-dismiss="modal" type="button">×</button>
+					<center>
+						<br>
+						<div>
+							<h4 style="width: 500px; color: red ">Please Complete The Search Parameter!</h4>
+						</div>
+						<br>
+					</center>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="searching" role="dialog" tabindex="2">
+		<div class="modal-dialog" style="width: -moz-max-content">
+			<div class="modal-content">
+
+				<div class="modal-body">
+					<button class="close" data-dismiss="modal" type="button">×</button>
+					<center>
+						<br>
+						<div>
+							<h4 style="width: 500px;">Searching......</h4>
+						</div>
+						<br>
+					</center>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<div class="hiddendiv common"></div></body>
+</html>

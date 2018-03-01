@@ -1,0 +1,2017 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- jas 10-27-17 --><meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Medicon</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css_v3/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+    <!-- Datables-->
+    <link href="DataTables-1.10.16/css/dataTables.bootstrap.css" rel="stylesheet">  
+    <link href="css/stacktable.css" rel="stylesheet">
+
+        <!-- Material Design Bootstrap -->
+    <link href="css_v3/mdb.min.css" rel="stylesheet">
+            <!-- Jasmin CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+            <!-- Jesh CSS -->
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+  </head>
+<body onload="searchQuery()" id="page-top">
+
+ <!-- Navigation -->
+    <nav  class="navbar navbar-expand-md navbar-light fixed-top" id="mainNav">
+      <div class="container-fluid"  >
+        <div class="custom-navtemp"   >
+          <a class="navbar-brand js-scroll-trigger" href="#page-top" >
+            <img class="img-fluid imagelogo img-lg" src="img/Medicon.png" alt="Medicon Logo" style="height: 100px;z-index: 1000;"></a>
+              
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav ml-auto pull-right">
+                <li class="nav-item">
+
+                  <!-- jas 11-29-17 --><li class="top-nav">
+                    <p>Hi Maricar! |</p>
+                    <a href="index.html" class="btn btn-secondary btn-lg btn-icon1" role="button" aria-pressed="true"><img src="img/circle-icons/icon2.png"></a>
+                    <a href="http://192.168.137.238:3031" class="btn btn-secondary btn-lg btn-icon1" role="button" aria-pressed="true"><img src="img/circle-icons/icon1.png"></a>
+                   </li>
+                  </li> <!--end jas 11-29-17 -->
+
+                  <!--profile pic dropdown -->
+                  <li class="nav-item dropdown img-index">
+                    <a class="nav-link dropdown-toggle img-hov" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img class="img-circle pull-right" src="img/circle-icons/profile-icon.png" alt="" height="100" width="100">
+                    </a>
+
+                    <div class="dropdown-menu img-dropindex img-dropindextwo" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="editprofile.html?tab=1">Edit Profile</a>
+                      <a class="dropdown-item" href="editprofile.html?tab=2">Settings</a>
+                    </div>
+                  </li>
+
+                </li><!-- end nav-item -->
+              </ul><!-- end navbar-nav -->
+            </div><!-- end navbar-collapse -->
+
+        </div><!-- custom-navtemp -->
+      </div><!-- container -->
+    </nav><!-- end nav -->
+
+
+<!--Options-->
+<!-- jas 11-29-17 --><!--BACKGROUND-->
+<div class="backport backport-img height-buffer-100" id="backport">
+    <ul class="stluke img-reponsive img-r img-rtwo cb-slideshow height-buffer-100">
+        <li><span>Image 01</span></li>
+        <li><span>Image 02</span></li>
+        <li><span>Image 03</span></li>
+        <li><span>Image 04</span></li>
+        <li><span>Image 05</span></li>
+        <li><span>Image 06</span></li>
+    </ul>
+</div>
+<!--END BACKGROUND--> <!-- end jas 11-29-17 -->
+
+<section id="patient">
+    <div class="container" id="patientSearchFormLoading">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="bdpatient">
+                    <h5>Enter Details for Existing patient</h5>
+                    <form id="patientSearchForm" method="post" name="patientSearchForm" action="/medicon/patient/">
+                        <input id="time" name="time" value="00:03:58" type="hidden">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label>PIN OR LASTNAME</label> <input class="form-control" id="pinOrLastname" name="pinOrLastname" placeholder="INPUT PIN OR LASTNAME" value="" type="text">
+                                <!--<p th:if="${#fields.hasErrors('pinOrLastname')}"
+                                    th:errors="*{pinOrLastname}">Error input</p> -->
+
+                            </div>
+                            <div class="col-sm-5" style="margin-top:25px">
+                                <input class="btn btn-primary" onclick="submitPinSearch()" value="Search" type="button">
+                                <a class="btn btn-primary" data-backdrop="static" data-keyboard="false" data-toggle="modal" href="#portfolioModal2" id="advSrch">Advance Search</a>
+                            </div>
+                        </div>
+                    </form>
+                    <br>
+
+                    <!-- THIS IS ERROR/SUCCESS MSG -->
+                    <!-- <div th:errors="${patientSearchForm.*}" class="alert alert-danger"></div> -->
+                    
+                    <!-- <div th:if="${updateAlert == false}">
+                        <div th:replace="fragments/alert :: alert (type='danger', message='Form contains errors. Please Fill up all fields and try again!')">Alert</div>
+                    </div> -->
+                    
+                    <div>
+                        <form id="registerForm" method="POST" action="/medicon/patient/register">
+                            <h5>Patient Detail</h5>
+                            <div class="row">
+                                <input id="time" name="time" type="hidden">
+                                <div class="col-sm-3">
+                                    <input id="rehPin" name="rehPin" value="" type="hidden">
+                                    <label>Last Name</label>
+                                    <input class="form-control" id="lname" maxlength="30" name="rlastname" placeholder="Last Name" readonly="readonly" value="" type="text">
+                                    <!--  -->
+                                </div>
+                                <div class="col-sm-3">
+                                    <label>First Name</label>
+                                    <input class="form-control" id="fname" maxlength="30" name="rfirstname" placeholder="First Name" readonly="readonly" value="" type="text">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label>Middle Name</label> <input class="form-control" id="mname" maxlength="30" name="rmiddlename" placeholder="Middle Name" readonly="readonly" value="" type="text">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label>Suffix</label> <select class="form-control" name="rsuffix" readonly="readonly" id="rsuffix">
+                                    <option value="SFX-">Select Suffix Name</option>
+                                    <option value="SFX-"> </option>
+                                    <option value="SFX03">II</option>
+                                    <option value="SFX04">III</option>
+                                    <option value="SFX05">IV</option>
+                                    <option value="SFX10">IX</option>
+                                    <option value="SFX01">JR</option>
+                                    <option value="SFX11">JR.</option>
+                                    <option value="SFX02">SR</option>
+                                    <option value="SFX12">SR.</option>
+                                    <option value="SFX06">V</option>
+                                    <option value="SFX07">VI</option>
+                                    <option value="SFX08">VII</option>
+                                    <option value="SFX09">VIII</option></select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+
+                                    <label for="max">Birthday</label>
+                                    <div id="birthdateChecking">
+                                        
+                                    </div>
+                                    <input class="form-control birthdate max-today" placeholder="MM-DD-YYYY" readonly="readonly" id="rbirthdate" name="rbirthdate" value="" type="text">
+                                    <!-- 			<div class="input-group date col-md-12" id="fromDateDiv" style="float: left; padding:0 15px;"
+                                                data-date-viewmode="years" data-date-format="yyyy-MM-dd">
+                                                    <input type="date" class="form-control birthdate"
+                                                    th:field="*{rbirthdate}"
+                                                        name="fromDate" placeholder="Start Date" required="required">
+                                                    <span class="input-group-addon"> <span
+                                                        class="glyphicon glyphicon-calendar"></span>
+                                                    </span>
+                                                </div>
+                                              -->
+                                    <!-- <label>Birthday</label>
+                                    <input placeholder="mm/dd/yyyy"
+                                        type="date" name="birthdate" id="date" class="form-control birthdate"
+                                        th:field="*{rbirthdate}"/> -->
+                                </div>
+                                <div class="col-sm-3">
+                                    <label>Age</label> <input class="form-control" id="age" placeholder="0 Years Old" readonly="readonly" value="" type="text">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label>Gender</label> <select class="form-control" name="rgender" readonly="readonly" id="rgender">
+                                    <option value="">Select Gender</option>
+                                    <option value="F">FEMALE</option>
+                                    <option value="M">MALE</option></select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label>Email</label> <input class="form-control" id="email" name="remail" placeholder="Email" readonly="readonly" value="" type="email">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label>Contact Number <span class="hide validContactNumber" id="valid-msg">✓ Valid</span>
+                                        <span class="hide errorContactNumber" id="error-msg">Invalid number</span></label>
+                                   
+                                    <input id="isPhone" type="hidden">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label>Religion</label> <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input class="form-control ui-autocomplete-input" id="religion" name="rreligion" placeholder="Religion" title="Type Religion for Suggested Words" readonly="readonly" value="" autocomplete="off" type="text">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label>Nationality</label> <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input class="form-control ui-autocomplete-input" id="nationality" name="rnationality" placeholder="Nationality" title="Type Nationalities for Suggested Words" readonly="readonly" value="" autocomplete="off" type="text">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label>Country</label> <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input class="form-control ui-autocomplete-input" id="country" name="rcountry" placeholder="Country" title="Type Country for Suggested Words" readonly="readonly" value="" autocomplete="off" type="text">
+                                </div>
+                                <div class="col-sm-6" style="margin-top:25px">
+                                    
+                                    
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                    
+
+                    <div class="row iconbelowpatient iconbelowpatient-ref top-buffer">
+                        <div class="col-sm-3 below-icon">
+                            <a data-toggle="modal" href="#portfolioModal1">
+                                <img alt="" class="img-fluid img-iconsz img-reficons" src="img/circle-icons/Search_2-Circle-icons.png" style="cursor: pointer" width="180" height="180">
+                            </a>
+                        </div>
+                        <div class="col-sm-3 below-icon">
+                            <a onclick="GoToAppointment()">
+                                <img alt="" class="img-fluid img-iconsz img-reficons" style="cursor: pointer" src="img/circle-icons/calendar-Circle-icons.png" width="180" height="180">
+                            </a>
+                        </div>
+                        <div class="col-sm-3 below-icon">
+                            <a onclick="GoToMessagingModal()">
+                                <img alt="" class="img-fluid img-iconsz img-reficons" src="img/circle-icons/Message_3-Circle-icons.png" style="cursor: pointer" width="180" height="180">
+                            </a>
+                        </div>
+                        <div class="col-sm-3 below-icon">
+                            <a onclick="GoToReference()">
+                                <img alt="" class="img-fluid img-iconsz img-reficons" style="cursor:pointer" src="img/circle-icons/Reference-Circle-icons.png" width="180" height="180">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end-->
+
+<!-- Footer -->
+<footer class="footer text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4"><p class="footer-sz">Medicon Version 1.1 rev 389</p>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--modal-->
+<div aria-hidden="true" class="modal fade" data-backdrop="static" data-keyboard="false" id="portfolioModal2" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg" role="document" style="width: 90%;">
+        <div class="modal-content" style="background-color: #cdc8c8;">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl"></div>
+                </div>
+            </div>
+            <div class="container" id="loadingHolder">
+                <div class="row">
+                    <div class="modal-body mx-auto">
+                        <p>Advance Search</p>
+                        <div class="row mx-auto">
+                            <input id="time" name="time" type="hidden">
+                            <!-- th:action="@{/medicon/patient/patientSearchByCriteria}" -->
+                            <div class="row col-sm-12" style="margin: 5px; background-color: #96ceef; border: 2px solid #90a0b9;">
+
+                                <div class="patientDropdown col-sm-12" id="pinSearch" style="margin-top: 12px; display: none;">
+                                    <button aria-expanded="true" aria-haspopup="true" class="btn btn-default dropdown-toggle btn-psSms" onclick="toggleDropDown('pinSearch')" type="button">
+                                        <a class="hov-color">
+                                            PIN Search
+                                            <i class="fa fa-arrow-circle-down fa-mgarrow"></i></a>
+                                    </button>
+                                </div>
+
+
+                                
+                                <form id="pinSearchForm" method="POST" name="pinSearchForm" action="/medicon/patient/pinOnly" style="display: none;">
+                                    <input id="prevPage" name="prevPage" value="" type="hidden">
+                                    <label class="col-md-12 move-right" for="pin">
+                                        <b>PIN Search</b>
+                                    </label>
+                                    <div class="col-md-4">
+                                        <input class="form-control move-right" id="pin" maxlength="10" name="pin" value="" type="text">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input class="btn btn-primary" onclick="searchPinOnly(event)" style="margin-left: 10px;" value="Search" type="button">&nbsp;
+                                        <input class="btn btn-primary" value="Clear" type="reset">
+                                    </div>
+                                </form>
+
+                                <div class="freeDropdown col-sm-12" id="completeSearch" style="margin-top: 12px; display: none;">
+                                    <button aria-expanded="true" aria-haspopup="true" class="btn btn-default dropdown-toggle btn-psSms" onclick="toggleDropDown('completeSearch')" type="button">
+                                        <a class="hov-color">
+                                            Complete Search
+                                            <i class="fa fa-arrow-circle-down fa-mgarrow"></i></a>
+                                    </button>
+                                </div>
+
+                                <form id="patientAdvSearchForm" method="post" name="patientAdvSearchForm">
+
+                                    <div class="" id="completeSearchForm">
+                                        <div class="row col-sm-9" style="margin-top: 10px;">
+                                            <div class="col-sm-3">Last Name:</div>
+                                            <div class="col-sm-6">
+                                                <input class="form-control" id="lastname" maxlength="50" name="lastname" placeholder="Last Name" required="required" value="" type="text">
+                                            </div>
+                                        </div>
+
+                                        <div class="row col-sm-9">
+                                            <div class="col-sm-3">First Name:</div>
+                                            <div class="col-sm-6">
+                                                <input class="form-control" id="firstname" maxlength="50" name="firstname" placeholder="First Name" required="required" value="" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="row col-sm-9">
+                                            <div class="col-sm-3">Middle Name:</div>
+                                            <div class="col-sm-6">
+                                                <input class="form-control" id="middlename" maxlength="50" name="middlename" placeholder="Middle Name" required="required" value="" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="row col-sm-9">
+                                            <div class="col-sm-3">Birthday:</div>
+                                            <div class="col-sm-6">
+                                                <div class="input-group date col-md-12" data-date-format="dd-mm-yyyy" data-date-viewmode="years" id="fromDateDiv1">
+                                                    <input class="form-control max-today" data-date-split-input="true" name="bday" placeholder="YYYY-MM-DD" required="required" id="bday" value="" style="display: none;" type="date"><span class="ws-date ws-input ws-inputreplace max-today wsshadow-1519787359652 has-input-buttons" role="group" dir="ltr" aria-labelledby="" style="margin-left: 0px; margin-right: 0px; width: 97.2px;"><input class="mm" inputmode="numeric" maxlength="2" size="2" placeholder="MM" value="" aria-required="true" type="text"><span class="ws-input-seperator">/</span><input class="dd ws-spin" inputmode="numeric" maxlength="2" size="2" placeholder="DD" value="" aria-required="true" type="text"><span class="ws-input-seperator">/</span><input class="yy" size="4" inputmode="numeric" maxlength="4" placeholder="YYYY" value="" aria-required="true" type="text"></span><span class="input-buttons date-input-buttons input-button-size-2 wsshadow-1519787359652" style="margin-right: 0px;"><span unselectable="on" class="step-controls"><span class="step-up step-control"></span><span class="step-down step-control"></span></span><button type="button" class="ws-popover-opener" aria-labelledby="" style="touch-action: manipulation;"><span></span></button></span>
+                                                    <!-- <input  th:field="*{bday}" type="date" name="bday"
+                                                            class="form-control"
+                                                            th:errorclass="null-values" required="required"
+                                                            placeholder="YYYY-MM-DD">
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </span> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row col-sm-9">
+                                            <div class="col-sm-3">Gender:</div>
+                                            <div class="col-sm-6">
+                                                <div id="genderDivHolder">
+                                                    <select class="form-control" id="genderSearch" required="required" name="genderSearch">
+                                                        <option value="">Select Gender</option>
+                                                        <option value="F">FEMALE</option>
+                                                        <option value="M">MALE</option></select>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div style="margin-top: -17px;">
+                                                <input id="advFromPage" name="fromPage" value="" type="hidden">
+                                                <a><input class="btn btn-primary" onclick="getPatient()" value="Search" type="button"></a>&nbsp;
+                                                <a><input class="btn btn-primary" onclick="clearForm('patientAdvSearchForm')" value="Clear" type="button"></a>
+                                            </div>
+                                        </div>
+                                    </div><!--End CompleteSearchForm-->
+                                </form>
+
+                            </div>
+                            
+                            <div class="panel panel-info col-sm-12">
+                                <div class="panel-body">
+                                    <div id="resultsBlock">
+                                        <div id="example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="example_length"><label>Show <select name="example_length" aria-controls="example" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="75">75</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-6"></div></div><div class="row"><div class="col-sm-12"><table class="table table-bordered large-only responsive-example-table dataTable no-footer stacktable small-only stacktable small-only"><tbody><tr class="    "><th class="st-head-row st-head-row-main" colspan="2">LAST NAME</th></tr><tr class="odd"><th class="st-head-row" colspan="2">No data available in table</th></tr></tbody></table><table class="table table-bordered large-only responsive-example-table dataTable no-footer stacktable small-only"><tbody><tr class="  "><th class="st-head-row st-head-row-main" colspan="2">LAST NAME</th></tr><tr class="odd"><th class="st-head-row" colspan="2">No data available in table</th></tr></tbody></table><table class="table table-bordered large-only responsive-example-table dataTable no-footer stacktable stacktable small-only"><tbody><tr class="  "><th class="st-head-row st-head-row-main" colspan="2">LAST NAME</th></tr><tr class="odd"><th class="st-head-row" colspan="2">No data available in table</th></tr></tbody></table><table class="table table-bordered large-only responsive-example-table dataTable no-footer stacktable" id="example" style="text-align: center;" role="grid" aria-describedby="example_info" cellspacing="0">
+                                            <thead id="headtb">
+                                            <tr role="row"><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 0px;" aria-label="LAST NAME: activate to sort column ascending">LAST NAME</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 0px;" aria-label="FIRST NAME: activate to sort column ascending">FIRST NAME</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 0px;" aria-label="MIDDLE NAME: activate to sort column ascending">MIDDLE NAME</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 0px;" aria-label="BIRTHDATE: activate to sort column ascending">BIRTHDATE</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 0px;" aria-label="GENDER: activate to sort column ascending">GENDER</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" style="width: 0px;" aria-label="ACTION: activate to sort column ascending">ACTION</th></tr></thead><tbody>
+                                            
+                                            <tr class="odd"><td colspan="6" class="dataTables_empty" valign="top">No data available in table</td></tr></tbody>
+                                        </table></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="example_info" role="status" aria-live="polite">Showing 0 to 0 of 0 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="example_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="example_previous"><a href="#" aria-controls="example" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button next disabled" id="example_next"><a href="#" aria-controls="example" data-dt-idx="1" tabindex="0">Next</a></li></ul></div></div></div></div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <center>
+                            <button class="btn btn-primary" data-dismiss="modal" onclick="closeToPreviousPage()" type="button">
+                                <i class="fa fa-times"></i> Close
+                            </button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div aria-hidden="true" class="modal fade" data-backdrop="static" data-keyboard="false" id="procedures" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg" role="document" style="width: 90%;">
+        <div class="modal-content" style="background-color: #cdc8c8;">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl"></div>
+                </div>
+            </div>
+            <div class="container" id="procedureLoadingDiv">
+                <div class="row">
+                    <div class="modal-body mx-auto">
+                        <div class="row mx-auto" style="background-color: #96ceef; border: 1px solid #90a0b9;">
+                            <div class="row col-sm-12">
+                                <div class="col-sm-12">
+                                    <p></p>
+                                    <h4><span></span>
+                                    </h4>
+                                </div>
+                                <div class="col-sm-2">
+                                    Search by:
+                                </div>
+                                <div class="col-sm-2">
+                                    <select class="form-control" id="searchCategory" name="searchCategory">
+                                        <option value="div1">Visit Number</option>
+                                        <option selected="" value="div2">Date Range</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-7">
+
+                                    <form id="searchByVisitNumber" name="searchByVisitNumber">
+                                        <input id="time" name="time" type="hidden">
+                                        <div class="drop-down-show-hide" id="div1" style="display: none;">
+                                            <div class="col-sm-6">
+                                                <input class="form-control" id="visitNumber" maxlength="10" name="visitNumber" placeholder="Input Visit Number" type="text">
+                                                <input id="patientPin" name="patientPin" value="" type="hidden">
+                                            </div>
+                                            <input class="btn btn-primary" onclick="getProcedureByVistNumber()" value="Search" type="button">&nbsp;
+                                            <input class="btn btn-primary" onclick="clearForm('searchByVisitNumber')" value="Clear" type="button">
+                                        </div>
+                                    </form>
+
+                                    <form id="searchByDateRange" name="searchByDateRange">
+                                        <input id="time" name="time" type="hidden">
+                                        <input id="patientPin" name="patientPin" value="" type="hidden">
+                                        <div class="drop-down-show-hide" id="div2" style="display: flex;">
+                                            <div class="col-sm-6">
+                                                <div id="firstDivHolder">
+                                                    <input class="form-control max-today" data-date-split-input="true" id="date1" name="date1" placeholder="YYYY-MM-DD" style="display: none;" type="date"><span class="ws-date ws-input ws-inputreplace max-today wsshadow-1519787359652 has-input-buttons" role="group" dir="ltr" aria-labelledby="" style="margin-left: 0px; margin-right: 0px; width: 97.2px;"><input class="mm" inputmode="numeric" maxlength="2" size="2" placeholder="MM" value="" aria-required="false" type="text"><span class="ws-input-seperator">/</span><input class="dd ws-spin" inputmode="numeric" maxlength="2" size="2" placeholder="DD" value="" aria-required="false" type="text"><span class="ws-input-seperator">/</span><input class="yy" size="4" inputmode="numeric" maxlength="4" placeholder="YYYY" value="" aria-required="false" type="text"></span><span class="input-buttons date-input-buttons input-button-size-2 wsshadow-1519787359652" style="margin-right: 0px;"><span unselectable="on" class="step-controls"><span class="step-up step-control"></span><span class="step-down step-control"></span></span><button type="button" class="ws-popover-opener" aria-labelledby="" style="touch-action: manipulation;"><span></span></button></span>
+                                                </div>
+                                            </div>
+                                            <label>To:</label>
+                                            <div class="col-sm-6">
+                                                <div id="secondDivHolder">
+                                                    <input class="form-control max-today" data-date-split-input="true" id="date2" name="date2" placeholder="YYYY-MM-DD" style="display: none;" type="date"><span class="ws-date ws-input ws-inputreplace max-today wsshadow-1519787359652 has-input-buttons" role="group" dir="ltr" aria-labelledby="" style="margin-left: 0px; margin-right: 0px; width: 97.2px;"><input class="mm" inputmode="numeric" maxlength="2" size="2" placeholder="MM" value="" aria-required="false" type="text"><span class="ws-input-seperator">/</span><input class="dd ws-spin" inputmode="numeric" maxlength="2" size="2" placeholder="DD" value="" aria-required="false" type="text"><span class="ws-input-seperator">/</span><input class="yy" size="4" inputmode="numeric" maxlength="4" placeholder="YYYY" value="" aria-required="false" type="text"></span><span class="input-buttons date-input-buttons input-button-size-2 wsshadow-1519787359652" style="margin-right: 0px;"><span unselectable="on" class="step-controls"><span class="step-up step-control"></span><span class="step-down step-control"></span></span><button type="button" class="ws-popover-opener" aria-labelledby="" style="touch-action: manipulation;"><span></span></button></span>
+                                                </div>
+                                            </div>
+                                            <input class="btn btn-primary" onclick="getProcedureByDate()" value="Search" type="button">&nbsp;
+                                            <input class="btn btn-primary" onclick="clearForm('searchByDateRange')" value="Clear" type="button">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-info">
+                            <div class="panel-body">
+                                <div id="resultsBlockProcedure">
+                                    <table class="table table-bordered large-only responsive-example-table stacktable small-only stacktable small-only"><tbody><tr class="    "><th class="st-head-row st-head-row-main" colspan="2">PERFORMING UNIT</th></tr></tbody></table><table class="table table-bordered large-only responsive-example-table stacktable small-only"><tbody><tr class="  "><th class="st-head-row st-head-row-main" colspan="2">PERFORMING UNIT</th></tr></tbody></table><div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="example1_length"><label>Show <select name="example1_length" aria-controls="example1" class="form-control input-sm"><option value="5">5</option><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="75">75</option><option value="-1">All</option></select> entries</label></div></div><div class="col-sm-6"></div></div><div class="row"><div class="col-sm-12"><table class="table table-bordered large-only responsive-example-table stacktable dataTable no-footer stacktable small-only"><tbody><tr class="  "><th class="st-head-row st-head-row-main" colspan="2">PERFORMING UNIT</th></tr><tr class="odd"><th class="st-head-row" colspan="2">No data available in table</th></tr></tbody></table><table class="table table-bordered large-only responsive-example-table stacktable dataTable no-footer" id="example1" style="text-align: center;" role="grid" aria-describedby="example1_info" cellspacing="0">
+                                        <thead id="headtb">
+                                        <tr role="row"><th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style="width: 0px;" aria-label="PERFORMING UNIT: activate to sort column ascending">PERFORMING UNIT</th><th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style="width: 0px;" aria-label="PROCEDURE: activate to sort column ascending">PROCEDURE</th><th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style="width: 0px;" aria-label="EXAMINATION DATE: activate to sort column ascending">EXAMINATION DATE</th><th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style="width: 0px;" aria-label="RESULT STATUS: activate to sort column ascending">RESULT STATUS</th></tr></thead><tbody>
+
+                                        <tr class="odd"><td colspan="4" class="dataTables_empty" valign="top">No data available in table</td></tr></tbody>
+                                    </table></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="example1_info" role="status" aria-live="polite">Showing 0 to 0 of 0 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="example1_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="example1_previous"><a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button next disabled" id="example1_next"><a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0">Next</a></li></ul></div></div></div></div>
+                                </div>
+                                <!-- <button class="btn btn-primary" type="button" data-dismiss="modal">
+                                 UPDATE FROM HEALTHCARE</button> -->
+                            </div>
+                        </div>
+                        <center>
+                            <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                CLOSE
+                            </button>
+                            <br>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Portfolio Modals -->
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="portfolio-modal modal fade" data-backdrop="static" data-keyboard="false" id="portfolioModal1" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document" style="position: fixed;overflow: hidden;">
+        <div class="modal-content">
+            <!-- jas 11-29-17 --> <!--BACKGROUND-->
+            <div class="backport backport-img backport-modal-img" id="backport">
+                <ul class="stluke img-reponsive img-r img-rtwo cb-slideshow cb-custom">
+                    <li><span>Image 01</span></li>
+                    <li><span>Image 02</span></li>
+                    <li><span>Image 03</span></li>
+                    <li><span>Image 04</span></li>
+                    <li><span>Image 05</span></li>
+                    <li><span>Image 06</span></li>
+                </ul>
+            </div>
+            <!--END BACKGROUND--> <!-- jas 11-29-17 -->
+            <div class="container">
+                <div class="row">
+                    <div class="modal-body mx-auto" id="demo">
+                        <div class="searchmodal">
+
+                            <div class="row mx-auto ajax margin-auto">
+                                <div class="col-md-12">
+                                    <h4 class="title-module">Choose Module to Access</h4>
+
+                                    <div class="row">
+
+                                        <div class="col-md-3" style="filter: grayscale(100%) blur(2px);">
+                                            <a style="cursor: not-allowed;">
+                                                <img alt="" class="img-fluid img-fsize img-squareiconsz" src="/img/square-icons/patient-search.png">
+                                            </a>
+                                            <!-- <h5 class="mg-modaltext">Patient Search</h5> -->
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <a href="https://doctorsdirectory.stlukesmedicalcenter.com.ph/index.html" target="_blank">
+                                                <img alt="" class="img-fluid img-fsize img-squareiconsz" src="/img/square-icons/doctors-inquiry.png">
+                                            </a>
+                                            <!-- <h5 class="mg-modaltext">Doctor's Inquiry</h5> -->
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <a>
+                                                <img alt="" class="img-fluid img-fsize img-squareiconsz" src="/img/square-icons/private-dutynurse-comingsoon.png">
+                                            </a>
+                                            <!-- <h5 class="mg-modaltext">Coming Soon</h5> -->
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <a>
+                                                <img alt="" class="img-fluid img-fsize img-squareiconsz" src="/img/square-icons/location-comingsoon.png">
+                                            </a>
+                                            <!-- <h5 class="mg-modaltext">Coming Soon</h5> -->
+                                        </div>
+
+                                    </div><!-- end row -->
+
+                                    <div class="row">
+
+                                        <div class="col-md-12 modalbutton">
+                                            <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                                <i class="fa fa-times"></i>
+                                                Close
+                                            </button>
+                                        </div>
+
+                                    </div><!-- end row -->
+
+                                </div><!-- end col-md-12 -->
+                            </div><!-- end row mx-auto ajax -->
+
+                        </div><!-- end search modal -->
+                    </div><!-- modal-body mx-auto -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div><!-- end modal-content -->
+    </div><!-- end modal-dialog -->
+</div><!-- end portfolio-modal -->
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="portfolio-modal modal fade" data-backdrop="static" data-keyboard="false" id="portfolioModal3" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document" style="height: 100%; overflow: hidden; position: fixed;">
+        <div class="modal-content">
+            <!-- jas 11-29-17 --> <!--BACKGROUND-->
+            <div class="backport backport-img backport-modal-img" id="backport">
+                <ul class="stluke img-reponsive img-r img-rtwo cb-slideshow cb-custom">
+                    <li><span>Image 01</span></li>
+                    <li><span>Image 02</span></li>
+                    <li><span>Image 03</span></li>
+                    <li><span>Image 04</span></li>
+                    <li><span>Image 05</span></li>
+                    <li><span>Image 06</span></li>
+                </ul>
+            </div>
+            <!--END BACKGROUND--> <!-- jas 11-29-17 -->
+            <div class="container">
+                <div class="row">
+                    <div class="modal-body mx-auto" id="demo">
+                        <div class="searchmodal">
+
+                            <div class="row mx-auto ajax margin-auto">
+                                <div class="col-md-12">
+                                    <h4 class="title-module">Choose Module to Access</h4>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="col-md-4">
+                                                <a onclick="gotoRequestLetter()">
+                                                    <img alt="" class="img-fluid img-fsize img-squareiconsz" src="/img/square-icons/guarantee-letters.png"></a>
+                                                <!-- <h5 class="mg-modaltext5">Guarantee Letters</h5> -->
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <a onclick="gotoSMS()">
+                                                    <img alt="" class="img-fluid img-fsize img-squareiconsz" src="/img/square-icons/messaging.png">
+                                                </a>
+                                                <!-- <h5 class="mg-modaltext5">SMS</h5> -->
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <a href="#">
+                                                    <img alt="" class="img-fluid img-fsize img-squareiconsz" src="/img/square-icons/endorsement-comingsoon.png">
+                                                </a>
+                                                <!-- <h5 class="mg-modaltext5">Coming Soon</h5> -->
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 text-center">
+                                            <div class="col-md-2"><!-- buffer --></div>
+                                            <div class="col-md-4">
+                                                <a href="#">
+                                                    <img alt="" class="img-fluid img-fsize img-squareiconsz" src="/img/square-icons/call-comingsoon.png">
+                                                </a>
+                                                <!-- <h5 class="mg-modaltext5">Coming Soon</h5> -->
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <a href="#">
+                                                    <img alt="" class="img-fluid img-fsize img-squareiconsz" src="/img/square-icons/survey-comingsoon.png">
+                                                </a>
+                                                <!-- <h5 class="mg-modaltext5">Coming Soon</h5> -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div><!-- end row -->
+
+                                <div class="row">
+
+                                    <div class="col-md-12 modalbutton">
+                                        <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                            <i class="fa fa-times"></i>
+                                            Close
+                                        </button>
+                                    </div>
+
+                                </div><!-- end row -->
+
+                            </div><!-- end col-md-12 -->
+                        </div><!-- end row mx-auto ajax -->
+
+                    </div><!-- end search modal -->
+                </div><!-- modal-body mx-auto -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end modal-content -->
+</div><!-- end modal-dialog -->
+<!-- end portfolio-modal -->
+
+
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" data-backdrop="static" data-keyboard="false" id="ors-no-ehpin" role="dialog" tabindex="2">
+    <div class="modal-dialog" style="">
+        <div class="modal-content">
+            <div class="modal-body">
+                <center>
+                    <div>
+                        <h3>Patient not registered in Ehealth!</h3>
+                        <hr>
+                        <h4>In order to proceed with the Reservation, kindly register the patient in Ehealth</h4>
+                    </div>
+                    <br>
+                    <button class="btn btn-primary" onclick="$('#patientData').submit()" style="margin-top: 3px">OK
+                    </button>
+                    <button class="btn btn-primary" data-dismiss="modal" style="margin-top: 3px">CANCEL</button>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" data-backdrop="static" data-keyboard="false" id="triggerAdvanceSearch" role="dialog" tabindex="2">
+    <div class="modal-dialog" style="">
+        <div class="modal-content">
+            <div class="modal-body">
+                <center>
+                    <div>
+                        <h3>Search Completed!</h3>
+                        <hr>
+                        <h4>Please provide additional information for the <b>PATIENT</b>.</h4>
+                        <h4>Please try again!</h4>
+                    </div>
+                    <br>
+                    <button class="btn btn-primary" id="openModalAS" style="margin-top: 3px">OK</button>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" data-backdrop="static" data-keyboard="false" id="ehPin-validation" role="dialog" tabindex="2">
+    <div class="modal-dialog" style="">
+        <div class="modal-content">
+            <div class="modal-body">
+                <center>
+                    <div>
+                        <h3>Please complete Patient Details.</h3>
+                        <hr>
+                        <h4>In order to proceed with the Module Selected, kindly update the patient.</h4>
+                    </div>
+                    <br>
+                    <button class="btn btn-primary" data-dismiss="modal" style="margin-top: 3px">Back</button>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" data-backdrop="static" data-keyboard="false" id="withEhPin-completeForm" role="dialog" tabindex="2">
+    <div class="modal-dialog" style="">
+        <div class="modal-content">
+            <div class="modal-body">
+                <center>
+                    <div>
+                        <h3>Patient not registered in Ehub.</h3>
+                        <hr>
+                        <h4>In order to proceed with the Module, you are required to register patient to ehub. Continue
+                            to register?</h4>
+                    </div>
+                    <br>
+                    <button class="btn btn-primary" onclick="updateFormSubmit();" style="margin-top: 3px">OK</button>
+                    <button class="btn btn-primary" data-dismiss="modal" style="margin-top: 3px">Back</button>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" data-backdrop="static" data-keyboard="false" id="NoPatientValidation" role="dialog" tabindex="2">
+    <div class="modal-dialog" style="">
+        <div class="modal-content">
+            <div class="modal-body">
+                <center>
+                    <h3>You are about to change Module</h3>
+                    <hr>
+                    <div>
+                        <h4>Are you sure you want to change module without selecting <b>Patient<b></b>?</b></h4>
+                    </div>
+                    <br>
+                    <button class="btn btn-primary" id="GotoModule" style="margin-top: 3px">Yes</button>
+                    <button class="btn btn-primary" data-dismiss="modal" style="margin-top: 3px">Cancel</button>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" data-backdrop="static" data-keyboard="false" id="patient-no-found" role="dialog" tabindex="2">
+    <div class="modal-dialog" style="">
+        <div class="modal-content">
+            <div class="modal-body">
+                <center>
+                    <h3>Search Completed!</h3>
+                    <hr>
+                    <div>
+                        <h4>No Patient Found!</h4>
+                    </div>
+                    <br>
+                    <button class="btn btn-primary" data-dismiss="modal" style="margin-top: 3px">Close</button>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" data-backdrop="static" data-keyboard="false" id="improper-date" role="dialog" tabindex="2">
+    <div class="modal-dialog" style="">
+        <div class="modal-content">
+            <div class="modal-body">
+                <center>
+                    <div>
+                        <h3>Invalid Input!</h3>
+                        <hr>
+                        <h4>Improper date! Please try again.</h4>
+                    </div>
+                    <br>
+                    <button class="btn btn-primary" data-dismiss="modal" style="margin-top: 3px">Close</button>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" data-backdrop="static" data-keyboard="false" id="clearConfirm" role="dialog" tabindex="2">
+    <div class="modal-dialog" style="">
+        <div class="modal-content">
+            <div class="modal-body">
+                <center>
+                    <div>
+                        <h3>Confirm Navigation</h3>
+                        <hr>
+                        <h4>You will lose all unsaved works.</h4>
+                        <h4>Are you sure you want to clear this form?</h4>
+                    </div>
+                    <br>
+                    <button class="btn btn-danger" onclick="clearButton();" style="margin-top: 3px">Yes</button>
+                    <button class="btn btn-info" data-dismiss="modal" style="margin-top: 3px">No</button>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" data-backdrop="static" data-keyboard="false" id="reloadConfirmation" role="dialog" tabindex="2">
+    <div class="modal-dialog" style="">
+        <div class="modal-content">
+            <div class="modal-body">
+                <center>
+                    <div>
+                        <h3>Confirm Navigation</h3>
+                        <hr>
+                        <h4>You will lose all unsaved works.</h4>
+                        <h4>Are you sure you want to reset all field?</h4>
+                    </div>
+                    <br>
+                    <button class="btn btn-danger" onclick="reload();" style="margin-top: 3px">Yes</button>
+                    <button class="btn btn-info" data-dismiss="modal" style="margin-top: 3px">No</button>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" data-backdrop="static" data-keyboard="false" id="searchResult" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <center>
+                    
+                    <br>
+                    <button class="btn btn-danger" id="viewSearchResult" style="margin-top: 3px">View Patients</button>
+                    <button class="btn btn-info" data-dismiss="modal" style="margin-top: 3px">Close</button>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Start Create Account Modal Section-->
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" data-backdrop="static" data-keyboard="false" id="submitConfirm" role="dialog" tabindex="2">
+    <div class="modal-dialog" style="">
+        <div class="modal-content">
+            <div class="modal-body">
+                <center>
+                    <div>
+                        <h3 id="modal-title"></h3>
+                        <hr>
+                        <h4 id="modal-body">Please Enter Patient’s PIN</h4>
+                    </div>
+                    <br>
+                    <button aria-label="Close" class="btn btn-danger" data-dismiss="modal" style="margin-top: 3px">Ok
+                    </button>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End Create Account Modal Section-->
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    var datefield = document.createElement("input");
+    datefield.setAttribute("type", "date");
+    if (datefield.type != "date") { //if browser doesn't support input type="date", load files for jQuery UI Date Picker
+        document
+            .write('<link th:href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />\n');
+        document
+            .write('<script th:src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js}"><\/script>\n');
+        document
+            .write('<script th:src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js}"><\/script>\n')
+    }
+    /*]]>*/
+</script>
+
+
+<!-- DATETIMEPICKER -->
+<script src="/js/ors/jquery.js"></script>
+<script src="/js/ors/jquery-ui.js"></script>
+<script src="/js/ors/moment.js"></script>
+<script src="/newdaw/js/bootstrap-datetimepicker.js"></script>
+<script src="/css/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="/css/bootstrap-3.3.7/js/jquery-ui.js"></script>
+
+<!-- Bootstrap core JavaScript -->
+<script src="/js/popper/popper.min.js"></script>
+<!-- <script src="/js_v3/jquery-3.2.1.min.js"></script> -->
+<script src="/js_v3/custom.js"></script>
+<!-- Bootstrap tooltips -->
+<script src="/js_v3/popper.min.js" type="text/javascript"></script>
+<!-- MDB core JavaScript -->
+
+<!-- Plugin JavaScript -->
+<script src="/js/jquery-easing/jquery.easing.min.js"></script>
+<!-- Custom scripts for this template -->
+<script src="/js/freelancer.min.js"></script>
+
+<!--Data Tables-->
+<script src="/DataTables-1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="/DataTables-1.10.16/js/dataTables.bootstrap.js"></script>
+<script src="/js/stacktable.js"></script>
+<script src="/scripts/header.js"></script>
+
+<!-- MOZZILA DATE PICKER -->
+<script src="/js-webshim/minified/polyfiller.js"></script>
+<script src="/js-webshim/modernizr-custom.js"></script>
+<!-- International Input -->
+<script src="/build/js/intlTelInput.js"></script>
+<!-- Webshim -->
+<script src="/js-webshim/jquery-ui.js"></script>
+<script src="/scripts/header.js"></script>
+<!-- LOADING -->
+<script src="/ors-late-pages/ors/scripts/js/waitMe.js"></script>
+<script src="/ors-late-pages/ors/scripts/js/waitMe.min.js"></script>
+<!-- Timer -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/timer.jquery/0.7.0/timer.jquery.js"></script>
+<!-- timer script -->
+<script>
+    /*<![CDATA[*/
+    (function ($) {
+        //start a timer
+        if (localStorage.getItem("f5Time") === '' ||
+            localStorage.getItem("f5Time") === null ||
+            localStorage.getItem("f5Time") === undefined ||
+            localStorage.getItem("f5Time") === 'null') {
+
+            var start = '0'
+        } else {
+            var f5Time = localStorage.getItem("f5Time");
+            var start = convertToSeconds(f5Time);
+        }
+
+        var green = 'green';
+        var yellow = 'yellow';
+        var red = 'red';
+        // alert(start);
+        jQuery("#timer").timer({
+            seconds: start,
+            format: '%H:%M:%S',
+            duration: '1s',
+            callback: function () {
+                var timerTime = jQuery("#timer").html();
+                //console.log(convertToSeconds(timerTime));
+                if (convertToSeconds(timerTime) >= 3600) {
+                    jQuery("#timer").css({'color': red});
+                } else if (convertToSeconds(timerTime) >= 60 * 15) {
+                    jQuery("#timer").css({'color': yellow});
+                } else if (convertToSeconds(timerTime) > 0) {
+                    jQuery("#timer").css({'color': green});
+                }
+                localStorage.setItem("f5Time", timerTime);
+            },
+            repeat: true
+        });
+        jQuery("#time").timer({
+            seconds: start,
+            format: '%H:%M:%S'
+        });
+    }());
+
+    function convertToSeconds(val) {
+        var x = val.split(':');
+        var hr = (3600 * x[0]);
+        var m = (60 * x[1]);
+        var s = x[2];
+        return parseInt(hr) + parseInt(m) + parseInt(s);
+    }
+
+    /*]]>*/
+</script>
+<!-- datatable -->
+<script charset="utf-8" type="text/javascript">
+    /*<![CDATA[*/
+    $('#example').dataTable({
+        "lengthMenu": [10, 25, 50, 75, 100],
+        "bFilter": false,
+        "order": [],
+        "columnDefs": [{
+            "targets": 'no-sort',
+            "orderable": false,
+        }]
+    });
+    $('.responsive-example-table').stacktable({
+        myClass: 'stacktable large-only'
+    });
+
+    $('#example1').dataTable({
+        "bFilter": false,
+        "order": [],
+        "columnDefs": [{
+            "targets": 'no-sort',
+            "orderable": false,
+        }],
+        "aLengthMenu": [[5, 10, 25, 50, 75, -1], [5, 10, 25, 50, 75, "All"]],
+        "iDisplayLength": 5
+    });
+    $('.responsive-example-table').stacktable({myClass: 'stacktable large-only'});
+    /*]]>*/
+</script>
+
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-top d-lg-none">
+    <a class="btn btn-primary js-scroll-trigger" href="#page-top"> <i class="fa fa-chevron-up"></i>
+    </a>
+</div>
+<!-- Tool tip -->
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $(function () {
+        $(document).tooltip({
+            position: {
+                my: "center bottom",
+                at: "center top-10",
+                collision: "flip",
+                using: function (position, feedback) {
+                    $(this).addClass(feedback.vertical)
+                        .css(position);
+                }
+            },
+            show: {duration: 1000}
+        });
+        var religionsTags = [{'code':'RLG15','description':'IGLESIA NI CRISTO','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG24','description':'PAGAN','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG22','description':'METHODIST','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG21','description':'NOI ABE MANDAL','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG17','description':'N.B.C.','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG20','description':'SIKH','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG09','description':'LUTHERAN','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG13','description':'JEWISH','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG03','description':'ROMAN CATHOLIC','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG14','description':'BAPTIST','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG10','description':'HINDU','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG25','description':'SCIENTOLOGIST','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG01','description':'ATHEIST','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG28','description':'MUSLIM','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG29','description':'PENTECOSTAL','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG18','description':'ANGLICAN','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG16','description':'LATTER DAY SAINTS','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG-','description':' ','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG11','description':'BUDDHIST','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG23','description':'OTHERS','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG02','description':'EVANGELICAL','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG08','description':'SEVENTH DAY ADVENTIST','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG05','description':'PROTESTANT','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG27','description':'AGLIPAY','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG06','description':'JEHOVAH\'S WITNESS','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG07','description':'ISLAM','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG19','description':'CHURCH OF CHRIST','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG26','description':'EPISCOPALIAN','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG12','description':'BORN AGAIN','location':'GC','ref_hdr_code':'PAT09','status':'A'},{'code':'RLG04','description':'CHRISTIAN','location':'GC','ref_hdr_code':'PAT09','status':'A'}];
+        var nationalitiesTags = [{'code':'NL189','description':'HONGKONGER','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL185','description':'GIBRALTAR','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL085','description':'KAZAKH','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL006','description':'ANGOLAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL123','description':'PERUVIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL092','description':'LIBYAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL198','description':'CHUUKESE','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL136','description':'SINGAPOREAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL160','description':'UGANDAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL028','description':'BURKINESE','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL077','description':'IRANIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL171','description':'YUGOSLAV','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL019','description':'BENINESE','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL056','description':'FIJIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL080','description':'ISRAELI','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL068','description':'GUINEAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL174','description':'ZIMBABWEAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL011','description':'AZERBAIJANI','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL050','description':'EGYPTIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL168','description':'WELSH','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL005','description':'ANDORRAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL003','description':'ALGERIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL008','description':'ARMENIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL183','description':'EMIRATIS','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL036','description':'CHILEAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL095','description':'MADAGASCAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL190','description':'IVOIRIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL066','description':'GRENADIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL096','description':'MALAWIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL115','description':'NIGERIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL153','description':'THAI','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL111','description':'NEPALESE','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL170','description':'YEMENI','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL200','description':'MARSHALLESE','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL152','description':'TANZANIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL029','description':'BURMESE','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL117','description':'NORWEGIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL138','description':'SLOVENE OR SLOVENIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL191','description':'LIECHTENSTEINERS','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL149','description':'SYRIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL001','description':'AFGHAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL167','description':'VIETNAMESE','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL014','description':'BANGLADESHI','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL194','description':'PUERTO RICAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL040','description':'COSTA RICAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL035','description':'CHADIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL065','description':'GREEK','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL069','description':'GUYANESE','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL030','description':'BURUNDIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL002','description':'ALBANIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL134','description':'SEYCHELLOIS','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL072','description':'HONDURAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL026','description':'BRUNEIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL079','description':'IRISH','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL187','description':'GUIANESE','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL018','description':'BELIZIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL176','description':'AROMANIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL033','description':'CANADIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL178','description':'BALOCHI','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL090','description':'LEBANESE','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL024','description':'BRAZILIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL082','description':'JAMAICAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL129','description':'RWANDAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL057','description':'FILIPINO','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL087','description':'KUWAITI','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL107','description':'MONTENEGRIN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL020','description':'BHUTANESE','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL084','description':'JORDANIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL112','description':'NEW ZEALANDER','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL196','description':'TIBETANS','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL097','description':'MALAYSIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL064','description':'GHANAIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL016','description':'BYELORUSSIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL074','description':'ICELANDIC','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL060','description':'GABONESE','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL104','description':'MOLDOVAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL114','description':'NIGERIEN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL172','description':'ZA\xCFREAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL047','description':'CATALANS','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL045','description':'DANISH','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL106','description':'MONGOLIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL166','description':'VENEZUELAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL108','description':'MOROCCAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL042','description':'CUBAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL109','description':'MOZAMBICAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL051','description':'SALVADOREAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL201','description':'BAPTIST','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL202','description':'MICRONESIA','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL164','description':'UZBEK','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL013','description':'BAHRAINI','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL101','description':'MAURITANIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL151','description':'TAJIK OR TADJIK','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL105','description':'MON\xC9GASQUE OR MONACAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL037','description':'CHINESE','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL088','description':'LAOTIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL044','description':'CZECH','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL055','description':'ETHIOPIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL155','description':'TRINIDADIAN AND TOBAGAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL021','description':'BOLIVIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL177','description':'ARUBAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL140','description':'SOUTH AFRICAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL175','description':'AFRICAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL121','description':'PAPUA NEW GUINEAN OR GUINEAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL086','description':'KENYAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL093','description':'LITHUANIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL173','description':'ZAMBIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL054','description':'ESTONIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL027','description':'BULGARIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL032','description':'CAMEROONIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL102','description':'MAURITIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL150','description':'TAIWANESE','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL091','description':'LIBERIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL132','description':'SENEGALESE','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL089','description':'LATVIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL017','description':'BELGIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL061','description':'GAMBIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL015','description':'BARBADIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL146','description':'SWAZI','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL004','description':'AMERICAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL094','description':'MACEDONIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL052','description':'ENGLISH','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL116','description':'NORTH KOREAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL148','description':'SWISS','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL141','description':'SOUTH KOREAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL053','description':'ERITREAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL010','description':'AUSTRIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL199','description':'CHAMORRO','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL062','description':'GEORGIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL135','description':'SIERRA LEONIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL075','description':'INDIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL119','description':'PAKISTANI','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL139','description':'SOMALI','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL181','description':'COMORIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL133','description':'SERB OR SERBIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL118','description':'OMANI','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL122','description':'PARAGUAYAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL067','description':'GUATEMALAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL195','description':'SICILIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL192','description':'PALAUAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL025','description':'BRITISH','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL100','description':'MALTESE','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL059','description':'FRENCH','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL126','description':'QATARI','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL023','description':'BOTSWANAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL098','description':'MALDIVIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL099','description':'MALIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL113','description':'NICARAGUAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL034','description':'CAPE VERDEAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL071','description':'DUTCH','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL137','description':'SLOVAK','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL128','description':'RUSSIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL157','description':'TURKISH','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL154','description':'TOGOLESE','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL103','description':'MEXICAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL070','description':'HAITIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL124','description':'POLISH','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL007','description':'ARGENTINIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL163','description':'URUGUAYAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL031','description':'CAMBODIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL180','description':'BOERS','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL041','description':'CROAT OR CROATIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL147','description':'SWEDISH','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL193','description':'POLYNESIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL012','description':'BAHAMIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL156','description':'TUNISIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL043','description':'CYPRIOT','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL120','description':'PANAMANIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL110','description':'NAMIBIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL048','description':'DOMINICAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL162','description':'BRITISH','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL073','description':'HUNGARIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL186','description':'GUAMANIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL130','description':'SAUDI ARABIAN OR SAUDI','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL144','description':'SUDANESE','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL169','description':'WESTERN SAMOAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL083','description':'JAPANESE','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL161','description':'UKRAINIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL197','description':'OTHERS','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL039','description':'CONGOLESE','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL184','description':'FINN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL038','description':'COLOMBIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL165','description':'VANUATUAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL182','description':'EAST TIMORESE','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL145','description':'SURINAMESE','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL203','description':'PALESTINIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL-','description':' ','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL188','description':'HAIDA','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL131','description':'SCOTTISH','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL142','description':'SPANISH','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL022','description':'BOSNIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL081','description':'ITALIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL058','description':'FINNISH','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL078','description':'IRAQI','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL127','description':'ROMANIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL158','description':'TURKMEN OR TURKOMAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL179','description':'BELARUSIANS','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL143','description':'SRI LANKAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL009','description':'AUSTRALIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL159','description':'TUVALUAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL046','description':'DJIBOUTIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL049','description':'ECUADOREAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL125','description':'PORTUGUESE','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL063','description':'GERMAN','location':'GC','ref_hdr_code':'PAT07','status':'A'},{'code':'NL076','description':'INDONESIAN','location':'GC','ref_hdr_code':'PAT07','status':'A'}];
+        var countriesTags = [{'code':'ARE','description':'UNITED ARAB EMIRATES','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'SOM','description':'SOMALIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'UZB','description':'UZBEKISTAN','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'COG','description':'CONGO','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'BFA','description':'BURKINA FASO','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'BOL','description':'BOLIVIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'AUS','description':'AUSTRALIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'GLP','description':'GUADELOUPE','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'GAB','description':'GABON','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'GUF','description':'FRENCH GUIANA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'DMA','description':'DOMINICA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'COL','description':'COLOMBIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'ZAR','description':'ZAIRE','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'GEO','description':'GEORGIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'THA','description':'THAILAND','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'HMD','description':'HEARD ISLAND AND MCDONALD ISLANDS','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'REU','description':'REUNION','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'TUV','description':'TUVALU','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'CAN','description':'CANADA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'NER','description':'NIGER','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'FIN','description':'FINLAND','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'MUS','description':'MAURITIUS','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'ERI','description':'ERITREA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'VNM','description':'VIET NAM','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'VEN','description':'VENEZUELA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'SEN','description':'SENEGAL','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'NPL','description':'NEPAL','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'MOZ','description':'MOZAMBIQUE','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'VGB','description':'VIRGIN ISLANDS (BRITISH)','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'MDG','description':'MADAGASCAR','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'RUS','description':'RUSSIAN FEDERATION','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'MCO','description':'MONACO','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'KAZ','description':'KAZAKHSTAN','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'GRD','description':'GRENADA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'CPV','description':'CAPE VERDE','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'ETH','description':'ETHIOPIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'BGR','description':'BULGARIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'VAT','description':'VATICAN CITY STATE (HOLY SEE)','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'NIC','description':'NICARAGUA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'UKR','description':'UKRAINE','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'SVK','description':'SLOVAKIA (SLOVAK REPUBLIC)','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'BDI','description':'BURUNDI','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'TZA','description':'TANZANIA, UNITED REPUBLIC OF','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'TJK','description':'TAJIKISTAN','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'ATG','description':'ANTIGUA AND BARBUDA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'HKG','description':'HONG KONG','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'RWA','description':'RWANDA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'MSR','description':'MONTSERRAT','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'LVA','description':'LATVIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'GBR','description':'UNITED KINGDOM','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'DOM','description':'DOMINICAN REPUBLIC','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'MMR','description':'MYANMAR','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'ATA','description':'ANTARCTICA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'ZMB','description':'ZAMBIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'TLS','description':'EAST TIMOR','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'FRO','description':'FAROE ISLANDS','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'MYT','description':'MAYOTTE','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'GIB','description':'GIBRALTAR','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'FSM','description':'MICRONESIA, FEDERATED STATES OF','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'HUN','description':'HUNGARY','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'AIA','description':'ANGUILLA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'LKA','description':'SRI LANKA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'MHL','description':'MARSHALL ISLANDS','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'IDN','description':'INDONESIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'DJI','description':'DJIBOUTI','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'SGP','description':'SINGAPORE','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'IND','description':'INDIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'AGO','description':'ANGOLA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'GHA','description':'GHANA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'ESH','description':'WESTERN SAHARA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'ESP','description':'SPAIN','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'JAM','description':'JAMAICA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'BRA','description':'BRAZIL','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'COK','description':'COOK ISLANDS','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'USA','description':'UNITED STATES','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'FRA','description':'FRANCE','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'NCL','description':'NEW CALEDONIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'IRQ','description':'IRAQ','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'PAK','description':'PAKISTAN','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'TCA','description':'TURKS AND CAICOS ISLANDS','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'UMI','description':'UNITED STATES MINOR OUTLYING ISLANDS','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'MNP','description':'NORTHERN MARIANA ISLANDS','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'SUR','description':'SURINAME','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'HND','description':'HONDURAS','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'JPN','description':'JAPAN','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'DZA','description':'ALGERIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'SAU','description':'SAUDI ARABIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'PHL','description':'PHILIPPINES','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'CHL','description':'CHILE','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'IRN','description':'IRAN, ISLAMIC REPUBLIC OF','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'BVT','description':'BOUVET ISLAND','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'MWI','description':'MALAWI','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'VCT','description':'SAINT VINCENT AND THE GRENADINES','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'LSO','description':'LESOTHO','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'PLW','description':'PALAU','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'GRC','description':'GREECE','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'GRL','description':'GREENLAND','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'DNK','description':'DENMARK','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'CMR','description':'CAMEROON','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'MDA','description':'MOLDOVA, REPUBLIC OF','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'BRB','description':'BARBADOS','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'PRI','description':'PUERTO RICO','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'ECU','description':'ECUADOR','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'NZL','description':'NEW ZEALAND','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'JOR','description':'JORDAN','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'PER','description':'PERU','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'GTM','description':'GUATEMALA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'POL','description':'POLAND','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'NIU','description':'NIUE','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'NGA','description':'NIGERIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'FJI','description':'FIJI','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'BWA','description':'BOTSWANA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'GUY','description':'GUYANA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'ISR','description':'ISRAEL','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'PAN','description':'PANAMA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'STP','description':'SAO TOME AND PRINCIPE','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'FLK','description':'FALKLAND ISLANDS (MALVINAS)','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'ROU*','description':'ROMANIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'PRY','description':'PARAGUAY','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'CUB','description':'CUBA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'DEU','description':'GERMANY','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'PYF','description':'FRENCH POLYNESIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'MRT','description':'MAURITANIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'QAT','description':'QATAR','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'KIR','description':'KIRIBATI','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'PRK','description':'KOREA, DEMOCRATIC PEOPLE\'S REPUBLIC OF','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'HTI','description':'HAITI','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'CYM','description':'CAYMAN ISLANDS','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'WLF','description':'WALLIS AND FUTUNA ISLANDS','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'BHR','description':'BAHRAIN','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'COM','description':'COMOROS','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'SYC','description':'SEYCHELLES','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'EST','description':'ESTONIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'TWN','description':'TAIWAN, PROVINCE OF CHINA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'SHN','description':'SAINT HELENA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'SER','description':'SERBIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'SLV','description':'EL SALVADOR','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'NLD','description':'NETHERLANDS','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'MTQ','description':'MARTINIQUE','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'PRT','description':'PORTUGAL','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'ANT','description':'NETHERLANDS ANTILLES','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'AUT','description':'AUSTRIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'MLT','description':'MALTA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'KNA','description':'SAINT KITTS AND NEVIS','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'KHM','description':'CAMBODIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'KGZ','description':'KYRGYZSTAN','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'SPM','description':'SAINT PIERRE AND MIQUELON','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'NRU','description':'NAURU','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'FXX','description':'FRANCE, METROPOLITAN','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'BLZ','description':'BELIZE','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'GNQ','description':'EQUATORIAL GUINEA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'TCD','description':'CHAD','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'MKD','description':'MACEDONIA, THE FORMER YUGOSLAV REPUBLIC ','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'PCN','description':'PITCAIRN','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'GUM','description':'GUAM','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'MEX','description':'MEXICO','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'LBY','description':'LIBYAN ARAB JAMAHIRIYA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'KEN','description':'KENYA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'GMB','description':'GAMBIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'ISL','description':'ICELAND','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'LUX','description':'LUXEMBOURG','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'MYS','description':'MALAYSIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'AZE','description':'AZERBAIJAN','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'MLI','description':'MALI','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'CZE','description':'CZECH REPUBLIC','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'SLE','description':'SIERRA LEONE','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'VUT','description':'VANUATU','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'SWZ','description':'SWAZILAND','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'LTU','description':'LITHUANIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'CHE','description':'SWITZERLAND','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'BLR','description':'BELARUS','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'CXR','description':'CHRISTMAS ISLAND','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'ABW','description':'ARUBA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'LCA','description':'SAINT LUCIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'BEL','description':'BELGIUM','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'CRI','description':'COSTA RICA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'IOT','description':'BRITISH INDIAN OCEAN TERRITORY','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'ARM','description':'ARMENIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'GIN','description':'GUINEA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'ASM','description':'AMERICAN SAMOA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'LBR','description':'LIBERIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'KWT','description':'KUWAIT','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'TGO','description':'TOGO','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'PNG','description':'PAPUA NEW GUINEA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'IRL','description':'IRELAND','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'CHN','description':'CHINA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'CCK','description':'COCOS (KEELING) ISLANDS','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'TUN','description':'TUNISIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'ZWE','description':'ZIMBABWE','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'AFG','description':'AFGHANISTAN','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'BRN','description':'BRUNEI DARUSSALAM','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'LAO','description':'LAO PEOPLE\'S DEMOCRATIC REPUBLIC','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'TTO','description':'TRINIDAD AND TOBAGO','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'SVN','description':'SLOVENIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'TKL','description':'TOKELAU','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'MAC','description':'MACAU','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'MNG','description':'MONGOLIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'SYR','description':'SYRIAN ARAB REPUBLIC','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'EGY','description':'EGYPT','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'CIV','description':'COTE D\'IVOIRE','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'NAM','description':'NAMIBIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'NFK','description':'NORFOLK ISLAND','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'MDV','description':'MALDIVES','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'ATF','description':'FRENCH SOUTHERN TERRITORIES','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'YEM','description':'YEMEN','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'TON','description':'TONGA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'CAF','description':'CENTRAL AFRICAN REPUBLIC','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'YUG','description':'YUGOSLAVIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'SWE','description':'SWEDEN','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'URY','description':'URUGUAY','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'ITA','description':'ITALY','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'SLB','description':'SOLOMON ISLANDS','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'TUR','description':'TURKEY','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'TKM','description':'TURKMENISTAN','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'BIH','description':'BOSNIA AND HERZEGOVINA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'OMN','description':'OMAN','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'SJM','description':'SVALBARD AND JAN MAYEN ISLANDS','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'UGA','description':'UGANDA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'KOR','description':'KOREA, REPUBLIC OF','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'BGD','description':'BANGLADESH','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'ARG','description':'ARGENTINA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'BHS','description':'BAHAMAS','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'CYP','description':'CYPRUS','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'BMU','description':'BERMUDA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'GNB','description':'GUINEA-BISSAU','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'LBN','description':'LEBANON','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'ZAF','description':'SOUTH AFRICA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'SMR','description':'SAN MARINO','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'LIE','description':'LIECHTENSTEIN','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'MAR','description':'MOROCCO','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'VIR','description':'VIRGIN ISLANDS (U.S.)','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'HRV','description':'CROATIA (HRVATSKA)','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'BTN','description':'BHUTAN','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'WSM','description':'SAMOA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'TAR','description':'TATARSTAN','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'NOR','description':'NORWAY','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'ALB','description':'ALBANIA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'AND','description':'ANDORRA','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'SDN','description':'SUDAN','location':'GC','ref_hdr_code':'FM003','status':'A'},{'code':'BEN','description':'BENIN','location':'GC','ref_hdr_code':'FM003','status':'A'}];
+
+        var religionsEmptyTags = [];
+        var nationalitiesEmptyTags = [];
+        var countriesEmptyTags = [];
+        for (var x = 0; x < religionsTags.length; x++) {
+            religionsEmptyTags.push(religionsTags[x].description);
+        }
+        for (var x = 0; x < nationalitiesTags.length; x++) {
+            nationalitiesEmptyTags.push(nationalitiesTags[x].description);
+        }
+        for (var x = 0; x < countriesTags.length; x++) {
+            countriesEmptyTags.push(countriesTags[x].description);
+        }
+        jQuery('#religion').change(function () {
+            var religion = $('#religion').val();
+            if (religionsEmptyTags.includes(religion) == false) {
+                $('#religion').addClass('null-values');
+                $('#religion').val(null);
+            } else {
+                $('#religion').removeClass('null-values');
+            }
+        });
+        $("#religion").autocomplete({
+            source: religionsEmptyTags,
+            messages: {
+                noResults: '',
+                results: function () {
+                }
+            }
+
+        });
+        jQuery('#nationality').change(function () {
+            var nationality = $('#nationality').val();
+            if (nationalitiesEmptyTags.includes(nationality) == false) {
+                $('#nationality').addClass('null-values');
+                $('#nationality').val(null);
+            } else {
+                $('#nationality').removeClass('null-values');
+            }
+        });
+        $("#nationality").autocomplete({
+            source: nationalitiesEmptyTags,
+            messages: {
+                noResults: '',
+                results: function () {
+                }
+            }
+        });
+        jQuery('#country').change(function () {
+            var country = $('#country').val();
+            if (countriesEmptyTags.includes(country) == false) {
+                $('#country').addClass('null-values');
+                $('#country').val(null);
+            } else {
+                $('#country').removeClass('null-values');
+            }
+        });
+        $("#country").autocomplete({
+            source: countriesEmptyTags,
+            messages: {
+                noResults: '',
+                results: function () {
+                }
+            }
+        });
+    });
+    /*]]>*/
+</script>
+<!-- Datepicker script -->
+<!-- Date picker Mozilla -->
+<script>
+    webshims.setOptions('forms-ext', {
+        types: 'date',
+        replaceUI: 'auto'
+    });
+    webshims.polyfill('forms forms-ext');
+
+    $(".birthdate").change(function () {
+        $(function () {
+            $('[type="date"].max-today').prop('max', function () {
+                return new Date().toJSON().split('T')[0];
+            });
+        });
+    });
+</script>
+<!-- International Input -->
+<script>
+    $(".internationContactNumber").intlTelInput({
+        allowDropdown: true,
+        //autoHideDialCode: false,
+        autoPlaceholder: "off",
+        //dropdownContainer: "body",
+        // excludeCountries: ["us"],
+        formatOnDisplay: false,
+        // geoIpLookup: function(callback) {
+        //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+        //     var countryCode = (resp && resp.country) ? resp.country : "";
+        //     callback(countryCode);
+        //   });
+        // },
+        hiddenInput: "full_number",
+        initialCountry: "ph",
+        nationalMode: false,
+        //onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+        placeholderNumberType: "MOBILE",
+        //preferredCountries: ['cn', 'jp'],
+        //separateDialCode: true,
+        utilsScript: "/build/js/utils.js"
+    });
+
+    $(document).ready(function () {
+        //called when key is pressed in textbox
+        $(".internationContactNumber").keypress(function (e) {
+            //if the letter is not digit then display error and don't type anything
+            if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                //display error message
+                return false;
+            }
+        });
+        $("#visitNumber").keypress(function (e) {
+            //if the letter is not digit then display error and don't type anything
+            if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                //display error message
+                return false;
+            }
+        });
+        var telInput = $("#rcontactNumber"),
+            errorMsg = $("#error-msg"),
+            validMsg = $("#valid-msg");
+
+        var reset = function () {
+            telInput.removeClass("error");
+            errorMsg.addClass("hide");
+            validMsg.addClass("hide");
+        };
+
+        // on blur: validate
+        telInput.blur(function () {
+            reset();
+            if ($.trim(telInput.val())) {
+                if (telInput.intlTelInput("isValidNumber")) {
+                    validMsg.removeClass("hide");
+                    $('#isPhone').val("yes");
+                } else {
+                    telInput.addClass("error");
+                    errorMsg.removeClass("hide");
+                    $('#isPhone').val("no");
+                    $("#rcontactNumber").val("");
+                }
+            }
+        });
+
+        // on keyup / change flag: reset
+        telInput.on("keyup change", reset);
+
+
+        var telInput1 = $("#contactNumber"),
+            errorMsg1 = $("#error-msg1"),
+            validMsg1 = $("#valid-msg1");
+
+        var reset1 = function () {
+            telInput1.removeClass("error");
+            errorMsg1.addClass("hide");
+            validMsg1.addClass("hide");
+        };
+
+        // on blur: validate
+        telInput1.blur(function () {
+            reset1();
+            if ($.trim(telInput1.val())) {
+                if (telInput1.intlTelInput("isValidNumber")) {
+                    validMsg1.removeClass("hide");
+                    $('#isPhone1').val("yes");
+                } else {
+                    telInput1.addClass("error");
+                    errorMsg1.removeClass("hide");
+                    $('#isPhone1').val("no");
+                    $("#contactNumber").val("");
+                }
+            }
+        });
+
+        // on keyup / change flag: reset
+        telInput1.on("keyup change", reset);
+    });
+
+
+</script>
+
+<!-- Functions -->
+<script charset="utf-8" type="text/javascript">
+    /*<![CDATA[*/
+    function reload() {
+        window.location = "clear?time=" + $("#time").val();
+    }
+
+    function getPatientWithPin() {
+        $("#resultsBlock").load("medicon/patient/pinOnly", function () {
+            $('#loadingHolder').waitMe("hide");
+        });
+    }
+
+    function getPatient() {
+        var url = 'medicon/patient';
+        var bday = $('#bday').val();
+        //var lastname= $('#lastname').val();
+        //var firstname= $('#firstname').val();
+        //var middlename = $('#middlename').val();
+        var gender = $('#genderSearch').val();
+        var lastname = encodeURIComponent($('#lastname').val().trim());
+        var firstname = encodeURIComponent($('#firstname').val().trim());
+        var middlename = encodeURIComponent($('#middlename').val().trim());
+        var advFromPage = encodeURIComponent($('#advFromPage').val().trim());
+
+        if (advFromPage == null || advFromPage == '') {
+            advFromPage = "unknown";
+        }
+        //alert(advFromPage);
+
+        if (bday != '' && lastname != '' && firstname != '' && middlename != '' && gender != '') {
+            /* if(gender === "M"){
+                $("#genderDivHolder").addClass('null-values');
+            }else if(gender === "F"){
+                $("#gender").addClass('null-values');
+            }else{ */
+            var nurl = url + '/patientSearchByCriteria/' + lastname + '/' + firstname + '/' + middlename + '/' + bday + '/' + gender + '/' + advFromPage;
+            $("#lastname").removeClass('null-values');
+            $("#firstname").removeClass('null-values');
+            $("#middlename").removeClass('null-values');
+            $("#genderSearch").removeClass('null-values');
+            $("#fromDateDiv1").removeClass('null-values-datepicker');
+            loadingScreen('#loadingHolder', 'Retrieveing Records');
+            console.log(nurl + "/" + time);
+            /* } */
+        }
+        if (!($('#lastname').val() != '')) {
+            $("#lastname").addClass('null-values');
+        }
+        if (!($('#firstname').val() != '')) {
+            $("#firstname").addClass('null-values');
+        }
+        if (!($('#middlename').val() != '')) {
+            $("#middlename").addClass('null-values');
+        }
+        if (!($('#genderSearch').val() != '')) {
+            $("#genderSearch").addClass('null-values');
+        }
+        if (!($('#bday').val() != '')) {
+            $("#fromDateDiv1").addClass('null-values-datepicker');
+        }
+        /* if(gender === "M" || gender === "F"){
+            $("#genderDivHolder").addClass('null-values');
+            alert("MAG ADD KA");
+        } */
+        console.log("Clicking...");
+
+        $("#resultsBlock").load(nurl, function () {
+            $('#loadingHolder').waitMe("hide");
+        });
+    }
+
+    function getProcedureByVistNumber() {
+        var url = 'medicon/patient';
+        var vistNumber = $('#visitNumber').val();
+        var patientPin = $('#patientPin').val();
+        if (vistNumber != '' && patientPin != '') {
+            var nurl = url + '/procedureSearchByVisitNumber/' + vistNumber + '/' + patientPin;
+            loadingScreen('#procedureLoadingDiv', 'Retrieving Records');
+            console.log(nurl);
+        }
+        $("#resultsBlockProcedure").load(nurl, function () {
+            $('#procedureLoadingDiv').waitMe("hide");
+        });
+        if (vistNumber == '') {
+            $('#visitNumber').addClass('null-values');
+        }
+    }
+
+    function getProcedureByDate() {
+        var url = 'medicon/patient';
+        var date1 = $('#date1').val();
+        var date2 = $('#date2').val();
+        var patientPin = $('#patientPin').val();
+        if (date1 != '' && date2 != '' && patientPin != '') {
+            loadingScreen('#procedureLoadingDiv', 'Retrieving Records');
+            var nurl = url + '/procedureSearchByVisitNumber/' + date1 + '/' + date2 + '/' + patientPin;
+            console.log(nurl);
+        }
+        $("#resultsBlockProcedure").load(nurl, function () {
+            $('#procedureLoadingDiv').waitMe("hide");
+        });
+        if (date1 == '') {
+            $('#firstDivHolder').addClass('null-values');
+        }
+        if (date2 == '') {
+            $('#secondDivHolder').addClass('null-values');
+        }
+    }
+
+    $('.drop-down-show-hide').hide();
+    $('#div2').show();
+    $('#searchCategory').change(function () {
+        $(this).find("option").each(function () {
+            $('#' + this.value).hide();
+        });
+        $('#' + this.value).show();
+
+    });
+
+    $(document).ready(function () {
+        var fromPage = null;
+        //alert(" asas" +fromPage);
+        if (fromPage === "Y") {
+            $("#portfolioModal2").modal('show');
+        }
+    });
+
+    function searchPinOnly(e) {
+        // loadingScreen('#loadingHolder', 'Retrieving Records');
+        var prevPage = null;
+        var timers = $("#time").val();
+        e.preventDefault();
+
+        if ($('#pin').val()) {
+            $('#pin').removeClass('null-values');
+            $.ajax({
+                type: 'POST',
+                url: window.location.protocol + '//' + window.location.host + '/medicon/patient/pinOnly',
+                data: $('#pinSearchForm').serialize(),
+                error: function () {
+                    $('#pin').addClass('null-values');
+                    $('#modal-body').text('Patient not found');
+                    $('#submitConfirm').modal('toggle');
+                },
+                success: function (data) {
+                    // completeSearchForm.appendTo('#patientAdvSearchForm');
+                    $('#fromDateDiv1').find('input');
+                    // var strArr = data.birthdate.split('-');
+                    // console.log(strArr);
+
+                    // $('#pinSearchForm').hide();
+                    // $('#completeSearchForm').show();
+                    // $('#lastname').val(data.lastname);
+                    // $('#firstname').val(data.firstname);
+                    // $('#middlename').val(data.middlename);
+                    // $('#fromDateDiv1').find('input')[1].value = strArr[2];
+                    // $('#fromDateDiv1').find('input')[2].value = strArr[1];
+                    // $('#fromDateDiv1').find('input')[3].value = strArr[0];
+                    // $('#genderSearch').val(data.gender);
+                    var ehPin = data.ehPin;
+
+                    if (prevPage === "appointment") {
+                        window.location.href = "/medicon/appointment?ehPin=" + ehPin + '&time=' + timers;
+                    } else if (prevPage === "sms") {
+                        window.location.href = "/medicon/messages/sms?ehPin=" + ehPin + "&fromTab=TAB1" + '&time=' + timers;
+                    } else if (prevPage === "smsSent") {
+                        window.location.href = "/medicon/messages/sms?ehPin=" + ehPin + "&fromTab=TAB2" + '&time=' + timers;
+                    } else if (prevPage === "guarantee") {
+                        window.location.href = "/medicon/request-letter/form?time=" + timers + "&ehPin=" + ehPin + "&fromTab=TAB1";
+                    } else if (prevPage === "guaranteeSent") {
+                        window.location.href = "/medicon/request-letter/form?time=" + timers + "&ehPin=" + ehPin + "&fromTab=TAB2";
+                    }
+                }
+            })
+        } else {
+            $('#pin').addClass('null-values');
+            $('#modal-body').val('Please Enter Patient’s PIN');
+            $('#submitConfirm').modal('toggle');
+        }
+        $('#prevPage').val(prevPage);
+    }
+
+    function checkPreviousPage(ehPin, test) {
+        loadingScreen('#loadingHolder', 'Retrieving Records');
+        var previousPage = null;
+        var timers = $("#time").val();
+        if (previousPage === "appointment") {
+            if (ehPin != null && ehPin != '') {
+                window.location.href = "/medicon/appointment?ehPin=" + ehPin + '&time=' + timers;
+            } else {
+                $("#ors-no-ehpin").modal("toggle");
+            }
+        } else if (previousPage === "sms") {
+            window.location.href = "/medicon/messages/sms?ehPin=" + ehPin + "&fromTab=TAB1" + '&time=' + timers;
+            if (ehPin != null && ehPin != '') {
+                window.location.href = "/medicon/messages/sms?ehPin=" + ehPin + "&fromTab=TAB1" + '&time=' + timers;
+            } else {
+                $("#ors-no-ehpin").modal("toggle");
+            }
+        } else if (previousPage === "smsSent") {
+            window.location.href = "/medicon/messages/sms?ehPin=" + ehPin + "&fromTab=TAB2" + '&time=' + timers;
+        } else if (previousPage === "guarantee") {
+            window.location.href = "/medicon/request-letter/form?time=" + timers + "&ehPin=" + ehPin + "&fromTab=TAB1";
+        } else if (previousPage === "guaranteeSent") {
+            window.location.href = "/medicon/request-letter/form?time=" + timers + "&ehPin=" + ehPin + "&fromTab=TAB2";
+        } else {
+            $('#timeForm').val($("#time").val());
+            $("#patientData" + test).submit();
+        }
+    }
+
+    function closeToPreviousPage() {
+        //alert('ok');
+        $('#page-top').css("overflow-y", "scroll");
+        var previousPage = null;
+        console.log(previousPage);
+        var time = $("#time").val();
+        if (previousPage === "appointment") {
+            window.location.href = "/medicon/appointment?time=" + time;
+        } else if (previousPage === "sms") {
+            window.location.href = "/medicon/messages/sms?fromTab=TAB1" + '&time=' + time;
+        } else if (previousPage === "smsSent") {
+            window.location.href = "/medicon/messages/sms?fromTab=TAB2" + '&time=' + time;
+        } else if (previousPage === "guarantee") {
+            window.location.href = "/medicon/request-letter/form?time=" + time + "&fromTab=TAB1";
+        } else if (previousPage === "guaranteeSent") {
+            window.location.href = "/medicon/request-letter/form?time=" + time + "&fromTab=TAB2";
+        } else {
+            $('#portfolioModal2').modal('hide')
+        }
+    }
+
+    function submitPinSearch() {
+        loadingScreen('#page-top', 'Retrieving Records');
+        $("#patientSearchForm").submit();
+
+    }
+
+    function registerFormButton() {
+        var lname = $('#lname').val();
+        var fname = $('#fname').val();
+        var mname = $('#mname').val();
+        var rbirthdate = $('#rbirthdate').val();
+        var rgender = $('#rgender').val();
+        var email = $('#email').val();
+        var rcontactNumber = $('#rcontactNumber').val();
+        var religion = $('#religion').val();
+        var nationality = $('#nationality').val();
+        var country = $('#country').val();
+        if (lname != '' && fname != '' && mname != '' && rbirthdate != '' && rgender != '' && email != '' && rcontactNumber != '' && religion != '' && nationality != '' && country != '') {
+            loadingScreen('#page-top', 'Processing');
+            $("#registerForm").submit();
+        }
+        if ($('#rbirthdate').val() == '') {
+            $('#birthdateChecking').addClass('null-values');
+        }
+        if ($('#lname').val() == '') {
+            $('#lname').addClass('null-values');
+        }
+        if ($('#fname').val() == '') {
+            $('#fname').addClass('null-values');
+        }
+        if ($('#mname').val() == '') {
+            $('#mname').addClass('null-values');
+        }
+        if ($('#rgender').val() == '') {
+            $('#rgender').addClass('null-values');
+        }
+        if ($('#email').val() == '') {
+            $('#email').addClass('null-values');
+        }
+        if ($('#rcontactNumber').val() == '') {
+            $('#rcontactNumber').addClass('null-values');
+        }
+        if ($('#religion').val() == '') {
+            $('#religion').addClass('null-values');
+        }
+        if ($('#nationality').val() == '') {
+            $('#nationality').addClass('null-values');
+        }
+        if ($('#country').val() == '') {
+            $('#country').addClass('null-values');
+        }
+    }
+
+    $('#openModalAS').click(function () {
+        $('#triggerAdvanceSearch').modal('hide');
+        $('#portfolioModal2').modal('show');
+    });
+    $('#viewSearchResult').click(function () {
+        $('#searchResult').modal('hide');
+        $('#portfolioModal2').modal("show");
+        $('#page-top').css("overflow", "hidden");
+        $('#portfolioModal2').css("overflow", "auto");
+    });
+
+    function searchQuery() {
+        var pOrL = $("#pinOrLastname").val();
+        var intRegex = /^[a-zA-Z]+$/.test(pOrL);
+        var advResult = null;
+        var patientResult = null;
+        var patientIsList = null;
+
+        console.log("CALLING" + patientIsList + " : " + patientResult);
+        /*if(/[a-zA-Z]/.test(pOrL)){
+            $('#triggerAdvanceSearch').modal('show');
+        } */
+        if (patientIsList == true) {
+            //$('#portfolioModal2').modal('show');
+            //$('#portfolioModal2').modal("show");
+            $('#searchResult').modal('show');
+        }
+        if (advResult == true) {
+            $('#portfolioModal2').modal('show');
+        } else if (advResult == false) {
+            console.log(advResult);
+            $('#portfolioModal2').modal('show');
+        } else if (patientResult == true) {
+            $("#triggerAdvanceSearch").modal("toggle");
+        }
+    }
+    function clearAdvanceSearch() {
+        document.getElementById("patientSearchForm").reset();
+    }
+    var formId = null;
+
+    function clearForm(id) {
+        $('#clearConfirm').modal('show');
+        console.log(id);
+        formId = id;
+    }
+    function clearButton() {
+        document.getElementById(formId).reset();
+        $("#lname").removeClass('null-values');
+        $("#lastname").removeClass('null-values');
+        $("#fname").removeClass('null-values');
+        $("#firstname").removeClass('null-values');
+        $("#mname").removeClass('null-values');
+        $("#middlename").removeClass('null-values');
+        $("#birthdateChecking").removeClass('null-values');
+        $("#rgender").removeClass('null-values');
+        $("#email").removeClass('null-values');
+        $("#rcontactNumber").removeClass('null-values');
+        $("#religion").removeClass('null-values');
+        $("#nationality").removeClass('null-values');
+        $("#country").removeClass('null-values');
+        $("#fromDateDiv1").removeClass('null-values-datepicker');
+        $("#genderSearch").removeClass('null-values');
+        $('#clearConfirm').modal('hide');
+    }
+    /* COMPUTING AGE */
+
+
+    /* $(document).ready(function () {
+        $( "#date" ).datepicker({
+               showOn: "button",
+               //buttonImage: "images/calendar.png",
+               buttonImageOnly: true,
+               dateFormat:'mm-dd-yy',
+               changeYear: true,
+               changeMonth: true,
+               showMonthAfterYear: true, //this is what you are looking for
+               maxDate:0
+           });
+        $( "#rbirthdate" ).datepicker({
+               showOn: "button",
+               //buttonImage: "images/calendar.png",
+               buttonImageOnly: true,
+               dateFormat:'mm-dd-yy',
+               changeYear: true,
+               changeMonth: true,
+               showMonthAfterYear: true, //this is what you are looking for
+               maxDate:0
+           });
+        $( "#bday" ).datepicker({
+               showOn: "button",
+               //buttonImage: "images/calendar.png",
+               buttonImageOnly: true,
+               dateFormat:'mm-dd-yy',
+               changeYear: true,
+               changeMonth: true,
+               showMonthAfterYear: true, //this is what you are looking for
+               maxDate:0
+           });
+    }); */
+
+    jQuery(document).ready(function () {
+        jQuery('#lname').change(function () {
+            $(this).val($(this).val().toUpperCase());
+        });
+        jQuery('#fname').change(function () {
+            $(this).val($(this).val().toUpperCase());
+        });
+        jQuery('#mname').change(function () {
+            $(this).val($(this).val().toUpperCase());
+        });
+        jQuery('#lname').keyup(function () {
+            $(this).val($(this).val().toUpperCase());
+        });
+        jQuery('#fname').keyup(function () {
+            $(this).val($(this).val().toUpperCase());
+        });
+        jQuery('#mname').keyup(function () {
+            $(this).val($(this).val().toUpperCase());
+        });
+    });
+
+    /*]]>*/
+</script>
+<script>
+    /*<![CDATA[*/
+
+    /*     $(document).ready(function(){
+            $('#fromDateDiv').datetimepicker({
+                //	            minDate: today,
+                //	                    defaultDate: '',
+                maxDate: $.now(),
+                format: "DD/MM/YYYY"
+            });
+        }); */
+
+    $(".birthdate").change(function () {
+        var parseDate = new Date($(".birthdate").val());
+        console.log($(".birthdate").val());
+        console.log(parseDate);
+        var today = new Date();
+        var age = today.getFullYear() - parseDate.getFullYear();
+        console.log(today.getFullYear());
+        console.log(parseDate.getFullYear());
+        console.log(today.getFullYear() - parseDate.getFullYear());
+        $("#age").val(age + " " + "Years Old");
+        if (isNaN(age) == true) {
+            $("#age").val("0 Years Old");
+        }
+        if (age < 0) {
+            $("#age").val("0 Years Old");
+        }
+        if (parseDate > today) {
+            $(".birthdate").val(null);
+            $('#birthdateChecking').addClass('null-values');
+        }
+
+    });
+    $("#bday").change(function () {
+        var parseDate = new Date($("#bday").val());
+        var today = new Date();
+        var age = today.getFullYear() - parseDate.getFullYear();
+        if (parseDate > today) {
+            $("#fromDateDiv1").addClass('null-values-datepicker');
+            $("#bday").val(null)
+        } else if ($("#bday").val() == '') {
+            $("#fromDateDiv1").addClass('null-values-datepicker');
+        } else {
+            $("#fromDateDiv1").removeClass('null-values-datepicker');
+        }
+    });
+    $("#date1").change(function () {
+        var parseDate1 = new Date($("#date1").val());
+        var today = new Date();
+        if (parseDate1 > today) {
+            $("#firstDivHolder").addClass('null-values');
+            $("#date1").val(null)
+        } else if ($("#date1").val() == '') {
+            $("#firstDivHolder").addClass('null-values');
+        } else {
+            $("#firstDivHolder").removeClass('null-values');
+        }
+    });
+    $("#date2").change(function () {
+        var parseDate1 = new Date($("#date1").val());
+        var parseDate2 = new Date($("#date2").val());
+        var today = new Date();
+        if (parseDate2 > today) {
+            $("#secondDivHolder").addClass('null-values');
+            $("#date2").val(null);
+        } else if (parseDate1 > parseDate2) {
+            $("#secondDivHolder").addClass('null-values');
+            $("#date2").val(null);
+            $("#firstDivHolder").addClass('null-values');
+            $("#date1").val(null);
+            $("#improper-date").modal("toggle");
+        } else if ($("#date2").val() == '') {
+            $("#secondDivHolder").addClass('null-values');
+        } else {
+            $("#secondDivHolder").removeClass('null-values');
+        }
+    });
+
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
+    $('#lastname').change(function () {
+        var text = $('#lastname').val();
+        text = capitalizeFirstLetter(text);
+        $('#lastname').val(text);
+        if ($('#lastname').val != null) {
+            $("#lastname").removeClass('null-values');
+        }
+    });
+    $('#firstname').change(function () {
+        var text = $('#firstname').val();
+        text = capitalizeFirstLetter(text);
+        $('#firstname').val(text);
+        if ($('#firstname').val != null) {
+            $("#firstname").removeClass('null-values');
+        }
+    });
+    $('#middlename').change(function () {
+        var text = $('#middlename').val();
+        text = capitalizeFirstLetter(text);
+        $('#middlename').val(text);
+        if ($('#middlename').val != null) {
+            $("#middlename").removeClass('null-values');
+        }
+    });
+    $('#genderSearch').change(function () {
+        if ($('#genderSearch').val != null) {
+            $("#genderSearch").removeClass('null-values');
+        }
+    });
+    $('#visitNumber').change(function () {
+        if ($('#visitNumber').val() != null) {
+            $('#visitNumber').removeClass('null-values')
+        } else {
+            $('#visitNumber').addClass('null-values')
+        }
+    });
+
+    /**PATIENT REGISTRATION RED BORDER**/
+    $('#country').change(function () {
+        if ($('#country').val != null) {
+            $("#country").removeClass('null-values');
+        }
+    });
+    $('#nationality').change(function () {
+        if ($('#nationality').val != null) {
+            $("#nationality").removeClass('null-values');
+        }
+    });
+    $('#religion').change(function () {
+        if ($('#religion').val != null) {
+            $("#religion").removeClass('null-values');
+        }
+    });
+    $('#rcontactNumber').change(function () {
+        if ($('#rcontactNumber').val != null) {
+            $("#rcontactNumber").removeClass('null-values');
+        }
+    });
+    $('#email').change(function () {
+        if ($('#email').val != null) {
+            $("#email").removeClass('null-values');
+        }
+    });
+    $('#rgender').change(function () {
+        if ($('#rgender').val != null) {
+            $("#rgender").removeClass('null-values');
+        }
+    });
+    $('#mname').change(function () {
+        if ($('#mname').val != null) {
+            $("#mname").removeClass('null-values');
+        }
+    });
+    $('#lname').change(function () {
+        if ($('#lname').val != null) {
+            $("#lname").removeClass('null-values');
+        }
+    });
+    $('#fname').change(function () {
+        if ($('#fname').val != null) {
+            $("#fname").removeClass('null-values');
+        }
+    });
+    $('#rbirthdate').change(function () {
+        if ($('#rbirthdate').val != null) {
+            $("#birthdateChecking").removeClass('null-values');
+        }
+    });
+
+
+    function loadingScreen(url, text) {
+        $(url).waitMe({
+            effect: 'ios',
+            text: 'Loading... Please Wait... ' + text + '...',
+            bg: 'rgba(255,255,255,0.7)',
+            color: '#000',
+            sizeW: '',
+            sizeH: '',
+            source: ''
+        });
+    }
+
+    /*BUTTONS FOR CHANGING MODULE*/
+    /*BUTTONS FOR CHANGING MODULE*/
+    /*BUTTONS FOR CHANGING MODULE*/
+    /* |||| */
+    /* vvvv */
+    function updateFormSubmit() {
+        loadingScreen('#page-top', 'Saving Records');
+        $("#updateForm").submit();
+    }
+
+    var globalUrl;
+
+    function GoToAppointment() {
+        var sessionPatient = null;
+        if ($('#hiddenEhPin').val() == null && $('#hiddenPin').val() == null && sessionPatient == null) {
+            $("#NoPatientValidation").modal("toggle");
+            globalUrl = '/medicon/appointment';
+        } else {
+            if ($('#hiddenEhPin').val() != '' && $('#contactNumber').val() == '') { /*EHPIN IS NOT NULL BUT CN IS NULL SHOW VALIDATION*/
+                $("#ehPin-validation").modal("toggle");
+            } else if ($('#hiddenEhPin').val() != '' && $('#email').val() == '') { /*EHPIN IS NOT NULL BUT EMAIL IS NULL SHOW VALIDATION*/
+                $("#ehPin-validation").modal("toggle");
+            } else if ($('#hiddenEhPin').val() == '' && $('#email').val() == '') { /*EHPIN IS NULL AND EMAIL IS NULL SHOW VALIDATION*/
+                $("#ehPin-validation").modal("toggle");
+            } else if ($('#hiddenEhPin').val() == '' && $('#contactNumber').val() == '') { /*EHPIN IS NULL AND CN IS NULL SHOW VALIDATION*/
+                $("#ehPin-validation").modal("toggle");
+            } else if ($('#hiddenEhPin').val() == '' && $('#email').val() != '' && $('#contactNumber').val() != '') { /*EHPIN IS NULL BUT EMAIL IS NOT NULL AND CN IS NOT NULL SHOW VALIDATION REGISTER TO EHUB*/
+                $("#withEhPin-completeForm").modal("toggle");
+            } else {
+                /* var confirmation = confirm('Are you sure you want to change module?');
+                if(confirmation == true){ */
+                var time = $("#time").val();
+                window.location.href = '/medicon/appointment?time=' + time;
+                /* } */
+            }
+        }
+    }
+
+    function GoToReference() {
+        var sessionPatient = null;
+        if ($('#hiddenEhPin').val() == null && $('#hiddenPin').val() == null && sessionPatient == null) {
+            $("#NoPatientValidation").modal("toggle");
+            globalUrl = '/medicon/references.html';
+        } else {
+            if ($('#hiddenEhPin').val() != '' && $('#contactNumber').val() == '') {
+                $("#ehPin-validation").modal("toggle");
+            } else if ($('#hiddenEhPin').val() != '' && $('#email').val() == '') {
+                $("#ehPin-validation").modal("toggle");
+            } else if ($('#hiddenEhPin').val() == '' && $('#email').val() == '') {
+                $("#ehPin-validation").modal("toggle");
+            } else if ($('#hiddenEhPin').val() == '' && $('#contactNumber').val() == '') {
+                $("#ehPin-validation").modal("toggle");
+            } else if ($('#hiddenEhPin').val() == '' && $('#email').val() != '' && $('#contactNumber').val() != '' && $('#hiddenPin').val() != '') {
+                $("#withEhPin-completeForm").modal("toggle");
+            } else {
+                /* var confirmation = confirm('Are you sure you want to change module?');
+                    if(confirmation == true){ */
+                var time = $("#time").val();
+                window.location.href = '/medicon/references.html?time=' + time;
+                /* } */
+            }
+        }
+    }
+
+    function GoToMessagingModal() {
+        var sessionPatient = null;
+        if ($('#hiddenEhPin').val() == null && $('#hiddenPin').val() == null && sessionPatient == null) {
+            $("#NoPatientValidation").modal("toggle");
+            globalUrl = 'openModal';
+        } else {
+            if ($('#hiddenEhPin').val() != '' && $('#contactNumber').val() == '') {
+                $("#ehPin-validation").modal("toggle");
+            } else if ($('#hiddenEhPin').val() != '' && $('#email').val() == '') {
+                $("#ehPin-validation").modal("toggle");
+            } else if ($('#hiddenEhPin').val() == '' && $('#email').val() == '') {
+                $("#ehPin-validation").modal("toggle");
+            } else if ($('#hiddenEhPin').val() == '' && $('#contactNumber').val() == '') {
+                $("#ehPin-validation").modal("toggle");
+            } else if ($('#hiddenEhPin').val() == '' && $('#email').val() != '' && $('#contactNumber').val() != '') {
+                $("#withEhPin-completeForm").modal("toggle");
+            } else {
+                $("#portfolioModal3	").modal("toggle");
+            }
+        }
+    }
+
+    $('#GotoModule').click(function () {
+        changeModule(globalUrl);
+    });
+
+    function changeModule(url) {
+        var time = $("#time").val();
+        if (url === 'openModal') {
+            $("#portfolioModal3	").modal("toggle");
+            $("#NoPatientValidation").modal("hide");
+        } else {
+            window.location.href = url + '?time=' + time;
+        }
+    }
+
+    $("form input").on("keypress", function (e) {
+        return e.keyCode != 13;
+    });
+    /*]]>*/
+</script>
+<script>
+    var prevPage = null;
+    // var completeSearchForm;
+    $(document).ready(function () {
+        if (prevPage == null) {
+            $('#pinSearch').hide();
+            $('#pinSearchForm').hide();
+            $('#completeSearch').hide();
+            $('#completeSearchForm').removeClass('move-right');
+        } else {
+            $('#pinSearchForm').hide();
+            $('#completeSearchForm').delay(600).hide(0);
+        }
+
+        // var singleReg = new RegExp('^[0-9]$');
+        var reg = new RegExp('^[0-9]*$');
+        var inputPin = $('#pin');
+
+        inputPin.keydown(function (e) {
+            if ((e.ctrlKey == true && e.key == 'v') || e.key == 'Backspace' || reg.test(e.key)) {
+                console.log('Accepted key...');
+            } else {
+                e.preventDefault();
+            }
+        });
+
+        inputPin.keyup(function (e) {
+            console.log(!reg.test(e.target.value));
+            if (!reg.test(e.target.value)) {
+                e.target.value = '';
+            }
+        });
+    });
+
+    // if (prevPage != null) {
+    //     completeSearchForm = $('#completeSearchForm').detach();
+    // }
+
+    function toggleDropDown(menu) {
+        if (menu === "pinSearch") {
+            $('#pinSearchForm').toggle();
+            $('#completeSearchForm').hide();
+        } else {
+            $('#completeSearchForm').toggle();
+            $('#pinSearchForm').hide();
+            // $('#completeSearchForm').append();
+            // if ($('#patientAdvSearchForm').find('div').length > 0) {
+            //     $('#completeSearchForm').detach();
+            //     $('#completeSearchForm').show();
+            // } else {
+            //     completeSearchForm.appendTo('#patientAdvSearchForm');
+            //     $('#completeSearchForm').hide();
+            // }
+            $('#pinSearchForm').hide();
+        }
+    }
+
+    function numberOnly(e) {
+        var reg = new RegExp('^[0-9]$');
+        // if ((e.ctrlKey == true && e.key == 'v') || e.key == 'Backspace' || reg.test(e.key)) {
+        //     console.log(e.target.value);
+        //     if (reg.test($('#pin').val)) {
+        //         console.log('asd');
+        //     }
+        // } else {
+        //     e.preventDefault();
+        // }
+
+        // if (reg.test(e.data) || e.inputType == "deleteContentBackward" || e.inputType == "insertFromPaste") {
+        //     console.log('numberOnly: Accepted key...');
+        // } else {
+        //     $('#pin').val(
+        //         function(index, value){
+        //             return value.substr(0, value.length - 1);
+        //         });
+        // }
+
+        // if (e.target.value.length > 0 && e.target.value.length <= 10) {
+        //     console.log(e.target.value);
+        // } else {
+        //     $('#pin').val(function (index, value) {
+        //         var maxLength = value.length - 10;
+        //         console.log(maxLength);
+        //         return value.substr(0, value.length - maxLength);
+        //     });
+        // }
+
+        // Allow: backspace, delete, tab, escape, enter and .
+        // if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
+        //     // Allow: Ctrl+A, Command+A
+        //     (e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+        //     // Allow: home, end, left, right, down, up
+        //     (e.keyCode >= 35 && e.keyCode <= 40)) {
+        //     // let it happen, don't do anything
+        //     return;
+        // }
+        // // Ensure that it is a number and stop the keypress
+        // if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+        //     e.preventDefault();
+        // }
+    }
+</script>
+
+<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"></ul><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-2" tabindex="0" style="display: none;"></ul><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-3" tabindex="0" style="display: none;"></ul></body>
+</html>

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<!--jasmin--> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--end jasmin-->    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Medicon</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css_v3/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+    <!-- Datables-->
+    <link href="DataTables-1.10.16/css/dataTables.bootstrap.css" rel="stylesheet">  
+    <link href="css/stacktable.css" rel="stylesheet">
+
+        <!-- Material Design Bootstrap -->
+    <link href="css_v3/mdb.min.css" rel="stylesheet">
+            <!-- Jasmin CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+            <!-- Jesh CSS -->
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+  </head>
+
+
+  <body id="page-top">
+    
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top" id="mainNav">
+      <div class="container-fluid">
+        <div class="custom-navtemp">
+          <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <img class="img-fluid imagelogo img-lg" src="img/Medicon.png" alt="Medicon Logo" style="height: 100px"></a>
+              <h5 id="timer" class="custom-timer">TIMER: 00:05:01</h5>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav ml-auto pull-right">
+                <li class="nav-item">
+
+                  <!-- jas 11-29-17 --><li class="top-nav">
+                    <p>Hi Maricar! |</p>
+                    <a href="index.html" class="btn btn-secondary btn-lg btn-icon1" role="button" aria-pressed="true"><img src="img/circle-icons/icon2.png"></a>
+                    <a href="http://192.168.137.238:3031" class="btn btn-secondary btn-lg btn-icon1" role="button" aria-pressed="true"><img src="img/circle-icons/icon1.png"></a>
+                   </li>
+                  </li> <!--end jas 11-29-17 -->
+
+                  <!--profile pic dropdown -->
+                  <li class="nav-item dropdown img-index">
+                    <a class="nav-link dropdown-toggle img-hov" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img class="img-circle pull-right" src="img/circle-icons/profile-icon.png" alt="" height="100" width="100">
+                    </a>
+
+                    <div class="dropdown-menu img-dropindex img-dropindextwo" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="editprofile.html?tab=1">Edit Profile</a>
+                      <a class="dropdown-item" href="editprofile.html?tab=2">Settings</a>
+                    </div>
+                  </li>
+
+                </li><!-- end nav-item -->
+              </ul><!-- end navbar-nav -->
+            </div><!-- end navbar-collapse -->
+
+        </div><!-- custom-navtemp -->
+      </div><!-- container -->
+    </nav><!-- end nav -->
+
+    <!-- jas 11-29-17 --><!--BACKGROUND-->
+    <div class="backport backport-img" id="backport">
+      <ul class="stluke img-reponsive img-r img-rtwo cb-slideshow ">
+        <li><span>Image 01</span></li>
+        <li><span>Image 02</span></li>
+        <li><span>Image 03</span></li>
+        <li><span>Image 04</span></li>
+        <li><span>Image 05</span></li>
+        <li><span>Image 06</span></li>
+      </ul>
+    </div>
+    <!--END BACKGROUND--> <!-- end jas 11-29-17 -->
+
+    <section id="sms">
+      <div class="container c-sms">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="bdsms">
+
+          <!--tabs-->
+              <div class="tab tab-radius tab-sms">
+                <button class="tablinks" id="defaultOpen"  onclick="openCity(event, 'createSms')"><b>Create New SMS</b></button>
+                <button class="tablinks" id="btnAdmin" onclick="openCity(event, 'sentItems')"><b>Sent Items</b></button>
+              </div>
+
+          <!--Start Tab 1-->
+              <div id="createSms" class="tabcontent">
+
+                <div class="row">
+                 <div class="col-md-12 mg-0">
+                  <div class="container c-tabcreatesms">
+
+                    <div class="dropdown-items dropdown-psSms">
+
+                      <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle btn-psSms" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                          <a class="hov-color">
+                          Patient SMS
+                          <i class="fa fa-arrow-circle-down fa-mgarrow"></i></a>
+                        </button>
+                        
+                        <ul class="dropdown-menu dropdown-position" aria-labelledby="dropdownMenu1">
+                          <li>
+                            <a> 
+                            <div class="form-group row">
+                                <label for="InputName" class="col-md-12">Patient's Name
+                                </label>
+                              <div class="col-md-4">
+                                <input type="text" name="name" placeholder="Ortega, Genesis Macalinao" class="form-control">
+                              </div>
+                              <div class="col-md-8">
+                                <button type="button" class="btn btn-primary">Search Patient
+                                </button>
+                              </div>
+                            </div>
+                            </a>
+                          </li>                       
+
+                          <li>
+                            <a>  
+                            <div class="form-group row">
+                              <label for="InputNumber" class="col-md-12">Mobile Number</label>
+                              <div class="col-md-4">
+                                <input type="number" name="pin" placeholder="Mobile Number" class="form-control">
+                              </div>
+                              <div class="col-md-8">
+                                <button class="btn btn-primary">UPDATE
+                                </button>
+                              </div>         
+                            </div>                
+                            </a>
+                          </li>    
+                        </ul>
+
+                      </div> <!-- dropdown -->   
+
+                      <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle btn-psSms" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                          <a class="hov-color">
+                          Send Free SMS
+                          <i class="fa fa-arrow-circle-down fa-mgarrow"></i></a>
+                        </button>
+                        
+                        <ul class="dropdown-menu dropdown-position" aria-labelledby="dropdownMenu1">
+                          <li>
+                            <a> 
+                            <div class="form-group row">
+                              <label for="InputNumber" class="col-md-12">Mobile Number</label>
+                              <div class="col-md-4">
+                                <input type="number" name="pin" placeholder="Mobile Number" class="form-control">
+                              </div>
+                              <div class="col-md-8">
+                              </div>                          
+                            </div>                    
+                            </a>
+                          </li>    
+                        </ul>
+
+                      </div> <!-- dropdown -->                      
+                    </div> <!-- dropdown-items -->                      
+                    <div style="border:2px solid black;"></div>
+                      
+                      <div class="row row-mgrequestdetails">
+                        <div class="col-md-3 pull-left">
+                          <h6>REQUEST DETAILS</h6>
+                        </div>
+
+                        <div class="col-md-3 pull-right zindex-md-3">
+                          <button type="button" class="btn btn-primary btn-fright" data-toggle="modal" data-target="#exampleModal1">Template</button>
+                        </div>
+
+
+                        <div class="col-md-12">
+                          <div class="form-group form-message">
+                            <label for="message"></label>
+                            <textarea class="form-control" rows="3" id="message" placehoder="Message"></textarea>
+                          </div>
+                        </div>
+
+                        <div class="col-md-12">
+                          <center>
+                            <button type="button" class="btn btn-primary btn-margin">Send</button>
+                            <button type="button" class="btn btn-primary btn-margin">Cancel</button>
+                          </center>
+                        </div>
+                      </div><!-- end row -->                    
+                
+                    
+                  </div><!-- container -->
+                 </div><!-- col-md-12 mg-0  -->
+                </div><!-- row -->
+              </div><!--End Tab 1-->
+
+          <!--Tab 2-->
+              <div id="sentItems" class="tabcontent tabcontent2">
+                  <div class="container c-SPcalendar" >
+                    <div class="row">
+                      <div class="modal-body mx-auto" >
+                        <p>Search Options</p>
+                          <div class="row mx-auto">
+                            <div class="col-md-12 SP-col-sm-12 SI-col-sm-12">
+
+                              <div class="row" style="margin-bottom: 5px;">
+                                <label for="colFormLabel" class="col-md-2 col-form-label smsdo-form-label smsall-form-label">
+                                  SMS Type:
+                                </label>
+                                      <div class="col-md-4 wsms-md-4">
+                                        <select class="form-control" id="validationCustom04" placeholder="Suffix" value="" required>
+                                          <option>option III</option>
+                                          <option>option II</option>
+                                          <option>option I</option>     
+                                        </select>   
+                                      </div> 
+
+                                      <div class="col-md-6"></div>
+                              </div>
+
+                              <div class="row" style="margin-bottom: 5px;">
+                                <label for="colFormLabel" class="col-md-2 col-form-label smsdo-form-label smsall-form-label">
+                                Patient's Name:
+                                </label>
+                                <div class="col-md-4 wsms-md-4">
+                                  <input type="text" name="firstname" class="form-control" placeholder="Patients's Name">
+                                </div>
+                                <div class="col-md-6 wsms-md-4">
+                                  <button type="button" class="btn btn-primary">Search Patient
+                                </div>
+                              </div><!-- end row -->
+
+                              <div class="row" style="margin-bottom: 5px;">
+                                <label for="colFormLabel" class="col-md-2 col-form-label smsdo-form-label smsall-form-label">
+                                  Document Date:
+                                </label>
+                                <div class="col-md-3 wsms-md-3">
+                                  <input type="date" name="birthday" class="form-control" id="birthday" placeholder="Birthday">
+                                </div>
+
+
+                                <label for="colFormLabel" class="col-md-1 col-form-label to-form-label">
+                                To
+                                </label>
+                                <div class="col-md-3 wsms-md-3">
+                                  <input type="date" name="birthday" class="form-control" id="birthday" placeholder="Birthday">
+                                </div>
+
+                                <div class="col-md-2 responsive-wsms">
+                                  <button type="button" class="btn btn-primary btn-SPreg-clear btn-SC wpad-md-1">  
+                                    <a href="">Search</a>
+                                  </button>
+                                </div>
+
+                                <div class="col-md-1 pad-md-2 responsive-wsms">
+                                  <button type="button" class="btn btn-primary btn-SPreg-clear btn-SC wpad-md-2">
+                                    <a href="#">Clear</a>
+                                  </button>
+                                </div>
+                              </div><!-- end row -->
+
+                            </div><!-- col-sm-12 -->
+
+                            <div class="panel panel-info panel-calendar">
+                              <div class="panel-body">
+                                <table table id="example" class="table table-bordered large-only responsive-example-table" style="margin-top: 0 !important;" cellspacing="0">
+                                  <thead id="headtb">
+                                      <th style="text-align: center;">DATE</th>
+                                      <th style="text-align: center; width: 35%;">CONTACT NUMBER</th>
+                                      <th style="text-align: center;">ACTION</th>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td style="text-align: center;">10/20/2017</td>
+                                      <td style="text-align: center;" style="width: 35%;">09372983732</td>
+                                      <td style="text-align: center;"><button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3">VIEW MESSAGE</button></td>
+                                    </tr>
+                                    <tr>
+                                      <td style="text-align: center;">10/21/2017</td>
+                                      <td style="text-align: center; width: 35%;"> 09372983732</td>
+                                      <td style="text-align: center;"><button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3">VIEW MESSAGE</button></td>
+                                    </tr>
+                                    <tr>
+                                      <td style="text-align: center;">10/22/2017</td>
+                                      <td style="text-align: center; width: 35%;">09372983732</td>
+                                      <td style="text-align: center;"><button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3">VIEW MESSAGE</button></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div><!-- end panel body -->
+
+                            </div><!-- end panel -->
+
+                          </div><!-- row -->
+                      </div><!-- body -->
+                    </div><!-- row -->
+                  </div><!-- container -->
+              </div>  <!-- End Search Patient -->
+
+            </div><!--bededitprofile-->
+          </div><!--col-md-12-->
+        </div><!--row-->
+      </div><!--container-->
+    </section><!--end patient tab-->
+
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top d-lg-none">
+      <a class="btn btn-primary js-scroll-trigger" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+
+   <!-- Footer -->
+    <footer class="footer text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+          </div>
+          <div class="col-md-4"><p class="footer-sz">Medicon Version 1.1 rev 389</p></div>
+          <div class="col-md-4">
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  <!--Modal View-->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md modal-custom SPmodal-calendar" role="document">
+            <div class="modal-content modal-bg modal-bgtop modal-sms">
+
+              <!--Search Patient-->
+              <div class="container c-SPcalendar" >
+                <div class="row">
+                  <div class="modal-body mx-auto" >
+                    <p>Templates</p>
+                      <div class="row mx-auto">
+
+
+                        <div class="panel panel-info panel-calendar">
+                          <div class="panel-body panel-bdpad">
+                            <table table id="example2" class="table table-bordered large-only responsive-example-table" cellspacing="0">
+                              <thead id="headtb">
+                                  <th style="text-align: center;">Action</th>
+                                  <th style="text-align: center; width: 75%;">Description</th>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td style="text-align: center;">
+                                    <div class="form-check">
+                                      <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input">
+                                      </label>
+                                  </td>
+                                  <td style="width: 85%;">This is to follow up your ddue date for the request application
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="text-align: center;">
+                                    <div class="form-check">
+                                      <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input">
+                                      </label>
+                                  </td>
+                                  <td style="width: 85%;">Good Day! You may now access the online request
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="text-align: center;">
+                                    <div class="form-check">
+                                      <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input">
+                                      </label>
+                                  </td>
+                                  <td style="width: 85%;">Good News! You may now access the online request
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="text-align: center;">
+                                    <div class="form-check">
+                                      <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input">
+                                      </label>
+                                  </td>
+                                  <td style="width: 85%;">Good Day! You may now access the online request
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div><!-- end panel body -->
+
+                          <div class="modal-footer">
+                            <center>
+                              <button type="button" class="btn btn-primary">
+                                Select
+                              </button>
+                              <button type="button" class="btn btn-primary" data-dismiss="modal">
+                                Cancel
+                              </button>
+                            </center>
+                          </div>
+
+                        </div><!-- end panel -->
+
+                      </div><!-- row -->
+                  </div><!-- modal-body -->
+                </div><!-- row -->
+              </div><!-- container -->
+              <!-- End Search Patient -->
+
+            </div><!-- end modal-content -->
+        </div><!-- end modal-dialog -->
+    </div><!--end-->
+
+
+    <!--Modal View-->
+    <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-custom modal-mpreview" role="document">
+            <div class="modal-content modal-bg modal-sms2">
+
+                <div class="modal-header">
+                  <center>
+                  <h5 class="modal-title" id="exampleModalLabel">Message Preview</h5>
+                  </center>
+                </div><!-- end modal header -->  
+
+
+                <div class="modal-body m-bd m-bdtwo">
+
+                  <div class="box-pdr">
+                    <center class="title-select">09267847897</center>
+                      <div class="modal-border m-br m-brtwo">
+                        Good Day! This is Kate from St. Luke's. I am glad to inform you that the application for your medical assistance is now approved.
+                      </div>
+                  </div>
+
+                </div><!-- end modal body -->
+
+            </div><!-- end modal-content -->
+        </div><!-- end modal-dialog -->
+    </div><!--end-->
+
+
+<!--Datepicker--> 
+<script type="text/javascript">
+  var datefield=document.createElement("input")
+  datefield.setAttribute("type", "date")
+  if (datefield.type!="date"){ //if browser doesn't support input type="date", load files for jQuery UI Date Picker
+    document.write('<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />\n')
+    document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"><\/script>\n')
+    document.write('<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"><\/script>\n') 
+  }
+</script>
+
+<script>
+if (datefield.type!="date"){ //if browser doesn't support input type="date", initialize date picker widget:
+  jQuery(function($){ //on document.ready
+    $('#birthday').datepicker();
+  })
+}
+</script>
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="js/popper/popper.min.js"></script>
+        <script src="js_v3/jquery-3.2.1.min.js"></script>
+        <script src="js_v3/bootstrap.min.js"></script>
+        <script src="js_v3/custom.js"></script>
+            <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="js_v3/popper.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="js_v3/mdb.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="js/jquery-easing/jquery.easing.min.js"></script>
+        <!-- Custom scripts for this template -->
+        <script src="js/freelancer.min.js"></script>
+
+    <!--Data Tables-->
+    <script src="DataTables-1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="DataTables-1.10.16/js/dataTables.bootstrap.js"></script>
+    <script src="js/stacktable.js"></script>
+
+    <script type="text/javascript" charset="utf-8">
+      $('#example').dataTable( {
+          "bFilter": false,
+          "order": [],
+          "columnDefs": [ {
+            "targets"  : 'no-sort',
+            "orderable": false,
+          }]
+      });
+      $('#example2').dataTable( {
+          "bFilter": true,
+          "order": [],
+          "columnDefs": [ {
+            "targets"  : 'no-sort',
+            "orderable": false,
+          }]
+      });
+      $('.responsive-example-table').stacktable({myClass:'stacktable large-only'});
+
+    </script>
+
+<!-- Tab -->
+  <script>
+    function openCity(evt, Name) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(Name).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+        document.getElementById("defaultOpen").click();
+  </script>
+
+</body>
+</html>
