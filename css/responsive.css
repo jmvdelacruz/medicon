@@ -422,8 +422,8 @@ and (orientation : portrait){
         margin-top: -100px;border:2px solid red;
     }
     .img-squareiconsz{
-        width: 30%;
-        height: 30%;
+        width: 32%;
+        height: 32%;
     }
 
     
@@ -502,7 +502,132 @@ and (orientation : portrait){
 
 
 
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 959px)
+and (orientation : portrait){
 
+/*----------backport----------*/
+    html{
+        overflow-x: none;
+        overflow-y: none;
+    }
+    #mainNav{
+        width: 105%;
+    }
+/*jesh new 02-20-208 backport*/
+    .backport-img  {
+        position: fixed; 
+        top: -10%; 
+        left: -10%; 
+        width: 500%; 
+        height: 900%;
+    }
+    .ipad-fix:after,.ipad-fix:before{
+        display:table;content:" "
+    }
+    .ipad-fix:after{
+        clear:both;
+    }
+    .visible-md-block{
+        display:block!important;
+    }
+    .c-wid,.bdtemplate {
+        margin-top: -200px !important;
+        /*margin-top: 5px !important;*/
+    }
+  .below-icon-inq a img {
+        height:20%;
+        width: 20%;
+    }
+    #portfolio{
+        padding-left: 65px;
+        margin-top: 55px;
+    }
+    
+    #demo{
+        position: fixed
+        height: 100%;
+        margin-top: -90px;
+    }
+    #demo2{
+        margin-top: -100px;border:2px solid red;
+    }
+    .img-squareiconsz{
+        width: 32%;
+        height: 32%;
+    }
+
+    
+    .cb-slideshow, .cb-slideshow:after {
+        position: fixed !important;
+        height: 100% !important;
+    }
+    /*icon*/
+    .img-size {
+        width: 120% !important;
+    }
+    .img-size {
+        max-width: 210px !important;
+    }
+
+    #search-home h5{
+        margin-left: 20px;
+    }
+    #appointment-home a img{
+        margin-left:30px;
+    }
+
+    #appointment-home h5{
+        margin-left:40px;
+    }
+    #message-home a img{
+        margin-left:60px;
+        text-align: right;
+    }
+    #message-home h5{
+        margin-left:98px;
+    }
+    #inquiry-home h5{
+        margin-left: 35px;
+    }
+    #reference-home a img {
+        margin-left: 14px;
+    }
+    #reference-home h5{
+        margin-right: -90px;
+    }
+    #template-home a img{
+        margin-left: -19px;
+    } 
+    #template-home h5{
+        margin-left: -6px;
+    }
+    #report-home h5,
+    #report-home a img {
+        margin-left: -50px;
+    }
+      .backport-modal-img {
+        position: absolute;
+        left: 0;
+        opacity: 0.7;
+        margin: 0 !important;
+        width: 100% !important;
+        padding: 0 !important;
+        overflow-y: none;
+    }
+    /*end*/
+
+    .del-btn{
+        width:50px;
+    }
+    /*---------guarantee_letters----*/
+
+     .c-wid,.bdtemplate {
+        margin-top: 8px !important;
+    }
+}
+/*end*/
 
 
 
