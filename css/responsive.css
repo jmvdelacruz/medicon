@@ -327,7 +327,7 @@ and (orientation : landscape){
         /*margin-top: 5px !important;*/
     }
     #portfolio{
-        margin-top:40px;
+        margin-top:50px;
     }
 
     #demo{
@@ -413,7 +413,7 @@ and (orientation : portrait){
     }
     #portfolio{
         padding-left: 40px;
-        margin-top: 50px;
+        margin-top: 70px;
     }
     
     #demo{
@@ -425,9 +425,9 @@ and (orientation : portrait){
         margin-top: -160px;
     }
     .img-squareiconsz{
-        width: 30%;
-        height: 30%;
-        
+        width: 50%;
+        height: 50%;
+        float: center;
     }
 
     
