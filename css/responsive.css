@@ -292,9 +292,6 @@ and (orientation : landscape){
 
 
 
-
-
-
 /*--------------------------ipad------------------------*/
 @media only screen 
 and (min-device-width : 768px) 
@@ -413,7 +410,7 @@ and (orientation : portrait){
     }
     #portfolio{
         padding-left: 40px;
-        margin-top: 70px;
+        margin-top: 55px;
     }
     
     #demo{
@@ -422,12 +419,11 @@ and (orientation : portrait){
         margin-top: -90px;
     }
     #demo2{
-        margin-top: -160px;
+        margin-top: -100px;border:2px solid red;
     }
     .img-squareiconsz{
-        width: 50%;
-        height: 50%;
-        float: center;
+        width: 30%;
+        height: 30%;
     }
 
     
