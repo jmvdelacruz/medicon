@@ -381,7 +381,7 @@ and (orientation : portrait){
         overflow-y: none;
     }
     #mainNav{
-        width: 105%;
+        width: 100%;
     }
 /*jesh new 02-20-208 backport*/
     .backport-img  {
