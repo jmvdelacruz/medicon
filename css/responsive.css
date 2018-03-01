@@ -310,6 +310,9 @@ and (orientation : landscape){
         bottom: 0;
         background-size: cover;
     }
+     #mainNav{
+        width: 100%;
+    }
     /*end*/
     .visible-md-block{
         display:none!important;
@@ -379,6 +382,9 @@ and (orientation : portrait){
     html{
         overflow-x: none;
         overflow-y: none;
+    }
+     #mainNav{
+        width: 100%;
     }
 /*jesh new 02-20-208 backport*/
     .backport-img  {
@@ -542,6 +548,9 @@ and (max-device-width : 1366px)
 and (orientation : portrait){
 
 /*----------backport----------*/
+    #mainNav{
+        width: 100%;
+    }
     html{
         overflow-x: none;
         overflow-y: none;
