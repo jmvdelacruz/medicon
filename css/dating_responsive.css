@@ -1,0 +1,605 @@
+
+ @media (max-width:1199px){
+
+/*----------references----------*/
+    #example3_filter > label >input {
+        width: 89.5% !important;
+    }
+
+}
+ @media (max-width:1170px){
+
+/*----------EDIT PROFILE----------*/  
+    #editprofile .bdeditprofile {
+        background: rgba(255, 255, 255, 0.6);
+        }
+    #editprofile {
+        padding-top: 40px !important; 
+    }
+/*----------sent items----------*/    
+    .smsall-form-label {
+        margin: 0;
+    }
+/*----------calendar----------*/
+    .c-calendar {
+        width: 970px;
+    }
+
+/*jesh new 02-20-208 backport*/
+    .backport-img {
+        max-width: 100%;
+        max-height: 100%;
+        
+        /* Set up proportionate scaling */
+        width: 100%;
+        height: auto;
+            
+        /* Set up positioning */
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-size: cover;
+    }
+    /*end*/
+}
+
+ @media (max-width:1100px){
+
+/*----------sent items----------*/
+    .SI-col-sm-12 {
+        width: 95.5% !important;
+    }
+    .wpad-ut {
+        width: auto;
+    }
+    .c-calendar {
+        width: 900px;
+    }
+/*----------TEMPLATE----------*/
+
+    .c-wid {
+        width: 920px !important;
+    }
+
+/*jesh new 02-20-208 backport*/
+    .backport-img {
+        max-width: 100%;
+        max-height: 100%;
+        
+        /* Set up proportionate scaling */
+        width: 100%;
+        height: auto;
+            
+        /* Set up positioning */
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-size: cover;
+    }
+/*end*/
+}
+
+ @media (max-width:1024px){
+
+/*----------backport----------*/
+    .cb-slideshow,
+    .cb-slideshow:after {
+        height: 1055px;
+    }
+/*----------EDIT PROFILE----------*/  
+    #editprofile .bdeditprofile {
+        background: rgba(255, 255, 255, 0.6);
+        }
+    #editprofile {
+        padding-top: 70px;
+    }
+
+/*----------TEMPLATE----------*/
+    #template .bdtemplate {
+        margin: 0 30px !important;
+    }
+    .mg-modaltext {
+        margin-top: -58px;
+        font-size: 20px;
+    }
+    .c-wid {
+        max-width: 942px !important;
+    }
+/*----------CALENDAR----------*/
+    .c-calendar {
+        width: 100% !important;
+        padding: 0 95px;
+    }
+    .cb-calendar,
+    .cb-calendar:after {
+        height: 1005px !important;
+    }
+        /*reference*/
+    .cb-template, .cb-template:after{
+        height: 690px !important;
+    }
+        /*utilization*/
+    .cb-utilizationA, .cb-utilizationA:after{
+        height: 820px !important;
+    }
+    .SPmodal-calendar {
+        width: 100%;
+    }
+    #sec-calendar {
+        padding-top: 30px;
+    }
+    .col-btnCalendar {
+        width: 95%;
+        margin-left: 20px;
+    }
+    .cal-col-md-9 {
+        width: 100%;
+    }
+    .bg-calendar {
+        height: 1050px !important;
+    }
+    .modal-bgtop {
+    top: -15px;
+    }
+
+/*----------sent items----------*/
+    .SI-col-sm-12 {
+        width: 95.5% !important;
+    }
+    .smsdo-form-label {
+        width: 20%;
+    }
+    .wsms-md-4 {
+        width: 40% !important;
+
+    }
+    .wsms-md-3 {
+        width: 30% !important;
+    }
+    .c-sms {
+        width: 85%;
+}
+    .responsive-wsms {
+        width: 20%;
+        margin: 20px 0 10px 0;
+    }
+    .r-wsms2 {
+        margin: 0 0 0 0 !important;
+    }
+    .r-wsms3 {
+        margin: 0 0 0 0 !important;
+        width: 15% !important;
+    }
+    .wpad-ut {
+        margin-left: 0 !important;
+        margin-top: 0 !important;
+    }
+    .wsms-md-5 {
+        width: 5%;
+    }
+    .wpad-md-1 {
+        margin-left: 236px;
+    }
+    .wpad-md-2 {
+        margin-left: 236px;
+    }
+    .SI-col-sm-12 {
+    padding-bottom: 5px;
+    }
+    .row-botUti {
+        margin-bottom: 15px !important;
+    }
+    .smsall-form-label {
+        margin: 0;
+    }
+
+    /*----------references----------*/
+    #example3_filter > label >input {
+        width: 88.5% !important;
+    }
+    /*index*/
+    .cb-custom,
+    .cb-custom:after {
+        height: 100% !important;
+    }
+    /*calendar*/
+    .cb-calendar,
+    .cb-calendar:after {
+        height: 1005px !important;
+    }
+    /*reference*/
+    .cb-template, .cb-template:after{
+        height: 685px !important;
+    }
+            /*utilization*/
+    .cb-utilizationA, .cb-utilizationA:after{
+        height: 820px !important;
+    }
+    
+/*jesh new 02-20-208 backport*/
+    .backport-img {
+        max-width: 100%;
+        max-height: 100%;
+                
+        /* Set up proportionate scaling */
+        width: 100%;
+        height: auto;
+            
+        /* Set up positioning */
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-size: cover;
+    }
+/*end*/
+}
+ @media (max-width:1023px){
+
+ 
+
+/*----------sent items----------*/
+    .panel-info {
+        border-color: transparent;
+    }
+    td {
+        background-color: #fff !important;
+    }
+    .panel {
+        background-color: transparent;
+    }
+    .smsdo-form-label {
+        width: 100%;
+    }
+    .wsms-md-4 {
+        width: 100% !important;
+    }
+    .wsms-md-3 {
+        width: 100% !important;
+    }
+    .to-form-label {
+        width: 10%;
+        float: left;
+    }
+    .tab-sms {
+        width: 100%;
+    }
+    .pad-md-2 {
+        padding-left: 15px;
+    }
+    .wpad-md-2 {
+        width: 100%;
+        margin-left: 0;
+    }
+    .wpad-md-1 {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    .responsive-wsms {
+        width: 100%;
+        margin-top: 0px !important;
+    }
+    /*icons*/
+    .img-iconsz {
+        float: left;
+        width: 25%;
+        height: auto;
+    }
+        /*icons*/
+    .img-squareiconsz {
+        float: left;
+        width: 100%;
+        height: auto;
+    }
+    .title-module {
+        float: left;
+        width: 100%;
+    }
+    .modalbutton {
+        padding-top: 10px;
+        padding-bottom: 25px;
+    }
+    .c-wid {
+        width: 100% !important;
+    }
+    .below-icon {
+        width: 100%;
+        float: none;
+    }
+    .below-icon-inq {
+        width: 70%;
+        float: none;
+    }
+
+/*jesh new 02-20-208 backport*/
+    .backport-img {
+        max-width: 100%;
+        max-height: 100%;
+        
+        /* Set up proportionate scaling */
+        width: 100%;
+        height: auto;
+            
+        /* Set up positioning */
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-size: cover;
+    }
+/*end*/
+}
+ @media (max-width:991px){
+
+/*----------Utilization----------*/
+    .r-wsms5 {
+        margin-top: 15px;
+    }
+    .r-wsms4 {
+        width: 100% !important;
+        margin-top: 5px;
+        padding-left: 15px !important;
+    }
+    .img-w {
+        display: none;
+    }
+    .wpad-ut {
+        width: 100%;
+    }
+    .to-form-label {
+        padding-left: 20px;
+        text-align: left;
+    }
+        /*----------references----------*/
+    #example3_filter > label >input {
+        width: 88.5% !important;
+        margin-left: 19px !important;
+        margin-top: 4px !important;
+        margin-bottom: 5px !important;
+    }
+    .custom-input-group-btn {
+        display: none !important;
+    }
+            /*icons*/
+    .img-squareiconsz {
+        float: left;
+        width: 25%;
+        height: auto;
+    }
+    .title-module {
+        float: left;
+        width: 100%;
+    }
+    .modalbutton {
+        padding-top: 10px;
+        padding-bottom: 25px;
+    }
+    .below-icon {
+        width: 100%;
+        float: none;
+    }
+    .below-icon-inq {
+        width: 70%;
+        float: none;
+    }
+
+/*jesh new 02-20-208 backport*/
+    .backport-img {
+        max-width: 100%;
+        max-height: 100%;
+                
+        /* Set up proportionate scaling */
+        width: 100%;
+        height: auto;
+            
+        /* Set up positioning */
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-size: cover;
+    }
+/*end*/
+}
+ @media (max-width:900px){
+
+/*----------sent items----------*/
+    .SI-col-sm-12 {
+        width: 94.7% !important;
+    }
+    .r-wsms4 {
+        width: 100% !important;
+    }
+/*----------edit profile----------*/
+    .c-wprofile {
+        width: 100% !important;
+    }   
+    /*icons*/
+    .img-squareiconsz {
+        float: left;
+        width: 25%;
+        height: auto;
+    }
+    .title-module {
+        float: left;
+        width: 100%;
+    }
+    .modalbutton {
+        padding-top: 10px;
+        padding-bottom: 25px;
+    }
+    .below-icon {
+        width: 100%;
+        float: none;
+    }
+    .below-icon-inq {
+        width: 70%;
+        float: none;
+    }
+
+     /*jesh new 02-20-208 backport*/
+    .backport-img {
+        min-height: 100%;
+        min-width: 1024px;
+        
+        /* Set up proportionate scaling */
+        width: 100%;
+        height: auto;
+            
+        /* Set up positioning */
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-size: cover;
+    }
+    /*end*/
+}
+ @media (max-width:800px){
+
+/*----------backport----------*/
+    .cb-slideshow {
+        height: 700px !important;
+    }
+/*----------EDIT PROFILE----------*/    
+    #editprofile .bdeditprofile {
+        background: rgba(255, 255, 255, 0.6);
+        }
+/*----------sent items----------*/
+    .SI-col-sm-12 {
+        width: 94% !important;
+    }
+
+/*jesh new 02-20-208 backport*/
+    .backport-img {
+        max-width: 100%;
+        max-height: 100%;
+        /* Set up proportionate scaling */
+        width: 100%;
+        height: auto;
+            
+        /* Set up positioning */
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-size: cover;
+    }
+    /*end*/
+
+}
+ @media (max-width:767px){
+
+/*----------backport----------*/
+    .navbar-brand {
+        padding: 17px 0 0 0 !important;
+        z-index: 100;
+        margin-left: -25px;
+    }
+    .custom-navtemp {
+        margin-top: -21px !important;
+    }
+    .cb-slideshow, .cb-slideshow:after {
+        position: fixed !important;
+        height: 100% !important;
+    }
+
+/*jesh new 02-20-208 backport*/
+    .backport-img {
+        max-width: 100%;
+        max-height: 100%;
+        
+        /* Set up proportionate scaling */
+        width: 100%;
+        height: auto;
+            
+        /* Set up positioning */
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+    }
+/*end*/
+/*----------nav-toggle----------*/
+    .navbar-toggle {
+        background-color: #fff;
+        border: 1px solid rgb(186, 186, 186);
+        margin-top: 34px;
+        z-index: 100;
+    }
+    .icon-bar {
+        background-color: #888;
+    }
+    .navbar-toggle:hover {
+        background-color: #ffffff9e;
+    }
+    .navbar-collapse li{
+        z-index: 100;
+    }
+    .navbar-collapse.in {
+        overflow-y: auto;
+    }
+    .ml-auto {    position: absolute;
+        right: 60px;
+        top: -28px;
+    }
+    .img-dropindex {
+        margin: 62px -48px !important;
+        position: absolute;
+    }
+    .dropdown-menu {
+        background-color: #ffffffc2 !important;
+        -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175) !important;
+        box-shadow: 0 6px 12px rgba(0,0,0,.175) !important;
+    }
+    .collapse {
+        display: block !important;
+    }
+    /*----------CALENDAR----------*/
+    .c-calendar {
+        width: 100% !important;
+        padding: 0 55px;
+    }
+    .below-icon {
+        width: 100%;
+        float: none;
+    }
+    .below-icon-inq {
+        width: 70%;
+        float: none;
+    }
+    .img-iconsz {
+        float: left;
+        width: 25%;
+        height: auto;
+    }
+
+}
+ @media (max-width:700px){
+
+/*----------backport----------*/
+    .navbar-brand {
+        padding: 0 !important;
+    }
+
+
+/*jesh new 02-20-208 backport*/
+    .backport-img {
+        max-width: 100%;
+        max-height: 100%;
+            
+        /* Set up proportionate scaling */
+        width: 100%;
+        height: auto;
+            
+        /* Set up positioning */
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-size: cover;
+    }
+/*end*/
+}

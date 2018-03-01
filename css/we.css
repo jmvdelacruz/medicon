@@ -1,0 +1,898 @@
+
+/*----------------------jesh 02-23-208 Responsiveness of specific resolutions and orientation NOT YET FINISHED---------------*/
+
+/***720p HD Television***/
+@media only screen 
+and (min-device-width : 720px) 
+and (max-device-width : 1280px)
+and (orientation : landscape)
+{
+    
+    .navbar-brand {
+        padding: 17px 0 0 0 !important;
+        z-index: 100;
+        margin-left: -25px;
+    }
+    .custom-navtemp {
+        margin-top: -21px !important;
+    }
+    .cb-slideshow, .cb-slideshow:after {
+        position: fixed !important;
+        height: 160% !important;
+    }
+    /*jesh new 02-20-208 backport*/
+    .backport-img {
+        max-width: 100%;
+        max-height: 150%;
+        height: auto;
+            
+        /* Set up positioning */
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-size: cover;
+    }
+    /*end*/
+    .visible-md-block{
+        display:none!important;
+    }
+
+    .below-icon-inq a img {
+        height:80%;
+        width: 80%;
+    }
+}
+
+@media only screen 
+and (min-device-width : 720px) 
+and (max-device-width : 1280px)
+and (orientation : portrait){
+
+
+    #portfolio{
+        padding-left: 40px;
+        margin-top: 80px;
+    }
+    #reference-home a img{
+        margin-left: -50px;
+    }
+    #reference-home h5{
+        margin-left: -40px;
+    }
+    #report-home a img
+    {
+        margin-left: 5px;
+        margin-top: 20px;
+    }
+    #report-home h5{
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+}
+/****end****/
+
+
+
+
+/*****************************Laptops***************************/
+/*Laptop 1366x768*/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1366px)
+and (orientation : landscape)
+{ 
+          /*----------backport----------*/
+    .navbar-brand {
+        padding: 17px 0 0 0 !important;
+        z-index: 100;
+        margin-left: -25px;
+    }
+    .custom-navtemp {
+        margin-top: -21px !important;
+    }
+    .cb-slideshow, .cb-slideshow:after {
+        position: fixed !important;
+        height: 160% !important;
+    }
+    /*jesh new 02-20-208 backport*/
+    .backport-img {
+        max-width: 100%;
+        max-height: 150%;
+        height: auto;
+            
+        /* Set up positioning */
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-size: cover;
+    }
+    /*end*/
+    .visible-md-block{
+        display:none!important;
+    }
+}
+
+
+
+
+
+
+
+
+/*foxinn*/
+@media only screen 
+and (min-device-width : 800px) 
+and (max-device-width : 1280px)
+and (orientation : landscape)
+{
+      /*----------backport----------*/
+    .navbar-brand {
+        padding: 17px 0 0 0 !important;
+        z-index: 100;
+        margin-left: -25px;
+    }
+    .custom-navtemp {
+        margin-top: -21px !important;
+    }
+    .cb-slideshow, .cb-slideshow:after {
+        position: fixed !important;
+        height: 160% !important;
+    }
+    /*jesh new 02-20-208 backport*/
+    .backport-img {
+        max-width: 100%;
+        max-height: 150%;
+        height: auto;
+            
+        /* Set up positioning */
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-size: cover;
+    }
+    /*end*/
+    .visible-md-block{
+        display:none!important;
+    }
+
+    .below-icon-inq a img {
+        height:80%;
+        width: 80%;
+    }
+    .c-wid,.bdtemplate {
+        margin-top: -200px !important;
+        /*margin-top: 5px !important;*/
+    }
+    #portfolio{
+        margin-top:80px;
+    }
+}
+
+@media only screen 
+and (min-device-width : 800px) 
+and (max-device-width : 1280px)
+and (orientation : portrait){
+
+/*jesh new 02-20-208 backport*/
+    .backport-img  {
+        position: fixed; 
+        top: -10%; 
+        left: -10%; 
+        width: 500%; 
+        height: 900%;
+    }
+    .ipad-fix:after,.ipad-fix:before{
+        display:table;content:" "
+    }
+    .ipad-fix:after{
+        clear:both;
+    }
+    .visible-md-block{
+        display:block!important;
+    }
+    .c-wid,.bdtemplate {
+        margin-top: -200px !important;
+        /*margin-top: 5px !important;*/
+    }
+  
+    #portfolio{
+        padding-left: 40px;
+        margin-top: 200px;
+    }
+    
+    
+    .cb-slideshow, .cb-slideshow:after {
+        position: fixed !important;
+        height: 100% !important;
+    }
+    /*icon*/
+    .img-size {
+        width: 120% !important;
+    }
+    .img-size {
+        max-width: 210px !important;
+    }
+
+    #search-home h5{
+        margin-left: 20px;
+    }
+    #appointment-home a img{
+        margin-left:30px;
+    }
+
+    #appointment-home h5{
+        margin-left:40px;
+    }
+    #message-home a img{
+        margin-left:60px;
+        text-align: right;
+    }
+    #message-home h5{
+        margin-left:98px;
+    }
+    #inquiry-home h5{
+        margin-left: 35px;
+    }
+    #reference-home a img {
+        margin-left: 14px;
+    }
+    #reference-home h5{
+        margin-right: -60px;
+    }
+    #template-home a img{
+        margin-left: -19px;
+    } 
+    #template-home h5{
+        margin-left: -6px;
+    }
+    #report-home h5,
+    #report-home a img {
+        margin-left: -50px;
+    }
+    /*end*/
+}
+/****end****/
+
+
+
+
+
+
+
+
+/****Blackberry Playbook****/
+@media only screen 
+and (min-device-width : 600px) 
+and (max-device-width : 1024px)
+and (orientation : landscape){ 
+    /*jesh new 02-20-208 backport*/
+    
+    .backport-img {
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+            
+        /* Set up positioning */
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-size: cover;
+    }
+    .img-size {
+        width: 90% !important;
+    }
+    .img-size {
+        max-width: 150px !important;
+    }
+    /*end*/
+    .visible-md-block{
+        display:none!important;
+    }
+
+    .below-icon-inq a img {
+        height:80%;
+        width: 80%;
+    }
+    .c-wid,.bdtemplate {
+        margin-top: -200px !important;
+        /*margin-top: 5px !important;*/
+    }
+    #portfolio{
+        margin-top:-10px;
+    }
+
+    /*footer*/
+    .footer {
+        bottom: 0px !important;
+        font-weight: 300;
+        width: 100%;
+        position: fixed;
+        font-size: 12px;
+    }
+            
+    .footer-sz {
+        font-size: 13px;
+        padding-top: 6px;
+    }    
+}
+
+/**end**/
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------ipad------------------------*/
+@media only screen 
+and (min-device-width : 1024px) 
+and (max-device-width : 768px)
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio: 1.5){ 
+div{}
+    /*jesh new 02-20-208 backport*/
+    .backport-img {
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+            
+        /* Set up positioning */
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-size: cover;
+    }
+    /*end*/
+    .visible-md-block{
+        display:none!important;
+    }
+
+    .below-icon-inq a img {
+        height:80%;
+        width: 80%;
+    }
+    .c-wid,.bdtemplate {
+        margin-top: -200px !important;
+        /*margin-top: 5px !important;*/
+    }
+    #portfolio{
+        margin-top:80px;
+    }
+
+    /*footer*/
+    .footer {
+        bottom: 0px !important;
+        font-weight: 300;
+        width: 100%;
+        position: fixed;
+        font-size: 12px;
+    }
+            
+    .footer-sz {
+        font-size: 13px;
+        padding-top: 6px;
+    } 
+    .backport-modal-img {
+        position: absolute;
+        left: 0;
+        opacity: 0.7;
+        margin: 0 !important;
+        width: 100% !important;
+        padding: 0 !important;
+        overflow-y: none;
+    }
+}
+
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (orientation : portrait){
+
+/*----------backport----------*/
+    
+    html{
+        overflow-x: none;
+        overflow-y: none;
+    }
+    #mainNav{
+        width: 105%;
+    }
+/*jesh new 02-20-208 backport*/
+    .backport-img  {
+        position: fixed; 
+        top: -10%; 
+        left: -10%; 
+        width: 500%; 
+        height: 900%;
+    }
+    .ipad-fix:after,.ipad-fix:before{
+        display:table;content:" "
+    }
+    .ipad-fix:after{
+        clear:both;
+    }
+    .visible-md-block{
+        display:block!important;
+    }
+    .c-wid,.bdtemplate {
+        margin-top: -200px !important;
+        /*margin-top: 5px !important;*/
+    }
+  
+    #portfolio{
+        padding-left: 40px;
+        margin-top: 70px;
+    }
+    
+    
+    .cb-slideshow, .cb-slideshow:after {
+        position: fixed !important;
+        height: 100% !important;
+    }
+    /*icon*/
+    .img-size {
+        width: 120% !important;
+    }
+    .img-size {
+        max-width: 210px !important;
+    }
+
+    #search-home h5{
+        margin-left: 20px;
+    }
+    #appointment-home a img{
+        margin-left:30px;
+    }
+
+    #appointment-home h5{
+        margin-left:40px;
+    }
+    #message-home a img{
+        margin-left:60px;
+        text-align: right;
+    }
+    #message-home h5{
+        margin-left:98px;
+    }
+    #inquiry-home h5{
+        margin-left: 35px;
+    }
+    #reference-home a img {
+        margin-left: 14px;
+    }
+    #reference-home h5{
+        margin-right: -60px;
+    }
+    #template-home a img{
+        margin-left: -19px;
+    } 
+    #template-home h5{
+        margin-left: -6px;
+    }
+    #report-home h5,
+    #report-home a img {
+        margin-left: -50px;
+    }
+    /*end*/
+}
+/*end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------ipad pro-------------------------------------*/
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1.5){ 
+   
+
+    .cb-slideshow, .cb-slideshow:after {
+        position: fixed !important;
+        height: 100% !important;
+    }
+    /*jesh new 02-20-208 backport*/
+    .backport-img {
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+            
+        /* Set up positioning */
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-size: cover;
+    }
+    #portfolio{
+    margin-top:50px;
+    }
+}
+
+@media only screen 
+and (min-device-width : 1024px) 
+and (max-device-width : 1366px)
+and (orientation : portrait){
+
+/*----------backport----------*/
+    #mainNav{
+        width: 100%;
+    }
+    html{
+        overflow-x: none;
+        overflow-y: none;
+    }
+/*jesh new 02-20-208 backport*/
+    .backport-img  {
+        position: fixed; 
+        top: -10%; 
+        left: -10%; 
+        width: 500%; 
+        height: 900%;
+    }
+    .ipad-fix:after,.ipad-fix:before{
+        display:table;content:" "
+    }
+    .ipad-fix:after{
+        clear:both;
+    }
+    .visible-md-block{
+        display:block!important;
+    }
+    .c-wid,.bdtemplate {
+        margin-top: -200px !important;
+        /*margin-top: 5px !important;*/
+    }
+  
+    #portfolio{
+        padding-left: 40px;
+        margin-top: 150px;
+    }
+    
+    
+    .cb-slideshow, .cb-slideshow:after {
+        position: fixed !important;
+        height: 100% !important;
+    }
+    /*icon*/
+    .img-size {
+        width: 120% !important;
+    }
+    .img-size {
+        max-width: 210px !important;
+    }
+
+    #search-home h5{
+        margin-left: 20px;
+    }
+    #appointment-home a img{
+        margin-left:30px;
+    }
+
+    #appointment-home h5{
+        margin-left:40px;
+    }
+    #message-home a img{
+        margin-left:60px;
+        text-align: right;
+    }
+    #message-home h5{
+        margin-left:98px;
+    }
+    #inquiry-home h5{
+        margin-left: 35px;
+    }
+    #reference-home a img {
+        margin-left: 14px;
+    }
+    #reference-home h5{
+        margin-right: -60px;
+    }
+    #template-home a img{
+        margin-left: -19px;
+    } 
+    #template-home h5{
+        margin-left: -6px;
+    }
+    #report-home h5,
+    #report-home a img {
+        margin-left: -50px;
+    }
+    /*end*/
+}
+/*end*/
+/*end*/
+
+
+
+
+
+
+
+
+
+/*iphone 4*/
+@media only screen 
+and (min-device-width : 480px) 
+and (max-device-width : 320px) 
+and (orientation : landscape) { 
+     #reference-home{
+        margin-left: 20px;
+    }
+    #report-home{
+        margin-left: 65px;
+        margin-bottom: 40px;
+    }
+
+}
+/*END*/
+
+
+
+
+/*iphone 6plus*/
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) 
+and (orientation : landscape) { 
+
+   #reference-home{
+        margin-right: 80px;
+    }
+    #report-home{
+        margin-left: 65px;
+        margin-bottom: 40px;
+    }
+}
+
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) 
+and (orientation : portrait) { 
+    #report-home{
+        margin-bottom: 40px;
+    }
+}
+/*end*/
+
+/*iphone 6s*/
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : landscape) { 
+    
+    #reference-home{
+        margin-right: 50px;
+    }
+    #report-home{
+        margin-bottom: 40px;
+        margin-left: 65px;
+    }
+}
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : portrait) { 
+    
+    #report-home{
+        margin-bottom: 40px;
+    }
+}
+/*end*/
+
+
+
+/*iphone se*/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : landscape) { 
+    
+   #reference-home{
+        margin-right: 50px;
+    }
+    #report-home{
+        margin-bottom: 40px;
+        margin-left: 15px;
+    }
+}
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) { 
+    
+   #reference-home {
+        width: 99.9%;
+    }
+    #report-home{
+        margin-bottom: 40px;
+    }
+    #portfolio{
+        margin-top: 14px;
+    }
+}
+/*end*/
+
+
+/*iphone x*/
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px) 
+and (orientation : landscape) { 
+    
+  .backport-img  {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+        
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 10;
+    background-size: cover;
+    }
+}
+@media only screen 
+and (min-device-width : 812px) 
+and (max-device-width : 375px) 
+and (orientation : portrait) { 
+    
+   #reference-home {
+        width: 99.9%;
+    }
+    #report-home{
+        margin-bottom: 40px;
+    }
+    #portfolio{
+        margin-top: 14px;
+    }
+}
+/*end*/
+
+
+/*google nexus 4*/
+@media only screen 
+and (min-device-width : 640px) 
+and (max-device-width : 384px) 
+and (orientation : landscape) { 
+    
+   #reference-home{
+        margin-right: 50px;
+    }
+    #report-home{
+        margin-bottom: 40px;
+        margin-right: 45px;
+    }
+}
+
+/*Nexus 5*/
+@media only screen 
+and (min-device-width : 360px) 
+and (max-device-width : 640px) 
+and (orientation : portrait) { 
+    
+}
+
+/*end*/
+
+
+/*Blackberry**/
+@media only screen 
+and (min-device-width : 600px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { 
+    
+   #reference-home{
+        margin-right: 35px;
+    }
+    #report-home{
+        margin-bottom: 40px;
+        margin-left: 50px;
+    }
+}
+
+
+@media only screen 
+and (min-device-width : 600px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
+    
+    #report-home{
+        margin-bottom: 40px;
+    }
+}
+/*end*/
+
+
+/*Nokia N9*/
+@media only screen 
+and (min-device-width : 854px) 
+and (max-device-width : 480px) 
+and (orientation : landscape) { 
+    
+    #report-home{
+        margin-bottom: 40px;
+        margin-left: 65px;
+    }
+}
+/*end*/
+
+
+
+/*galaxy s7*/
+@media only screen 
+and (min-device-width : 360px) 
+and (max-device-width : 640px) 
+and (orientation : landscape) { 
+    
+    #report-home a img{
+        margin-right:100px;
+    } 
+    #report-home h5{
+        margin-right:20px;
+    }
+}
+
+/*galaxy s8*/
+@media only screen 
+and (min-device-width : 360px) 
+and (max-device-width : 740px) 
+and (orientation : landscape) { 
+    #report-home a img{
+        margin-left:90px;
+    } 
+    #report-home h5{
+        margin-left:160px;
+    }
+}
+
+/*Sony Playstation */
+@media only screen 
+and (min-device-width : 544px) 
+and (max-device-width : 960px) 
+and (orientation : portrait) { 
+    #report-home a img{
+        margin-left:20px;
+    } 
+    #report-home h5{
+        margin-left:30px;
+    }
+}
+
+/*Sony Xperia Z3 */
+@media only screen 
+and (min-device-width : 360px) 
+and (max-device-width : 640px) 
+and (orientation : landscape) { 
+    #report-home a img{
+        margin-left:-10px;
+    } 
+    #report-home h5{
+        margin-left:-20px;
+    }
+}
+
+/*------------------end--------------------------*/
