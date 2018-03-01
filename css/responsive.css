@@ -408,6 +408,10 @@ and (orientation : portrait){
         height:20%;
         width: 20%;
     }
+ .below-icon a img{
+  width:80%;
+  height:80%;
+ }
     #portfolio{
         padding-left: 40px;
         margin-top: 55px;
