@@ -576,7 +576,6 @@ and (orientation : landscape){
     }
     #portfolio{
         margin-top:-10px;
-        border:2px solid black;
     }
 
     #demo{
@@ -729,6 +728,9 @@ and (orientation : portrait){
 
      .c-wid,.bdtemplate {
         margin-top: 8px !important;
+    }
+    footer{
+        border:2px red;
     }
 }
 
