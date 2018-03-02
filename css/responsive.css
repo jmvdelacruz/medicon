@@ -218,7 +218,11 @@ and (orientation : landscape){
         margin-right: 30px;
         border:2px solid black;
     }
-
+    .below-icon-inq a img {
+        height:80%;
+        width: 80%;
+    border:2px solid blue;
+    }
     .below-icon a img {
         height:90%;
         width: 90%;
@@ -276,7 +280,11 @@ and (orientation : landscape){
 and (min-device-width : 768px) 
 and (max-device-width : 1024px)
 and (orientation : portrait){
-
+.below-icon-inq a img {
+        height:80%;
+        width: 80%;
+    border:2px solid red;
+    }
     html{
         overflow-x: none;
         overflow-y: none;
