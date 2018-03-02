@@ -729,9 +729,6 @@ and (orientation : portrait){
      .c-wid,.bdtemplate {
         margin-top: 8px !important;
     }
-    footer{
-        border:2px red;
-    }
 }
 
 
