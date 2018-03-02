@@ -575,7 +575,8 @@ and (orientation : landscape){
         margin-top: 1px !important;
     }
     #portfolio{
-        margin-top:10px;
+        margin-top:-10px;
+        border:2px solid black;
     }
 
     #demo{
