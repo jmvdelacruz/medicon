@@ -221,6 +221,7 @@ and (orientation : landscape){
     .below-icon-inq a img {
         height:100%;
         width: 100%;
+        border:2px solid black;
     }
 
     .below-icon a img {
