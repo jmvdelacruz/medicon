@@ -38,10 +38,10 @@ and (orientation : landscape)
         display:none!important;
     }
 
-    .below-icon-inq a img {
+   /* .below-icon-inq a img {
         height:80%;
         width: 80%;
-    }
+    }*/
 }
 /*-Portrait-*/
 @media only screen 
@@ -105,10 +105,10 @@ and (orientation : landscape)
     .visible-md-block{
         display:none!important;
     }
-    .below-icon-inq a img {
+    /*.below-icon-inq a img {
         height:80%;
         width: 80%;
-    }
+    }*/
     .c-wid,.bdtemplate {
         margin-top: -200px !important;
         /*margin-top: 5px !important;*/
