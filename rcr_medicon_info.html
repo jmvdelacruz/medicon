@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<!--jasmin--> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--end jasmin-->    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Medicon</title>
+
+        <!-- Custom fonts for this template -->
+        <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <!--Jesh-->
+        <link rel="stylesheet" href="ors/styles/css/rcr.css">
+
+        <link rel="stylesheet" href="ors/styles/css/jquery-ui.css">
+        <link rel="stylesheet" href="ors/styles/css/bootstrap.css">
+        <link rel="stylesheet" href="ors/styles/css/slidebars.css">
+        <link rel="stylesheet" href="ors/styles/css/custom.css">
+        <link rel="stylesheet" href="ors/styles/css/mobile.css">
+        <link rel="stylesheet" href="ors/styles/css/waitMe.css">
+        <link href="ors/styles/css/OnlineReservation/bootstrapReservation.css" rel="stylesheet">
+        <link href="ors/styles/css/OnlineReservation/roomReservation.css" rel="stylesheet">
+        <link href="ors/styles/iops/css/eHub.css" rel="stylesheet">
+        <link href="ors/styles/css/OnlineReservation/dataTable/demo_table.css" rel="stylesheet">
+        <link href="ors/styles/css/OnlineReservation/bootstrap-datetimepicker.css" rel="stylesheet">
+
+        <script src="ors/scripts/js/jquery.js"></script>
+        <script src="ors/scripts/js/jquery-ui.js"></script>
+        <script src="ors/scripts/js/OnlineReservation/bootstrapReservation.min.js"></script>
+        <script type="text/javascript" src="ors/scripts/js/OnlineReservation/moment.js"></script>
+        <script type="text/javascript" src="ors/scripts/js/OnlineReservation/bootstrap-datetimepicker.js"></script>
+        <!--<script src="../scripts/js/bootstrap-datepicker.js"></script>-->
+        <script type="text/javascript" src="ors/scripts/js/OnlineReservation/ehealthValidate.js"></script>
+        <script src="ors/scripts/js/jquery.session.js"></script>
+
+        <script src="ors/js/jquery.maskedinput.js"></script>
+        <script src="ors/scripts/js/slidebars.js"></script>
+        <script src="ors/scripts/js/ie10-viewport-bug-workaround.js"></script>
+        <script src="ors/scripts/js/html5shiv.js"></script>
+        <script src="ors/scripts/js/respond.min.js"></script>
+        <script type="text/javascript" src="ors/scripts/js/OnlineReservation/scripts.js"></script>
+
+        <script type="text/javascript" src="ors/scripts/js/OnlineReservation/dataTable/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="ors/scripts/js/OnlineReservation/dataTable/jquery.tablesorter.js"></script>
+        <script type="text/javascript" src="ors/scripts/js/OnlineReservation/dataTable/FixedColumns.min.js"></script>
+        <script type="text/javascript" src="ors/scripts/js/OnlineReservation/bootstrap/bootstrap-paginator.min.js"></script>
+
+        <script src="ors/scripts/js/waitMe.js"></script>
+        <script src="ors/scripts/js/waitMe.min.js"></script>
+  </head>
+
+
+  <body id="page-top">
+    
+
+        <div class="container"  id="ajax-content">
+            <div class="row">
+                <div class="col-md-12" id="content">
+
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="col-sm-12 col-md-12">
+                                <div class="col-sm-12 form-header">
+                                    <h4>INTERNATIONAL PATIENT CARE</h4>
+                                    <h4>RCR (REFERRAL, CONSENT, REQUEST) FORM</h4>
+                                </div>
+                                <div class="col-sm-12 form-headerbl">
+                                    <h5>PATIENT'S INFORMATION</h5>
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label class="col-xs-12 col-sm-12 col-md-2 control-label">Patient's Name:</label>
+                                    <div class='col-xs-12 col-sm-12 col-md-10'>
+                                        <input type='text' class="form-control" name="pName"/>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label class="col-xs-12 col-sm-12 col-md-2 control-label">Date of Birth:</label>
+                                    <div class='col-md-4'>
+                                        <input type='date' class="form-control" />
+                                    </div>
+                                    <label class="col-xs-12 col-xs-12 col-md-1">Age:</label>
+                                    <div class='col-xs-12 col-sm-12 col-md-1'>
+                                        <input type='text' class="form-control" />
+                                    </div>
+                                    <label class="col-xs-2 col-sm-2 col-md-1">Gender:</label>
+                                    <div class='col-xs-10 col-xs-10 col-md-3'>
+                                       <input type="checkbox" id="male" onclick="male()" name="gender" value="male"> Male
+                                        <input type="checkbox" id="female" onclick="female()" name="gender" value="female"> Female
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label class="ol-xs-12 col-sm-12 col-md-2 control-label">Nationality:</label>
+                                    <div class='col-md-4'>
+                                        <input type='text' class="form-control" name=""/>
+                                    </div>
+                                    <label class="col-md-1 control-label">Religion:</label>
+                                    <div class='col-md-4'>
+                                        <input type='text' class="form-control" name=""/>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label class="col-md-2 control-label">Country of Origin:</label>
+                                    <div class='col-md-4'>
+                                        <input type='text' class="form-control" name=""/>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label class="col-md-2 control-label">Contact Number:</label>
+                                    <div class='col-md-4'>
+                                        <input type='text' class="form-control" name=""/>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label class="col-md-2 control-label">Email Address:</label>
+                                    <div class='col-md-4'>
+                                        <input type='text' class="form-control" name=""/>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <i class="col-md-7 control-label">Should we use the e-mail stated above when sending you a copy of your medical documents</i>
+                                    <div class="col-md-2">
+                                        <input type="checkbox" id="yes" onclick="yes()" name="" value="Yes"> Yes
+                                        <input type="checkbox" id="no" onclick="no()" name="" value="No"> No
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label class="col-md-2 control-label">Mode of Payment:</label>
+                                    <div class='col-md-10'>
+                                        <input type="checkbox" id="myCheck1"  onclick="myFunction1()"> Self-Pay
+                                        <input type="checkbox" id="myCheck2"  onclick="myFunction2()"> Insurance/Company
+                                        <input type="checkbox" id="myCheck3"  onclick="myFunction3()"> Medical Tourism Facilitator
+                                    </div>
+                                </div>
+                                <div class="form-group " id="text2" style="display:none;">
+                                    <div class="form-group col-md-12">
+                                       <label class="col-md-3 control-label">Insurance / Company Name:</label>
+                                        <div class='col-md-9'>
+                                            <input type='text' class="form-control" name=""/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                       <label class="col-md-3 control-label">ID Number:</label>
+                                        <div class='col-md-9'>
+                                            <input type='text' class="form-control" name=""/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                       <label class="col-md-3 control-label">Account / Policy Number:</label>
+                                        <div class='col-md-9'>
+                                            <input type='text' class="form-control" name=""/>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group " id="text3" style="display:none">
+                                    <div class="form-group col-md-12">
+                                       <label class="col-md-4 control-label">Medical Tourism Facilitator/ Platform Name:</label>
+                                        <div class='col-md-8'>
+                                            <input type='text' class="form-control" name=""/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                       <label class="col-md-3 control-label">Country of Origin:</label>
+                                        <div class='col-md-9'>
+                                            <input type='text' class="form-control" name=""/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <center>
+                                    <button type="button"  id="cont"  class="btn btn-primary">Continue</button>
+                                </center>
+                               <div style="margin:10px 0 0 0; float:right;">
+                                  You are on Patient Mode, Click here to access MediCon App>>
+                                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Medicon User?
+                                  </button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div><!-- end content -->
+
+            </div>
+        </div><!-- end row -->
+
+    </div><!--container-->
+
+    <!--Modal View-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-md" role="document" style="width: 450px;">
+            <div class="modal-content modal-bg" style="height: 197px;">
+
+              <div class="modal-header modal-Hheight">
+                <center>
+                  <h5 class="modal-title" id="exampleModalLabel">Enter Password</h5>  
+                </center>   
+              </div>
+
+              <div class="modal-body modal-Bheight">
+                <div class="container" style="width: 70%;">
+                  <div class="form-group">
+      
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal-footer modal-Dheight col-md-12" style="padding: 15px 15px;">
+                <center>
+                  <button type="button" class="btn btn-primary waves-effect waves-light">Ok
+                  </button>
+                        
+                  <button type="button" data-dismiss="modal" class="btn btn-primary waves-effect waves-light">Cancel</button>
+                  
+                </center>
+              </div><!-- end modal footer -->
+
+            </div><!-- end modal-content -->
+        </div><!-- end modal-dialog -->
+    </div><!--end-->
+
+    <!--Signature Modal-->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-md" role="document" style="width: 450px;">
+            <div class="modal-content modal-bg" style="height: 340px;">
+
+              <div class="modal-header modal-Hheight">
+                <center>
+                  <h5 class="modal-title" id="exampleModalLabel">Input Signature</h5>  
+                </center>   
+              </div>
+
+              <div class="modal-body modal-Bheight">
+                <div class="container" style="height: 180px;">
+                  <div class="form-group">
+                    <div class="col-md-12" id="signature">
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal-footer modal-Dheight col-md-12" style="padding: 15px 15px;">
+                <center>
+                  <button type="button" class="btn btn-primary waves-effect waves-light">Clear</button>
+                  <button type="button" class="btn btn-primary waves-effect waves-light">Ok</button>
+                  <button type="button" data-dismiss="modal" class="btn btn-primary waves-effect waves-light">Cancel</button>
+                </center>
+              </div><!-- end modal footer -->
+
+            </div><!-- end modal-content -->
+        </div><!-- end modal-dialog -->
+    </div><!--end-->
+
+        <!--Signature Modal 2-->
+    <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-md" role="document" style="width: 450px;">
+            <div class="modal-content modal-bg" style="height: 340px;">
+
+              <div class="modal-header modal-Hheight">
+                <center>
+                  <h5 class="modal-title" id="exampleModalLabel">Input Signature</h5>  
+                </center>   
+              </div>
+
+              <div class="modal-body modal-Bheight">
+                <div class="container" style="height: 180px;">
+                  <div class="form-group">
+                    <div class="col-md-12" id="signature">
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal-footer modal-Dheight col-md-12" style="padding: 15px 15px;">
+                <center>
+                  <button type="button" class="btn btn-primary waves-effect waves-light">Clear</button>
+                  <button type="button" class="btn btn-primary waves-effect waves-light">Ok</button>
+                  <button type="button" data-dismiss="modal" class="btn btn-primary waves-effect waves-light">Cancel</button>
+                </center>
+              </div><!-- end modal footer -->
+
+            </div><!-- end modal-content -->
+        </div><!-- end modal-dialog -->
+    </div><!--end-->
+
+    <script>
+        function myFunction1() {
+            var checkBox = document.getElementById("myCheck1");
+            var text2 = document.getElementById("text2");
+            var text3 = document.getElementById("text3");
+            if (checkBox.checked == true){
+                text2.style.display = "none";
+                text3.style.display = "none";
+            // Uncheck
+            $("#myCheck2").prop("checked", false);
+            $("#myCheck3").prop("checked", false);
+            } 
+        }
+
+        function myFunction2() {
+            var checkBox = document.getElementById("myCheck2");
+            var text2 = document.getElementById("text2");
+            var text3 = document.getElementById("text3");
+            if (checkBox.checked == true){
+                text2.style.display = "block";
+                text3.style.display = "none";
+                $("#myCheck1").prop("checked", false);
+                $("#myCheck3").prop("checked", false);
+            } else {
+               text.style.display = "none";
+            }
+        }
+
+        function myFunction3() {
+            var checkBox = document.getElementById("myCheck3");
+            var text2 = document.getElementById("text2");
+            var text3 = document.getElementById("text3");
+            if (checkBox.checked == true){
+                text2.style.display = "none";
+                text3.style.display = "block";
+                $("#myCheck1").prop("checked", false);
+                $("#myCheck2").prop("checked", false);
+            } else {
+               text.style.display = "none";
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        $('#cont').on('click', function() {
+            $('#ajax-content').load('rcr_2_request.html');
+        })
+    </script>
+    
+    <script type="text/javascript">
+         function male() {
+            var checkBox = document.getElementById("male");
+            if (checkBox.checked == true){
+                // Uncheck
+                $("#female").prop("checked", false);
+            } 
+        }
+
+        function female() {
+             var checkBox = document.getElementById("female");
+            if (checkBox.checked == true){
+                // Uncheck
+                $("#male").prop("checked", false);
+            } 
+        }
+    </script>
+
+    <script type="text/javascript">
+         function yes() {
+            var checkBox = document.getElementById("yes");
+            if (checkBox.checked == true){
+                // Uncheck
+                $("#no").prop("checked", false);
+            } 
+        }
+
+        function no() {
+             var checkBox = document.getElementById("no");
+            if (checkBox.checked == true){
+                // Uncheck
+                $("#yes").prop("checked", false);
+            } 
+        }
+    </script>
+    <script type="text/javascript">
+        function checked1() {
+            var checkBox = document.getElementById("check1");
+            if (checkBox.checked == true){
+                // Uncheck
+                $("#check2").prop("checked", false);
+                $("#check3").prop("checked", false);
+                $("#check4").prop("checked", false);
+            } 
+        }
+
+        function checked2() {
+             var checkBox = document.getElementById("check2");
+            if (checkBox.checked == true){
+                // Uncheck
+                $("#check1").prop("checked", false);
+                $("#check3").prop("checked", false);
+                $("#check4").prop("checked", false);
+            } 
+        }
+
+        function checked3() {
+             var checkBox = document.getElementById("check3");
+            if (checkBox.checked == true){
+                // Uncheck
+                $("#check1").prop("checked", false);
+                $("#check2").prop("checked", false);
+                $("#check4").prop("checked", false);
+            } 
+        }
+        function checked4() {
+             var checkBox = document.getElementById("check4");
+            if (checkBox.checked == true){
+                // Uncheck
+                $("#check1").prop("checked", false);
+                $("#check2").prop("checked", false);
+                $("#check3").prop("checked", false);
+            } 
+        }
+    </script>
+
+    <script type="text/javascript">
+        function op() {
+            var checkBox = document.getElementById("outpatient");
+            if (checkBox.checked == true){
+                // Uncheck
+                $("#inpatient").prop("checked", false);
+            } 
+        }
+
+        function ip() {
+             var checkBox = document.getElementById("inpatient");
+            if (checkBox.checked == true){
+                // Uncheck
+                $("#outpatient").prop("checked", false);
+            } 
+        }
+
+        function op1() {
+            var checkBox = document.getElementById("outpatient");
+            if (checkBox.checked == true){
+                // Uncheck
+                $("#inpatient1").prop("checked", false);
+            } 
+        }
+
+        function ip1() {
+             var checkBox = document.getElementById("inpatient");
+            if (checkBox.checked == true){
+                // Uncheck
+                $("#outpatient1").prop("checked", false);
+            } 
+        }
+    </script>
+  </body>
+</html>

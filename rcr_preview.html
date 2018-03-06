@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta http-equiv="Cache-Control" content="no-store"/>
+        <meta http-equiv="Pragma" content="no-cache"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="icon" type="image/png" href="../images/favicon.ico" /> -->
+        <title></title>
+        
+        <link rel="stylesheet" href="ors/styles/css/bootstrap.css">
+        <link rel="stylesheet" href="ors/styles/css/custom.css" type="text/javascript">
+
+        
+        <script src="ors/scripts/js/jquery.js"></script>
+
+        <meta charset="utf-8">
+        
+        <link href="ors/styles/css/OnlineReservation/request-form_css/style.css" rel="stylesheet">
+        <!--Jesh-->
+        <link rel="stylesheet" href="ors/styles/css/rcr.css">
+
+    </head>
+    <body style=" height:19in;">
+        
+
+        <div class="container-fluid" >
+            <div class="row-fluid">
+            <header>
+                <img style="padding-left: 10px;" alt="St. Luke's Medical Center QC" src="ors/img/SLMC_QC.jpg" width="20%" class="pull-left">
+                <div class="form-header">
+                    <h4>INTERNATIONAL PATIENT CARE</h4>
+                    <h4>RCR (REFERRAL, CONSENT, REQUEST) FORM</h4>
+                </div>
+            </header>
+            
+            <div class="col-sm-12">
+                <div class="form-headerpre">
+                        <h5>PATIENT'S INFORMATION</h5>
+                </div>
+                <table id="preview">
+                    <tbody>
+                        <tr>
+                            <td>PATIENT'S NAME:</td>
+                            <td colspan="5" id="ln"><p>Juan Dela Cruz</p></td>
+                        </tr>
+                        <tr>
+                            <td>DATE OF BIRTH:</td>
+                            <td id="ln"><p>December 30, 1996</p></td>
+                            <td>AGE:</td>
+                            <td id="ln"><p>21</p></td>
+                            <td>GENDER:</td>
+                            <td>
+                                <input type="checkbox" name="gender" value="male" checked disabled> Male
+                                <input type="checkbox" name="gender" value="female" disabled> Female
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>NATIONALITY:</td>
+                            <td id="ln" colspan="2"><p>Filipino</p></td>
+                            <td>RELIGION:</td>
+                            <td id="ln" colspan="2"><p>Christian</p></td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 9px">COUNTRY OF ORIGIN:</td>
+                            <td id="ln" colspan="5"><p>PILIPINAS</p></td>
+                        </tr>
+                        <tr>
+                            <td>CONTACT NUMBER:</td>
+                            <td id="ln" colspan="5"><p>0912345678</p></td>
+                        </tr>
+                        <tr>
+                            <td>EMAIL-ADDRESS:</td>
+                            <td id="ln" colspan="5"><p>juan@yahoo.com</p></td>
+                        </tr>
+                        <tr>
+                            <td colspan="5"><i>Should we use the e-mail stated above when sending you a copy of your medical documents?</i></td>
+                            <td>
+                                <input type="checkbox" name="" value="Yes" checked disabled> Yes
+                                <input type="checkbox" name="" value="No" disabled> No
+                            </td>
+                        </tr>
+                        <tr>
+                           <td > Mode of Payment:</td>
+                           <td colspan="5">
+                                <input type="checkbox" id="myCheck1" checked disabled> Self-Pay
+                                <input type="checkbox" id="myCheck2" disabled> Insurance/Company
+                                <input type="checkbox" id="myCheck3" disabled> Medical Tourism Facilitator
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"><i>For coverage under Insurance/Company:</i></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">INSURANCE/COMPANY NAME:</td>
+                            <td id="ln" colspan="4"><p>PHILCARE</p></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">ID NUMBER:</td>
+                            <td id="ln" colspan="4"><p>00001</p></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">ACCOUNT/POLICY #:</td>
+                            <td id="ln" colspan="4"><p>124646</p></td>
+                        </tr>
+                        <tr style="">
+                            <td colspan="6"><i>For medical Tourism Facility/Platform referrals:</i></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">MEDICAL TOURISM FACILITATOR/PLATFORM NAME:</td>
+                            <td id="ln" colspan="3"><p>Medical</p></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">COUNTRY OF ORIGIN:</td>
+                            <td id="ln" colspan="4"><p>Philippines</p></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                
+                <div class="form-headerpre">
+                    <h5>REQUEST</h5>
+                </div>
+
+                    <table id="preview">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" checked disabled>
+                                </td>
+                                <td colspan="10">Referral and Apointment Scheduling Specialist(s)</td>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input type="checkbox" disabled>
+                                </td>
+                                <td colspan="10">Guarantee of Payment (Processing may take 24-28 hours, depending on insurance assesment and appeoval)</td>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input type="checkbox" disabled>
+                                </td>
+                                <td colspan="10">Special billing arrangement for non-accredited insurances (for inpatient services)</td>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input type="checkbox" disabled>
+                                </td>
+                                <td colspan="3">Others (please Specify)</td>
+                                <td colspan="7"> <p>IT Request</p></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div class="form-headerpre">
+                        <h5>MEDICAL INFORMATION</h5>
+                    </div>
+
+                    <table id="preview">
+                        <tr>
+                            <td style="text-align: center;">DATE/TIME OF SERVICE</td>
+                            <td style="text-align: center;">REQUESTED SERVICE<br>
+                                (i.e. Consultation, Procedure, etc.)
+                            </td>
+                            <td style="text-align: center;">SYMPTOMS</td>
+                            <td style="text-align: center;">DIAGNOSIS</td>
+                            <td style="text-align: center;">TYPE OF SERVICE <br>
+                                Outpatient | Inpatient
+                            </td>
+                        </tr>
+                        <tr id="med">
+                            <td id="ln"><p></p></td>
+                            <td id="ln"><p></p></td>
+                            <td id="ln"><p></p></td>
+                            <td id="ln"><p></p></td>
+                            <td>
+                                <input type="checkbox" name="" style="margin-left: 35px;" checked disabled>
+                                <input type="checkbox" name="" style="margin-left: 35px;" disabled>
+                            </td>
+                        </tr>
+
+                        <tr id="med">
+                            <td id="ln"><p></p></td>
+                            <td id="ln"><p></p></td>
+                            <td id="ln"><p></p></td>
+                            <td id="ln"><p></p></td>
+                            <td>
+                                <input type="checkbox" name="" style="margin-left: 35px;" disabled>
+                                <input type="checkbox" name="" style="margin-left: 35px;" disabled>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <h6 id="reminder">REMINDERS: Appointments for your consultations / procedures have been confirmed prior appointment date and any cancellations must be made 24 hours prior. Kindly reconfirm with the doctor's clinic/s or units prior your appointment as schedules may chenge due to emergency situations.</h6>
+
+                    <div class="form-headerpre">
+                        <h5>REMARKS</h5>
+                    </div>
+                    <table id="remarks">
+                        <tbody>
+                            <tr>
+                                <td id="ln" ><p></p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="row" id="hereby">
+                        <p>I hereby certify that all information presented above are true and correct.</p>
+                        <p><b>FOR SELF-PAY PATIENTS:</b> I hereby undertake to pay hospital charges (oupatient and inpatient) including doctor's professional fees and make periodic payments during confinement and the full satisfaction of the account prior discharge.</p>
+                        <p><b>FOR INSURANCE/COMPANY MEMBERS:</b> In the event that my insurance fails to issuue the guarantee of payment (GOP)/Letter of Authorization for the insured amount/maximum benefit limit at the time I am cleared for discharge, I agree to make periodic payments during confinement and to pay whatever account is due by reason of my confinement/outpatient treatment which includes the professional fees, in excess of the covered amount and the exclusions indicated in the GOP/LOA.</p>
+                        <p>Furthermore, the hospital is authorized to furnish from my records, requested information or medical/results/summaries/resume/excerpts to my insurer and/or employer via courier or e-mail, if the Insurance/Company/HMO/Third Party Administrator is reposnsible for the payment of the hospital bill/professional fees.</p>
+                    </div>
+
+                    <div class="col-md-12 signature">
+                        <div class="col-md-5">
+                            <img style="width: 40%;height: 40;" src="img/signature_sample.png" alt="Patient's Signature">
+                            <p>JUAN DELA CRUZ</p>
+                            <h6>Patient's signature over printed name</h6>
+                        </div>
+                        <div class="col-md-3 " style="padding-top: 45px;">
+                            <p>06/14/2017</p>
+                            <h6>Date / Time</h6>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <b  id="consent">Consenting Party (if patient cannot give consent):</b>
+                    </div>
+
+
+                    <div class="col-md-12 signature">
+                        <div class="col-md-5">
+                            <img style="width: 40%;height: 40;" src="" alt="Consenting Signature">
+                            <p></p>
+                            <h6>Consenting Party's signature over printed name</h6>
+                        </div>
+                        <div class="col-md-3" style="padding-top: 20px;">
+                            <p></p>
+                            <h6>Date / Time</h6>
+                        </div>
+                    </div>
+                    <table id="preview">
+                        <tbody>
+                            <tr>
+                                <td colspan="3">Relationship to the patient:</td>
+                                <td id="ln" colspan="10"></td>
+                            </tr>
+                            <tr>
+                                <td>Address:</td>
+                                <td id="ln" colspan="5"><p></p></td>
+                                <td colspan="2">Contact Number:</td>
+                                <td id="ln" colspan="5"><p></p></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" style="font-size: 10px">Reason(s) why patient cannot give consent:</td>
+                                <td colspan="3" style="font-size: 10px"><input type="checkbox" name="" checked disabled> Patient is minor,aged </td>
+                                <td id="ln">12</td>
+                                <td colspan="3"><input type="checkbox" disabled>Others (please specify)</td>
+                                <td id="ln" colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="5">Name of IPC Officer who assisted the patient:</td>
+                                <td colspan="8" id="ln"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+           
+                    <div class="text-center col-md-12" style="padding-top: 30px;">
+                        <input type="button" class="btn btn-redBtn" id="btnContinue" onclick="" value="CONTINUE">
+                        <input type="button" class="btn btn-default" onclick="window.print();" id="printPrev" value="PRINT">            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,102 @@
+         <div class="container"  id="ajax-content">
+            <div class="row">
+                <div class="col-md-12" id="content">
+
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="col-sm-12 col-md-12">
+                                <div class="col-sm-12 form-header">
+                                    <h4>INTERNATIONAL PATIENT CARE</h4>
+                                    <h4>RCR (REFERRAL, CONSENT, REQUEST) FORM</h4>
+                                </div>
+                                <div class="col-sm-12 form-headerbl">
+                                    <h5>REQUEST</h5>
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <input id="check1" onclick="checked1()" type="checkbox" class="col-sm-1 col-md-1">
+                                    <label class="col-sm-11 col-md-11">Referral and Apointment Scheduling Specialist(s)</label>
+                                    <input id="check2" onclick="checked2()" type="checkbox" class="col-sm-1 col-md-1">
+                                    <label class="col-sm-11 col-md-11">Guarantee of Payment (Processing may take 24-28 hours, depending on insurance assesment and appeoval)</label>
+                                    <input id="check3" onclick="checked3()" type="checkbox" class="col-sm-1 col-md-1">
+                                    <label class="col-sm-11 col-md-11">Special billing arrangement for non-accredited insurances (for inpatient services)</label>
+                                    <input id="check4" onclick="checked4()" type="checkbox" class="col-sm-1 col-md-1">
+                                    <label class="col-xs-3 col-sm-3 col-md-3">Others (please Specify)</label>
+                                    <input  type="text" name="other" class="col-xs-7 col-sm-7 col-md-8">
+                                </div>
+
+                                <div class="col-sm-12 form-headerbl">
+                                    <h5>MEDICAL INFORMATION</h5>
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <table class="table-condensed col-md-12">
+                                        <thead >
+                                            <th style="text-align: center; color: #000">Date/Time of Service</th>
+                                            <th style="text-align: center; color: #000">Requested Services<h6 style="font-size: 10px">(i.e Consultation, Procedure etc.)</h6></th>
+                                            <th style="text-align: center; color: #000">Symptoms</th>
+                                            <th style="text-align: center; color: #000">Diagnosis</th>
+                                            <th  style="text-align: center; color: #000">Type of Sevice <h6 style="font-size: 10px" >Outpatient | Inpatient</h6></th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><input type="text" name="" class="form-control"></td>
+                                                <td><input type="text" name="" class="form-control"></td>
+                                                <td><input type="text" name="" class="form-control"></td>
+                                                <td><input type="text" name="" class="form-control"></td>
+                                                <td>
+                                                    <input type="checkbox" id="outpatient" onclick="op()" style="margin-left: 30px;" >
+                                                </td>
+                                                <td>
+                                                    
+                                                    <input type="checkbox" id="inpatient" onclick="ip()" style="margin-left: -40px" >
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" name="" class="form-control"></td>
+                                                <td><input type="text" name="" class="form-control"></td>
+                                                <td><input type="text" name="" class="form-control"></td>
+                                                <td><input type="text" name="" class="form-control"></td>
+                                                <td>
+                                                    <input type="checkbox" id="inpatient1" onclick="ip1()" style="margin-left: 30px;" >
+                                                </td>
+                                                <td>
+                                                    
+                                                    <input type="checkbox" id="outpatient1" onclick="op1()" style="margin-left:-40px " >
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h6>REMINDERS: Appointments for your consultations / procedures have been confirmed prior appointment date and any cancellations must be made 24 hours prior. Kindly reconfirm with the doctor's clinic/s or units prior your appointment as schedules may chenge due to emergency situations.</h6>
+                                </div>
+
+                                
+                                <div class="col-sm-12 form-headerbl">
+                                    <h5>REMARKS</h5>
+                                    <textarea class="col-sm-12 form-control" cols="150" rows="3"></textarea>
+                                </div>
+
+
+                                <center>
+                                    <button type="button"  id="cont2"  class="btn btn-primary">Continue</button>
+                                </center>
+                               <div style="margin:10px 0 0 0; float:right;">
+                                  You are on Patient Mode, Click here to access MediCon App>>
+                                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Medicon User?
+                                  </button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div><!-- end content -->
+
+            </div>
+        </div><!-- end row -->
+
+    </div><!--container-->
+
+
+    <script type="text/javascript">
+        $('#cont2').on('click', function() {
+            $('#ajax-content').load('rcr_3_signature.html');
+        })
+    </script>
