@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<!--jasmin--> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--end jasmin-->    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Medicon</title>
+
+        <!-- Custom fonts for this template -->
+        <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <link rel="stylesheet" href="ors/styles/css/jquery-ui.css">
+        <link rel="stylesheet" href="ors/styles/css/bootstrap.css">
+        <link rel="stylesheet" href="ors/styles/css/slidebars.css">
+        <link rel="stylesheet" href="ors/styles/css/custom.css">
+        <link rel="stylesheet" href="ors/styles/css/mobile.css">
+        <link rel="stylesheet" href="ors/styles/css/waitMe.css">
+        <link href="ors/styles/css/OnlineReservation/bootstrapReservation.css" rel="stylesheet">
+        <link href="ors/styles/css/OnlineReservation/roomReservation.css" rel="stylesheet">
+        <link href="ors/styles/iops/css/eHub.css" rel="stylesheet">
+        <link href="ors/styles/css/OnlineReservation/dataTable/demo_table.css" rel="stylesheet">
+        <link href="ors/styles/css/OnlineReservation/bootstrap-datetimepicker.css" rel="stylesheet">
+
+        <script src="ors/scripts/js/jquery.js"></script>
+        <script src="ors/scripts/js/jquery-ui.js"></script>
+        <script src="ors/scripts/js/OnlineReservation/bootstrapReservation.min.js"></script>
+        <script type="text/javascript" src="ors/scripts/js/OnlineReservation/moment.js"></script>
+        <script type="text/javascript" src="ors/scripts/js/OnlineReservation/bootstrap-datetimepicker.js"></script>
+        <!--<script src="../scripts/js/bootstrap-datepicker.js"></script>-->
+        <script type="text/javascript" src="ors/scripts/js/OnlineReservation/ehealthValidate.js"></script>
+        <script src="ors/scripts/js/jquery.session.js"></script>
+
+        <script src="ors/js/jquery.maskedinput.js"></script>
+        <script src="ors/scripts/js/slidebars.js"></script>
+        <script src="ors/scripts/js/ie10-viewport-bug-workaround.js"></script>
+        <script src="ors/scripts/js/html5shiv.js"></script>
+        <script src="ors/scripts/js/respond.min.js"></script>
+        <script type="text/javascript" src="ors/scripts/js/OnlineReservation/scripts.js"></script>
+
+        <script type="text/javascript" src="ors/scripts/js/OnlineReservation/dataTable/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="ors/scripts/js/OnlineReservation/dataTable/jquery.tablesorter.js"></script>
+        <script type="text/javascript" src="ors/scripts/js/OnlineReservation/dataTable/FixedColumns.min.js"></script>
+        <script type="text/javascript" src="ors/scripts/js/OnlineReservation/bootstrap/bootstrap-paginator.min.js"></script>
+        <script type="text/javascript" src="ors/scripts/js/OnlineReservation/OnlineReservation.js"></script>
+
+        <!--<script type="text/javascript" src="/dwr/interface/ValidatorManager.js"></script>-->
+        <!--<script type="text/javascript" src="/dwr/engine.js"></script>
+        <script type="text/javascript" src="/dwr/util.js"></script>-->
+
+        <!--<script type="text/javascript" src="/dwr/interface/PatientEditDwr.js"></script>-->
+        <!--<script type="text/javascript" src="/dwr/interface/eHealthDoctorManager.js"></script>
+        <script type="text/javascript" src="/dwr/interface/ReservationService.js"></script>
+        <script type="text/javascript" src="/dwr/interface/AppsConstantManager.js"></script>-->
+        <!--<script type="text/javascript" src="/js/EditPatientJs.js"></script>-->
+
+        <script src="ors/scripts/js/waitMe.js"></script>
+        <script src="ors/scripts/js/waitMe.min.js"></script>
+  </head>
+
+
+  <body id="page-top">
+    
+
+<div class="container">
+                <div class="row">
+                    <div class="col-md-12" id="content">
+
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="col-sm-8 col-md-6 noLeftPadding">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-12">
+                                            <img class="logoOnlineReserv" src="img/logo/logo_online_rr.png">
+                                        </div>
+                                    </div>
+                                    <ol class="breadcrumbReservation">
+                                        <li>
+                                            
+                                                <a><b>Step 1.</b> Room Type Selection</a>
+                                            
+                                        </li>
+                                        <li>
+                                            
+                                                Step 2. Admission Information
+                                            
+
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div class="col-sm-4 col-md-6 location">
+                                    <ol class="breadcrumbReservation">
+                                        <li>
+                                            <span class="darkBlue">Patient Name:</span>
+                                            <span id="patientFullName">Paz, Maricar S</span>
+                                        </li>
+                                        <li>
+                                            <span class="darkBlue">Location:</span>
+                                            <span><a href="" class="lightBlue" data-toggle="modal" data-target="#onlineRoomReservationModal">
+                                                    <!--
+                                                    
+                                                        Quezon City
+                                                    
+                                                    -->
+
+                                                 QUEZON CITY
+
+
+                                                </a></span>
+                                        </li>
+                                    </ol>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div>
+                                    <h4>
+                                        <span class="darkBlue">Step 1 /</span>
+                                        <span class="lightBlue">Choose your room type</span>
+                                    </h4>
+                                </div>
+                                <hr class="noTopmrg">
+                                <div class="mrgBottom10">
+
+
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" onclick="checkBoxControl(this.id)" id="regular"><strong style="color:rgb(30, 89, 178)">Show regular room prices</strong>                                            
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" onclick="checkBoxControl(this.id)" id="discount"><strong style="color:rgb(30, 89, 178)">Show room prices with Senior Citizen/PWD Discount</strong>                                            
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="text-center mrgBottom10 lightBlue">
+                                    <i class="fa fa-picture-o" aria-hidden="true"></i> Click the image to view room details
+                                </div>
+                                <!-- Preview Row -->
+                                <div class="row text-center">
+                                    
+                                        <script type="text/javascript">
+            roomMap["RCH01"] = "PRESIDENTIAL SUITE"
+                                        </script>
+                                        <div class="col-md-3 col-sm-3 col-xs-6" style="height: 250px">
+                                            <div class="thumbnail">
+                                                <textarea id="PRESIDENTIAL SUITE" style="display: none">&lt;li&gt;Plasma TV&lt;/li&gt;&lt;li&gt;DVD Player&lt;/li&gt;&lt;li&gt;Bose Surround Sound System&lt;/li&gt;&lt;li&gt;Bedside Table&lt;/li&gt;&lt;li&gt;Table Lamp&lt;/li&gt;&lt;li&gt;Pipe-in O2 and Suction&lt;/li&gt;&lt;li&gt;Toilet and Bath with Bathtub and Bidet&lt;/li&gt;&lt;li&gt;4-seater Dining Area&lt;/li&gt;&lt;li&gt;Living Area with Sofa, Center Table, Flat Screen TV, DVD Player, Computer with 4-in-1 Printer, Fax Machine, Wireless Phone&lt;/li&gt;&lt;li&gt;Kitchen with Refrigerator,Microwave Oven, Airpot and Coffee Maker&lt;/li&gt;</textarea>
+                                                <a onclick="getDetails('PRESIDENTIAL SUITE', 'RCH01', 'presidential_preview_qc.jpg')">
+                                                    
+                                                            <img src="ors/img/presidential_preview_qc.jpg" width="223" height="150">
+                                                        
+                                                </a>
+                                                <div class="caption preview">
+                                                    <div class="checkbox noMargin">
+                                                        <label class="roomLabel">
+                                                            
+                                                                <input type="checkbox" name="checkbox" id="checkbox" class="cb" value="RCH01">
+                                                            PRESIDENTIAL SUITE
+                                                        </label>
+                                                        <style>
+                                                            @media (max-width: 320px) {
+                                                                .roomLabel {
+                                                                    font-size:6px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 480px) {
+                                                                .roomLabel {
+                                                                    font-size:8px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 640px) {
+                                                                .roomLabel {
+                                                                    font-size:10px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 768px) {
+                                                                .roomLabel {
+                                                                    font-size:12px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 980px) {
+                                                                .roomLabel {
+                                                                    font-size:14px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 1200px) {
+                                                                .roomLabel {
+                                                                    font-size:14px;
+                                                                }
+                                                            }
+                                                        </style>
+                                                    </div>
+                                                    <input type="hidden" id="RCH01price" value="26265.0">
+
+                                                    <script type="text/javascript">
+            $(function() {
+                var x = document.getElementById("RCH01price").value;
+                var normalDiscount = "0.16";
+                var total = x - (x * normalDiscount);
+                var z = formatCurrency(total);
+                $("#RCH01discountedPrice").html(z);
+            });
+
+                                                    </script>
+                                                    <p align="center" style="padding-bottom: 10px; display: block;" class="prices" id="RCH01discountedPrice" name="RCH01">Php 22,063.00</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                        <script type="text/javascript">
+            roomMap["RCH02"] = "AMBASSADOR SUITE"
+                                        </script>
+                                        <div class="col-md-3 col-sm-3 col-xs-6" style="height: 250px">
+                                            <div class="thumbnail">
+                                                <textarea id="AMBASSADOR SUITE" style="display: none">&lt;li&gt;LCD TV&lt;/li&gt;&lt;li&gt;Bose Surround Sound System&lt;/li&gt;&lt;li&gt;DVD Player&lt;/li&gt;&lt;li&gt;Bedside Table&lt;/li&gt;&lt;li&gt;Table Lamp&lt;/li&gt;&lt;li&gt;Study Table with Chair&lt;/li&gt;&lt;li&gt;Body Mirror&lt;/li&gt;&lt;li&gt;Pipe-in O2 and Suction&lt;/li&gt;&lt;li&gt;Toilet and Bath with Shower&lt;/li&gt;&lt;li&gt;4-seater Dining Area&lt;/li&gt;&lt;li&gt;Living Area with Sofa, Center Table, Flat Screen TV, DVD Player, Computer with 4-in-1 Printer, Fax Machine, Wireless Phone&lt;/li&gt;&lt;li&gt;Kitchen with Refrigerator, Microwave Oven and Airpot&lt;/li&gt;</textarea>
+                                                <a onclick="getDetails('AMBASSADOR SUITE', 'RCH02', 'Ambassador-Suite_preview.jpg')">
+                                                    
+                                                            <img src="ors/img/Ambassador-Suite_preview.jpg" width="223" height="150">
+                                                        
+                                                </a>
+                                                <div class="caption preview">
+                                                    <div class="checkbox noMargin">
+                                                        <label class="roomLabel">
+                                                            
+                                                                <input type="checkbox" name="checkbox" id="checkbox" class="cb" value="RCH02">
+                                                            AMBASSADOR SUITE
+                                                        </label>
+                                                        <style>
+                                                            @media (max-width: 320px) {
+                                                                .roomLabel {
+                                                                    font-size:6px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 480px) {
+                                                                .roomLabel {
+                                                                    font-size:8px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 640px) {
+                                                                .roomLabel {
+                                                                    font-size:10px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 768px) {
+                                                                .roomLabel {
+                                                                    font-size:12px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 980px) {
+                                                                .roomLabel {
+                                                                    font-size:14px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 1200px) {
+                                                                .roomLabel {
+                                                                    font-size:14px;
+                                                                }
+                                                            }
+                                                        </style>
+                                                    </div>
+                                                    <input type="hidden" id="RCH02price" value="26265.0">
+
+                                                    <script type="text/javascript">
+            $(function() {
+                var x = document.getElementById("RCH02price").value;
+                var normalDiscount = "0.16";
+                var total = x - (x * normalDiscount);
+                var z = formatCurrency(total);
+                $("#RCH02discountedPrice").html(z);
+            });
+
+                                                    </script>
+                                                    <p align="center" style="padding-bottom: 10px; display: block;" class="prices" id="RCH02discountedPrice" name="RCH02">Php 22,063.00</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                        <script type="text/javascript">
+            roomMap["RCH05"] = "SUITE"
+                                        </script>
+                                        <div class="col-md-3 col-sm-3 col-xs-6" style="height: 250px">
+                                            <div class="thumbnail">
+                                                <textarea id="SUITE" style="display: none">&lt;li&gt;Flat Screen TV&lt;/li&gt;&lt;li&gt;Bose Sound System&lt;/li&gt;&lt;li&gt;Refrigerator, Microwave Oven, Airpot and Electric Kettle&lt;/li&gt;&lt;li&gt;Computer with 4-in-1 Printer&lt;/li&gt;&lt;li&gt;Fax Machine&lt;/li&gt;&lt;li&gt;Bedside table&lt;/li&gt;&lt;li&gt;Daybed with backrest, Armchair and Sofa&lt;/li&gt;&lt;li&gt;Over bed Table and Light&lt;/li&gt;&lt;li&gt;Safety Vault&lt;/li&gt;&lt;li&gt;BP Apparatus&lt;/li&gt;&lt;li&gt;Foot Stool&lt;/li&gt;&lt;li&gt;IV Stand&lt;/li&gt;&lt;li&gt;Intercom&lt;/li&gt;&lt;li&gt;Pipe-in O2 and Suction&lt;/li&gt;&lt;li&gt;Cabinet&lt;/li&gt;&lt;li&gt;Mirror and Dresser Chair&lt;/li&gt;</textarea>
+                                                <a onclick="getDetails('SUITE', 'RCH05', 'suite-room_preview_2.jpg')">
+                                                    
+                                                            <img src="ors/img/suite-room_preview_2.jpg" width="223" height="150">
+                                                        
+                                                </a>
+                                                <div class="caption preview">
+                                                    <div class="checkbox noMargin">
+                                                        <label class="roomLabel">
+                                                            
+                                                                <input type="checkbox" name="checkbox" id="checkbox" class="cb" value="RCH05">
+                                                            SUITE
+                                                        </label>
+                                                        <style>
+                                                            @media (max-width: 320px) {
+                                                                .roomLabel {
+                                                                    font-size:6px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 480px) {
+                                                                .roomLabel {
+                                                                    font-size:8px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 640px) {
+                                                                .roomLabel {
+                                                                    font-size:10px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 768px) {
+                                                                .roomLabel {
+                                                                    font-size:12px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 980px) {
+                                                                .roomLabel {
+                                                                    font-size:14px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 1200px) {
+                                                                .roomLabel {
+                                                                    font-size:14px;
+                                                                }
+                                                            }
+                                                        </style>
+                                                    </div>
+                                                    <input type="hidden" id="RCH05price" value="12262.0">
+
+                                                    <script type="text/javascript">
+            $(function() {
+                var x = document.getElementById("RCH05price").value;
+                var normalDiscount = "0.16";
+                var total = x - (x * normalDiscount);
+                var z = formatCurrency(total);
+                $("#RCH05discountedPrice").html(z);
+            });
+
+                                                    </script>
+                                                    <p align="center" style="padding-bottom: 10px; display: block;" class="prices" id="RCH05discountedPrice" name="RCH05">Php 10,301.00</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                        <script type="text/javascript">
+            roomMap["RCH06"] = "EXECUTIVE PRIVATE"
+                                        </script>
+                                        <div class="col-md-3 col-sm-3 col-xs-6" style="height: 250px">
+                                            <div class="thumbnail">
+                                                <textarea id="EXECUTIVE PRIVATE" style="display: none">&lt;li&gt;Private rooms at St. Luke's are a popular choice among patients.  &lt;/li&gt;   
+&lt;li&gt;Newly-renovated and air-conditioned Private Rooms are spacious enough to accommodate amenities such as a day bed, easy chair and a bedside table.  &lt;/li&gt;   
+&lt;li&gt;Done in soothing colors, a Private Room will promote a feeling of calmness among patients. &lt;/li&gt;&lt;li&gt;Rooms are tastefully decorated and well-maintained in keeping with the hospital's thrust to provide the same level of comfort and cleanliness as the best names in the hospitality industry.  &lt;/li&gt;   
+&lt;li&gt;The room is also equipped with a colored TV with cable, refrigerator, airconditioner, telephone, and piped-in oxygen that all build up to a positive experience.&lt;/li&gt;</textarea>
+                                                <a onclick="getDetails('EXECUTIVE PRIVATE', 'RCH06', 'Executive-Suite_preview_qc.jpg')">
+                                                    
+                                                            <img src="ors/img/Executive-Suite_preview_qc.jpg" width="223" height="150">
+                                                        
+                                                </a>
+                                                <div class="caption preview">
+                                                    <div class="checkbox noMargin">
+                                                        <label class="roomLabel">
+                                                            
+                                                                <input type="checkbox" name="checkbox" id="checkbox" class="cb" value="RCH06">
+                                                            EXECUTIVE PRIVATE
+                                                        </label>
+                                                        <style>
+                                                            @media (max-width: 320px) {
+                                                                .roomLabel {
+                                                                    font-size:6px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 480px) {
+                                                                .roomLabel {
+                                                                    font-size:8px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 640px) {
+                                                                .roomLabel {
+                                                                    font-size:10px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 768px) {
+                                                                .roomLabel {
+                                                                    font-size:12px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 980px) {
+                                                                .roomLabel {
+                                                                    font-size:14px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 1200px) {
+                                                                .roomLabel {
+                                                                    font-size:14px;
+                                                                }
+                                                            }
+                                                        </style>
+                                                    </div>
+                                                    <input type="hidden" id="RCH06price" value="7358.0">
+
+                                                    <script type="text/javascript">
+            $(function() {
+                var x = document.getElementById("RCH06price").value;
+                var normalDiscount = "0.16";
+                var total = x - (x * normalDiscount);
+                var z = formatCurrency(total);
+                $("#RCH06discountedPrice").html(z);
+            });
+
+                                                    </script>
+                                                    <p align="center" style="padding-bottom: 10px; display: block;" class="prices" id="RCH06discountedPrice" name="RCH06">Php 6,181.00</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                        <script type="text/javascript">
+            roomMap["RCH35"] = "BMT"
+                                        </script>
+                                        <div class="col-md-3 col-sm-3 col-xs-6" style="height: 250px">
+                                            <div class="thumbnail">
+                                                <textarea id="BMT" style="display: none"></textarea>
+                                                <a onclick="getDetails('BMT', 'RCH35', '')">
+                                                    
+                                                            <img src="ors/img/RoomImageNotAvailable.png" width="223" height="150">
+                                                        
+                                                </a>
+                                                <div class="caption preview">
+                                                    <div class="checkbox noMargin">
+                                                        <label class="roomLabel">
+                                                            
+                                                                <input type="checkbox" name="checkbox" id="checkbox" class="cb" value="RCH35">
+                                                            BMT
+                                                        </label>
+                                                        <style>
+                                                            @media (max-width: 320px) {
+                                                                .roomLabel {
+                                                                    font-size:6px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 480px) {
+                                                                .roomLabel {
+                                                                    font-size:8px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 640px) {
+                                                                .roomLabel {
+                                                                    font-size:10px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 768px) {
+                                                                .roomLabel {
+                                                                    font-size:12px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 980px) {
+                                                                .roomLabel {
+                                                                    font-size:14px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 1200px) {
+                                                                .roomLabel {
+                                                                    font-size:14px;
+                                                                }
+                                                            }
+                                                        </style>
+                                                    </div>
+                                                    <input type="hidden" id="RCH35price" value="7357.0">
+
+                                                    <script type="text/javascript">
+            $(function() {
+                var x = document.getElementById("RCH35price").value;
+                var normalDiscount = "0.16";
+                var total = x - (x * normalDiscount);
+                var z = formatCurrency(total);
+                $("#RCH35discountedPrice").html(z);
+            });
+
+                                                    </script>
+                                                    <p align="center" style="padding-bottom: 10px; display: block;" class="prices" id="RCH35discountedPrice" name="RCH35">Php 6,180.00</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                        <script type="text/javascript">
+            roomMap["RCH07"] = "DELUXE PRIVATE"
+                                        </script>
+                                        <div class="col-md-3 col-sm-3 col-xs-6" style="height: 250px">
+                                            <div class="thumbnail">
+                                                <textarea id="DELUXE PRIVATE" style="display: none">&lt;li&gt;Flat Screen TV&lt;/li&gt;&lt;li&gt;Refrigerator&lt;/li&gt;&lt;li&gt;Bedside Table&lt;/li&gt;&lt;li&gt;Daybed w/ backrest&lt;/li&gt;&lt;li&gt;Overbed Table and Light&lt;/li&gt;&lt;li&gt;Safety Vault&lt;/li&gt;&lt;li&gt;BP Apparatus&lt;/li&gt;&lt;li&gt;Foot Stool&lt;/li&gt;&lt;li&gt;IV Stand&lt;/li&gt;&lt;li&gt;Intercom&lt;/li&gt;&lt;li&gt;Cabinet&lt;/li&gt;&lt;li&gt;Telephone&lt;/li&gt;</textarea>
+                                                <a onclick="getDetails('DELUXE PRIVATE', 'RCH07', 'De-Luxe-Private_preview.jpg')">
+                                                    
+                                                            <img src="ors/img/De-Luxe-Private_preview.jpg" width="223" height="150">
+                                                        
+                                                </a>
+                                                <div class="caption preview">
+                                                    <div class="checkbox noMargin">
+                                                        <label class="roomLabel">
+                                                            
+                                                                <input type="checkbox" name="checkbox" id="checkbox" class="cb" value="RCH07">
+                                                            DELUXE PRIVATE
+                                                        </label>
+                                                        <style>
+                                                            @media (max-width: 320px) {
+                                                                .roomLabel {
+                                                                    font-size:6px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 480px) {
+                                                                .roomLabel {
+                                                                    font-size:8px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 640px) {
+                                                                .roomLabel {
+                                                                    font-size:10px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 768px) {
+                                                                .roomLabel {
+                                                                    font-size:12px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 980px) {
+                                                                .roomLabel {
+                                                                    font-size:14px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 1200px) {
+                                                                .roomLabel {
+                                                                    font-size:14px;
+                                                                }
+                                                            }
+                                                        </style>
+                                                    </div>
+                                                    <input type="hidden" id="RCH07price" value="5089.0">
+
+                                                    <script type="text/javascript">
+            $(function() {
+                var x = document.getElementById("RCH07price").value;
+                var normalDiscount = "0.16";
+                var total = x - (x * normalDiscount);
+                var z = formatCurrency(total);
+                $("#RCH07discountedPrice").html(z);
+            });
+
+                                                    </script>
+                                                    <p align="center" style="padding-bottom: 10px; display: block;" class="prices" id="RCH07discountedPrice" name="RCH07">Php 4,275.00</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                        <script type="text/javascript">
+            roomMap["RCH38"] = "NICU (NURSERY)"
+                                        </script>
+                                        <div class="col-md-3 col-sm-3 col-xs-6" style="height: 250px">
+                                            <div class="thumbnail">
+                                                <textarea id="NICU (NURSERY)" style="display: none"></textarea>
+                                                <a onclick="getDetails('NICU (NURSERY)', 'RCH38', '')">
+                                                    
+                                                            <img src="ors/img/RoomImageNotAvailable.png" width="223" height="150">
+                                                        
+                                                </a>
+                                                <div class="caption preview">
+                                                    <div class="checkbox noMargin">
+                                                        <label class="roomLabel">
+                                                            
+                                                                <input type="checkbox" name="checkbox" id="checkbox" class="cb" value="RCH38">
+                                                            NICU (NURSERY)
+                                                        </label>
+                                                        <style>
+                                                            @media (max-width: 320px) {
+                                                                .roomLabel {
+                                                                    font-size:6px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 480px) {
+                                                                .roomLabel {
+                                                                    font-size:8px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 640px) {
+                                                                .roomLabel {
+                                                                    font-size:10px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 768px) {
+                                                                .roomLabel {
+                                                                    font-size:12px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 980px) {
+                                                                .roomLabel {
+                                                                    font-size:14px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 1200px) {
+                                                                .roomLabel {
+                                                                    font-size:14px;
+                                                                }
+                                                            }
+                                                        </style>
+                                                    </div>
+                                                    <input type="hidden" id="RCH38price" value="4600.0">
+
+                                                    <script type="text/javascript">
+            $(function() {
+                var x = document.getElementById("RCH38price").value;
+                var normalDiscount = "0.16";
+                var total = x - (x * normalDiscount);
+                var z = formatCurrency(total);
+                $("#RCH38discountedPrice").html(z);
+            });
+
+                                                    </script>
+                                                    <p align="center" style="padding-bottom: 10px; display: block;" class="prices" id="RCH38discountedPrice" name="RCH38">Php 3,864.00</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                        <script type="text/javascript">
+            roomMap["RCH08"] = "REGULAR PRIVATE"
+                                        </script>
+                                        <div class="col-md-3 col-sm-3 col-xs-6" style="height: 250px">
+                                            <div class="thumbnail">
+                                                <textarea id="REGULAR PRIVATE" style="display: none">&lt;li&gt;TV with Cable&lt;/li&gt;&lt;li&gt;Refrigerator&lt;/li&gt;&lt;li&gt;Bedside Table&lt;/li&gt;&lt;li&gt;Daybed w/ backrest&lt;/li&gt;&lt;li&gt;Overbed Table and Light&lt;/li&gt;&lt;li&gt;Safety Vault&lt;/li&gt;&lt;li&gt;BP Apparatus&lt;/li&gt;&lt;li&gt;Foot Stool&lt;/li&gt;&lt;li&gt;IV Stand&lt;/li&gt;&lt;li&gt;Intercom&lt;/li&gt;&lt;li&gt;Cabinet&lt;/li&gt;&lt;li&gt;Telephone&lt;/li&gt;</textarea>
+                                                <a onclick="getDetails('REGULAR PRIVATE', 'RCH08', 'Regular-Private_preview_qc.jpg')">
+                                                    
+                                                            <img src="ors/img/Regular-Private_preview_qc.jpg" width="223" height="150">
+                                                        
+                                                </a>
+                                                <div class="caption preview">
+                                                    <div class="checkbox noMargin">
+                                                        <label class="roomLabel">
+                                                            
+                                                                <input type="checkbox" name="checkbox" id="checkbox" class="cb" value="RCH08">
+                                                            REGULAR PRIVATE
+                                                        </label>
+                                                        <style>
+                                                            @media (max-width: 320px) {
+                                                                .roomLabel {
+                                                                    font-size:6px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 480px) {
+                                                                .roomLabel {
+                                                                    font-size:8px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 640px) {
+                                                                .roomLabel {
+                                                                    font-size:10px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 768px) {
+                                                                .roomLabel {
+                                                                    font-size:12px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 980px) {
+                                                                .roomLabel {
+                                                                    font-size:14px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 1200px) {
+                                                                .roomLabel {
+                                                                    font-size:14px;
+                                                                }
+                                                            }
+                                                        </style>
+                                                    </div>
+                                                    <input type="hidden" id="RCH08price" value="4292.0">
+
+                                                    <script type="text/javascript">
+            $(function() {
+                var x = document.getElementById("RCH08price").value;
+                var normalDiscount = "0.16";
+                var total = x - (x * normalDiscount);
+                var z = formatCurrency(total);
+                $("#RCH08discountedPrice").html(z);
+            });
+
+                                                    </script>
+                                                    <p align="center" style="padding-bottom: 10px; display: block;" class="prices" id="RCH08discountedPrice" name="RCH08">Php 3,606.00</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                        <script type="text/javascript">
+            roomMap["RCH24"] = "SMALL PRIVATE"
+                                        </script>
+                                        <div class="col-md-3 col-sm-3 col-xs-6" style="height: 250px">
+                                            <div class="thumbnail">
+                                                <textarea id="SMALL PRIVATE" style="display: none">&lt;li&gt;TV with Cable&lt;/li&gt;&lt;li&gt;Refrigerator&lt;/li&gt;&lt;li&gt;Bedside Table&lt;/li&gt;&lt;li&gt;Daybed w/ backrest&lt;/li&gt;&lt;li&gt;Overbed Table and Light&lt;/li&gt;&lt;li&gt;Safety Vault&lt;/li&gt;&lt;li&gt;BP Apparatus&lt;/li&gt;&lt;li&gt;Foot Stool&lt;/li&gt;&lt;li&gt;IV Stand&lt;/li&gt;&lt;li&gt;Intercom&lt;/li&gt;&lt;li&gt;Cabinet&lt;/li&gt;&lt;li&gt;Telephone&lt;/li&gt;</textarea>
+                                                <a onclick="getDetails('SMALL PRIVATE', 'RCH24', 'SmallPrivate_preview.jpg')">
+                                                    
+                                                            <img src="ors/img/SmallPrivate_preview.jpg" width="223" height="150">
+                                                        
+                                                </a>
+                                                <div class="caption preview">
+                                                    <div class="checkbox noMargin">
+                                                        <label class="roomLabel">
+                                                            
+                                                                <input type="checkbox" name="checkbox" id="checkbox" class="cb" value="RCH24">
+                                                            SMALL PRIVATE
+                                                        </label>
+                                                        <style>
+                                                            @media (max-width: 320px) {
+                                                                .roomLabel {
+                                                                    font-size:6px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 480px) {
+                                                                .roomLabel {
+                                                                    font-size:8px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 640px) {
+                                                                .roomLabel {
+                                                                    font-size:10px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 768px) {
+                                                                .roomLabel {
+                                                                    font-size:12px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 980px) {
+                                                                .roomLabel {
+                                                                    font-size:14px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 1200px) {
+                                                                .roomLabel {
+                                                                    font-size:14px;
+                                                                }
+                                                            }
+                                                        </style>
+                                                    </div>
+                                                    <input type="hidden" id="RCH24price" value="3065.0">
+
+                                                    <script type="text/javascript">
+            $(function() {
+                var x = document.getElementById("RCH24price").value;
+                var normalDiscount = "0.16";
+                var total = x - (x * normalDiscount);
+                var z = formatCurrency(total);
+                $("#RCH24discountedPrice").html(z);
+            });
+
+                                                    </script>
+                                                    <p align="center" style="padding-bottom: 10px; display: block;" class="prices" id="RCH24discountedPrice" name="RCH24">Php 2,575.00</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                        <script type="text/javascript">
+            roomMap["RCH33"] = "2-BED PRIVATE ROOM"
+                                        </script>
+                                        <div class="col-md-3 col-sm-3 col-xs-6" style="height: 250px">
+                                            <div class="thumbnail">
+                                                <textarea id="2-BED PRIVATE ROOM" style="display: none">&lt;li&gt;Bedside Table&lt;/li&gt;&lt;li&gt;Overbed Table&lt;/li&gt;&lt;li&gt;Guest Chair&lt;/li&gt;&lt;li&gt;BP Apparatus&lt;/li&gt;&lt;li&gt;Foot Stool&lt;/li&gt;&lt;li&gt;IV Stand&lt;/li&gt;&lt;li&gt;Intercom&lt;/li&gt;&lt;li&gt;Cabinet&lt;/li&gt;&lt;li&gt;Common Comfort Room&lt;/li&gt;</textarea>
+                                                <a onclick="getDetails('2-BED PRIVATE ROOM', 'RCH33', 'Semi-Private_preview.jpg')">
+                                                    
+                                                            <img src="ors/img/Semi-Private_preview.jpg" width="223" height="150">
+                                                        
+                                                </a>
+                                                <div class="caption preview">
+                                                    <div class="checkbox noMargin">
+                                                        <label class="roomLabel">
+                                                            
+                                                                <input type="checkbox" name="checkbox" id="checkbox" class="cb" value="RCH33">
+                                                            2-BED PRIVATE ROOM
+                                                        </label>
+                                                        <style>
+                                                            @media (max-width: 320px) {
+                                                                .roomLabel {
+                                                                    font-size:6px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 480px) {
+                                                                .roomLabel {
+                                                                    font-size:8px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 640px) {
+                                                                .roomLabel {
+                                                                    font-size:10px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 768px) {
+                                                                .roomLabel {
+                                                                    font-size:12px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 980px) {
+                                                                .roomLabel {
+                                                                    font-size:14px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 1200px) {
+                                                                .roomLabel {
+                                                                    font-size:14px;
+                                                                }
+                                                            }
+                                                        </style>
+                                                    </div>
+                                                    <input type="hidden" id="RCH33price" value="2268.0">
+
+                                                    <script type="text/javascript">
+            $(function() {
+                var x = document.getElementById("RCH33price").value;
+                var normalDiscount = "0.16";
+                var total = x - (x * normalDiscount);
+                var z = formatCurrency(total);
+                $("#RCH33discountedPrice").html(z);
+            });
+
+                                                    </script>
+                                                    <p align="center" style="padding-bottom: 10px; display: block;" class="prices" id="RCH33discountedPrice" name="RCH33">Php 1,906.00</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                        <script type="text/javascript">
+            roomMap["RCH10"] = "WARD"
+                                        </script>
+                                        <div class="col-md-3 col-sm-3 col-xs-6" style="height: 250px">
+                                            <div class="thumbnail">
+                                                <textarea id="WARD" style="display: none">&lt;li&gt;Bedside Table&lt;/li&gt;&lt;li&gt;Overbed Table&lt;/li&gt;&lt;li&gt;Guest Chair&lt;/li&gt;&lt;li&gt;BP Apparatus&lt;/li&gt;&lt;li&gt;Foot Stool&lt;/li&gt;&lt;li&gt;IV Stand&lt;/li&gt;&lt;li&gt;Intercom&lt;/li&gt;&lt;li&gt;Pipe-in O2 and Suction&lt;/li&gt;&lt;li&gt;Cabinet&lt;/li&gt;&lt;li&gt;Common Comfort Room&lt;/li&gt;</textarea>
+                                                <a onclick="getDetails('WARD', 'RCH10', 'Ward_preview.jpg')">
+                                                    
+                                                            <img src="ors/img/Ward_preview.jpg" width="223" height="150">
+                                                        
+                                                </a>
+                                                <div class="caption preview">
+                                                    <div class="checkbox noMargin">
+                                                        <label class="roomLabel">
+                                                            
+                                                                <input type="checkbox" name="checkbox" id="checkbox" class="cb" value="RCH10">
+                                                            WARD
+                                                        </label>
+                                                        <style>
+                                                            @media (max-width: 320px) {
+                                                                .roomLabel {
+                                                                    font-size:6px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 480px) {
+                                                                .roomLabel {
+                                                                    font-size:8px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 640px) {
+                                                                .roomLabel {
+                                                                    font-size:10px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 768px) {
+                                                                .roomLabel {
+                                                                    font-size:12px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 980px) {
+                                                                .roomLabel {
+                                                                    font-size:14px;
+                                                                }
+                                                            }
+                                                            @media (max-width: 1200px) {
+                                                                .roomLabel {
+                                                                    font-size:14px;
+                                                                }
+                                                            }
+                                                        </style>
+                                                    </div>
+                                                    <input type="hidden" id="RCH10price" value="1226.0">
+
+                                                    <script type="text/javascript">
+            $(function() {
+                var x = document.getElementById("RCH10price").value;
+                var normalDiscount = "0.16";
+                var total = x - (x * normalDiscount);
+                var z = formatCurrency(total);
+                $("#RCH10discountedPrice").html(z);
+            });
+
+                                                    </script>
+                                                    <p align="center" style="padding-bottom: 10px; display: block;" class="prices" id="RCH10discountedPrice" name="RCH10">Php 1,030.00</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                </div>
+                                <form id="roomSelectionForm" action="createReservation" method="POST">
+                                    <input type="hidden" value="170600121" name="rsvEhPin">
+                                    <input type="hidden" value="QC" name="rsvLocationId">
+                                    <input type="hidden" value="ADM" name="admissionType">
+                                    <input type="hidden" id="first" class="placer" name="firstRoomChoice" value="">
+                                    <input type="hidden" id="second" class="placer" name="secondRoomChoice" value="">
+                                    <input type="hidden" id="roomName1" class="placer" name="firstRoomName" value="">
+                                    <input type="hidden" id="roomName2" class="placer" name="secondRoomName" value="">
+                                </form>
+                                <!-- /.row -->
+                                <div class="text-center bold mrgTop20">
+                                    <ul class="list-inline">
+                                        <li>
+                                            <span class="lightBlue">1st Choice:</span>
+                                            <strong id="room1"></strong>
+                                        </li>
+                                        <li>
+                                            <span class="lightBlue">2nd Choice:</span>
+                                            <strong id="room2"></strong>
+                                        </li>                   
+                                    </ul>
+                                </div>
+                                <div class="footnote well well-sm mrgTop20">
+                                    <ul class="list-unstyled">
+                                        <li>*You will receive a confirmation call 24 hours before your planned admission. 
+                                            Room of Choice is subject to availability on the day of admission.</li>
+                                        <li id="disclaimer">*Price shown is net of 16% promo discount.</li>
+                                        <li>*Program rates/prices are subject to change without prior notice.</li>
+                                    </ul>
+                                </div>                                        
+                                <div class="mrgBottom20 text-center">
+<!--                                     <button type="button" class="btn btn-default" onclick="window.location.href = '../mainPage'">Cancel</button>
+                                    <button type="button" class="btn btn-redBtn" onclick="submitChosenRoom()">Continue</button> -->
+
+                                    <!-- <form class="col-md-6" style="padding: 0 2px;">
+                                        <input type="submit" class="btn btn-default" style="float: right;" onclick="window.location.href = '../mainPage'" value="Cancel">
+                                    </form> -->
+
+                                    <form action="ors_admission_information.html">
+                                        <input type="submit" class="btn btn-redBtn" onclick="submitChosenRoom()" value="Continue">
+                                    </form>
+
+                                    <div style="margin:20px 0 0 0; float:right;">
+                                          You are on Patient Mode, Click here to access MediCon App>>
+                                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal4">Medicon User?
+                                          </button>
+                                    </div>
+
+                                    <script type="text/javascript">
+            function submitChosenRoom() {
+                var choice1 = document.getElementById('first').value;
+                var choice2 = document.getElementById('second').value;
+                if (choice1 !== "" && choice2 !== "") {
+                    $("#roomSelectionForm").submit();
+                } else {
+                    if (choice1 === "" && choice2 === "") {
+                        document.getElementById('errorMessage').innerHTML = "Please select a room choice.";
+                        $('#errorModal').modal('show');
+                    } else if (choice1 === "") {
+                        document.getElementById('errorMessage').innerHTML = "Please select 1st Choice of Room Type.";
+                        $('#errorModal').modal('show');
+                    } else if (choice2 === "") {
+                        document.getElementById('errorMessage').innerHTML = "Please select 2nd Choice of Room Type.";
+                        $('#errorModal').modal('show');
+                    }
+                }
+            }
+                                    </script>
+                                </div>
+                            </div><!-- end panel-body -->
+                        </div><!-- ene panel -->
+
+                    </div><!-- end content -->
+
+                </div><!-- end row -->
+            </div>
+
+    <!--Modal View-->
+    <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-md" role="document" style="width: 450px;">
+            <div class="modal-content modal-bg" style="height: 197px;">
+
+              <div class="modal-header modal-Hheight">
+                <center>
+                  <h5 class="modal-title" id="exampleModalLabel">Enter Password</h5>  
+                </center>   
+              </div>
+
+              <div class="modal-body modal-Bheight">
+                <div class="container" style="width: 70%;">
+                  <div class="form-group">
+      
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal-footer modal-Dheight col-md-12" style="padding: 15px 15px;">
+                <center>
+                  <button type="button" class="btn btn-primary waves-effect waves-light">Ok
+                  </button>
+                        
+                  <button type="button" class="btn btn-primary waves-effect waves-light">Cancel</button>
+                  
+                </center>
+              </div><!-- end modal footer -->
+
+            </div><!-- end modal-content -->
+        </div><!-- end modal-dialog -->
+    </div><!--end-->
+
+  </body>
+</html>

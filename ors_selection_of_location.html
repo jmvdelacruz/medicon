@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<!--jasmin--> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--end jasmin-->    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Medicon</title>
+
+        <!-- Custom fonts for this template -->
+        <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <link rel="stylesheet" href="ors/styles/css/jquery-ui.css">
+
+        <link rel="stylesheet" href="ors/styles/css/slidebars.css">
+        <link rel="stylesheet" href="ors/styles/css/custom.css">
+        <link rel="stylesheet" href="ors/styles/css/mobile.css">
+        <link rel="stylesheet" href="ors/styles/css/waitMe.css">
+        <link href="ors/styles/css/OnlineReservation/bootstrapReservation.css" rel="stylesheet">
+
+        <link href="ors/styles/css/OnlineReservation/roomReservation.css" rel="stylesheet">
+                <link rel="stylesheet" href="ors/styles/css/bootstrap.css">
+        <link href="ors/styles/iops/css/eHub.css" rel="stylesheet">
+        <link href="ors/styles/css/OnlineReservation/dataTable/demo_table.css" rel="stylesheet">
+        <link href="ors/styles/css/OnlineReservation/bootstrap-datetimepicker.css" rel="stylesheet">
+
+        <script src="ors/scripts/js/jquery.js"></script>
+        <script src="ors/scripts/js/jquery-ui.js"></script>
+        <script src="ors/scripts/js/OnlineReservation/bootstrapReservation.min.js"></script>
+        <script type="text/javascript" src="ors/scripts/js/OnlineReservation/moment.js"></script>
+        <script type="text/javascript" src="ors/scripts/js/OnlineReservation/bootstrap-datetimepicker.js"></script>
+        <!--<script src="../scripts/js/bootstrap-datepicker.js"></script>-->
+        <script type="text/javascript" src="ors/scripts/js/OnlineReservation/ehealthValidate.js"></script>
+        <script src="ors/scripts/js/jquery.session.js"></script>
+
+        <script src="ors/js/jquery.maskedinput.js"></script>
+        <script src="ors/scripts/js/slidebars.js"></script>
+        <script src="ors/scripts/js/ie10-viewport-bug-workaround.js"></script>
+        <script src="ors/scripts/js/html5shiv.js"></script>
+        <script src="ors/scripts/js/respond.min.js"></script>
+        <script type="text/javascript" src="ors/scripts/js/OnlineReservation/scripts.js"></script>
+
+        <script type="text/javascript" src="ors/scripts/js/OnlineReservation/dataTable/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="ors/scripts/js/OnlineReservation/dataTable/jquery.tablesorter.js"></script>
+        <script type="text/javascript" src="ors/scripts/js/OnlineReservation/dataTable/FixedColumns.min.js"></script>
+        <script type="text/javascript" src="ors/scripts/js/OnlineReservation/bootstrap/bootstrap-paginator.min.js"></script>
+        <script type="text/javascript" src="ors/scripts/js/OnlineReservation/OnlineReservation.js"></script>
+
+        <!--<script type="text/javascript" src="/dwr/interface/ValidatorManager.js"></script>-->
+        <script type="text/javascript" src="/dwr/engine.js"></script>
+        <script type="text/javascript" src="/dwr/util.js"></script>
+
+        <!--<script type="text/javascript" src="/dwr/interface/PatientEditDwr.js"></script>-->
+        <script type="text/javascript" src="/dwr/interface/eHealthDoctorManager.js"></script>
+        <script type="text/javascript" src="/dwr/interface/ReservationService.js"></script>
+        <script type="text/javascript" src="/dwr/interface/AppsConstantManager.js"></script>
+        <!--<script type="text/javascript" src="/js/EditPatientJs.js"></script>-->
+
+        <script src="ors/scripts/js/waitMe.js"></script>
+        <script src="ors/scripts/js/waitMe.min.js"></script>
+
+    <style>
+        .selectLocation {
+            min-width: 180px;
+        }
+    </style>
+    
+  </head>
+
+
+  <body id="page-top">
+    
+
+<div class="container">
+<div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button onclick="closeThisModal()" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <img class="logoOnlineReserv" src="img/logo/logo_online_rr.png">
+                <h4 class="modal-title" id="myModalLabel2">Choose Hospital Location for Online Pre-Admission
+                    Registration</h4><br>
+
+                
+                    <p><strong>To reduce your time in the admission procedure, note that pre-registration must be made 3 days before target check-in.</strong></p>
+                
+
+                <p>You are making pre-admission registration for patient <b>Paz, Maricar S</b>. If you wish
+                    to change patient for this reservation, close this dialog box and select your patient from the
+                    Patient Profile List from the slide bar or the side menu.</p>
+            </div>
+            <div class="modal-body text-center">
+                <h5 class="darkBlue">Select a hospital location where you like to transact</h5>
+
+                <div>
+                    <form id="roomReservation" action="ereserve/selectRoom" method="POST">
+                        <!--<input type="hidden" value="170600121" name="rsvEhPin" class="hiddenField">-->
+                        <select id="selectLocationForORS" class="selectLocation" name="rsvLocationId">
+                            
+                                        <option value="GC">GLOBAL CITY</option>
+                                    
+                                        <option value="QC" selected="">QUEZON CITY</option>
+                                    
+                        </select>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+
+                    <form class="col-md-6" style="padding: 0 2px;">
+                        <input type="submit" class="btn btn-default" style="float: right;" onclick="$('#onlineRoomReservationModal').modal('hide')" value="Close">
+                    </form>
+
+                    <form action="ors_choose_of_room_type.html" class="col-md-6" style="padding: 0 2px;">
+                        <input type="submit" class="btn btn-redBtn" style="float: left;" onclick="validateLocation('order')" value="Continue">
+                    </form>
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+    </div>
+
+  </body>
+</html>
