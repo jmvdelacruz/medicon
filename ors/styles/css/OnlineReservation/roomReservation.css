@@ -1,0 +1,46 @@
+/*--room reservation---*/
+
+.portfolio-item {
+    border: 1px solid #ddd;
+}
+
+.radio label, .checkbox label {
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+.breadcrumb {
+    padding: 0;
+    margin-bottom: 0;
+    background-color: #fff;
+    border-radius: 0;
+    color: #777;
+}
+.breadcrumb > .active {
+    color: #07093d;
+}
+.footnote {
+    background-color: #F5F5F5;
+    padding: 10px;
+    font-style: italic;
+    font-family: Georgia,"Times New Roman",Times,serif;
+}
+.bold {font-weight: bold;}
+.normal {font-weight: normal}
+
+@media(max-width:500px) {
+    .location {text-align: left; float: left; padding-left: 0; margin-top:5px;}
+}
+@media(min-width:600px) {
+    .location {text-align: right; padding-right: 0}
+}
+#otherAccount {padding-left: 0}
+
+#bcpadding {padding: 0}
+
+th {text-align: left; padding: 5px; color: #337AB7;}
+td {color:#07093D;}
+
+.table-hover > tbody > tr:hover {
+    background-color: #ECF2F6;
+}

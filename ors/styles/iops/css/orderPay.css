@@ -1,0 +1,177 @@
+.table-bordered > thead > tr > th, .table-bordered > thead > tr > td {
+    border-bottom-width: 1px;
+}
+.table-hover > tbody > tr:hover {
+  background-color: #ECF2F6;
+}
+
+.pagination > li:first-child > a, .pagination > li:first-child > span {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.pagination > li:last-child > a, .pagination > li:last-child > span {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
+.breadcrumb {
+    padding: 0;
+    margin-bottom: 0;
+    background-color: #fff;
+    border-radius: 0;
+    color: #777;
+}
+.breadcrumb > .active {
+    color: #07093d;
+}
+
+.cart {
+    padding-right: 0;
+    float: right;
+    text-align: right;
+}
+
+.location {
+    padding-left: 0;
+}
+.bold{font-weight: bold;}
+
+
+
+.item {
+    padding: 5px 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+}
+.item .name {
+    display: block;
+    color: #07093D;
+    font-weight: bold;
+}
+.item .price {
+    display: block;
+    color: #0E4EAD;
+}
+.normal {font-weight: normal;}
+
+#patientInfo {
+    margin-bottom: 10px;
+}
+#patientInfo .name {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0px 0px 2px;
+}
+
+.net {
+    font-size: 16px;
+    font-weight: bold;
+}
+#amount {
+    margin-bottom: 20px;
+    padding-right: 8px;
+}
+
+
+@media(max-width:320px) {
+    .cart {
+        padding-left: 0;
+        float: left;
+        margin-top: 10px;
+        text-align: left;
+        width: 100%
+    }
+    .location {
+        padding-left: 0;
+        float: left;
+        text-align: left;
+        width: 100%;
+    }
+    .checkoutBtn {
+        float: left;
+        margin-top: 10px;
+    }
+    .net {
+        font-size: 14px;
+    }
+}
+@media(max-width:360px) {
+    .cart {
+        padding-left: 0;
+        float: left;
+        margin-top: 10px;
+        text-align: left;
+        width: 100%
+    }
+    .location {
+        padding-left: 0;
+        float: left;
+        text-align: left;
+        width: 100%;
+    }
+}
+@media(max-width:375px) {
+    .cart {
+        padding-left: 0;
+        float: left;
+        margin-top: 10px;
+        text-align: left;
+        width: 100%
+    }
+    .location {
+        padding-left: 0;
+        float: left;
+        text-align: left;
+        width: 100%;
+    }
+}
+@media(max-width:800px) {
+    #amount {
+        padding-right: 10px;
+    }
+}
+
+.customLink:hover{
+	cursor: pointer;
+	color: #23527c;
+}
+
+.unseen{
+	display: none !important;
+    visibility: hidden !important;
+}
+
+.offToPage {
+   position: absolute !important;
+   top: -9999px !important;
+   left: -9999px !important;
+}
+
+
+/**BUTTON SPINNER**/
+.glyphicon.spinning {
+    animation: spin 1s infinite linear;
+    -webkit-animation: spin2 1s infinite linear;
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg); }
+    to { transform: scale(1) rotate(360deg); }
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+
+.glyphicon-refresh.spinning { transform-origin: 50% 58%; }
+
+#tblOrderCart td,#tblOrderCart th {
+				height: 35px;
+}
+
+.btn-wrapper{
+	white-space: normal;
+}

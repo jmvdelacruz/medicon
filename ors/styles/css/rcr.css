@@ -1,0 +1,65 @@
+.form-header h4{
+	text-align:center;
+	font-weight: bold
+}
+.form-headerbl h5{
+	background: #046BB6;
+	color:#fff;
+	padding: 8px;
+	text-align:center;
+	margin:15px 15px;
+}
+header h4{
+	margin-left: 10px;
+}
+.form-group i{
+	color: #15273D;
+}
+#signature{
+	border:2px solid gray;
+	background-color: #FBFAF8;
+	width: 390px;
+	height: 180px;
+	position: absolute;
+}
+.form-headerpre h5{
+	background: #046BB6;
+	color:#fff;
+	padding: 5px;
+	text-align:center;
+}
+#preview{
+	border:none;
+}
+#preview tbody tr td{
+	border:none;
+}
+#preview tbody tr #ln,.signature p{
+	border-bottom: 1px solid black;
+}
+#remarks tbody tr #ln{
+	border: 1px solid black;
+	height: 27px;
+}
+#hereby{
+	text-align: justify;
+	padding: 15px;
+	font-size: 11px
+}
+.signature{
+	text-align: center;
+}
+#med #ln{
+		border:1px solid #000;
+}
+#reminder{
+	text-align: justify; 
+	font-weight: bold;
+	font-size: 9px;
+}
+#consent{
+	font-size: 10px;
+}
+#long-label{
+	font-size: 12px;
+}
